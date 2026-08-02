@@ -102,3 +102,9 @@ Universidad Nacional del Comahue
 © 2026 Candelaria Morelli – Universidad Nacional del Comahue.
 
 Este recurso educativo puede utilizarse y compartirse con fines académicos, citando adecuadamente la autoría.
+
+---
+
+## 🌐 Acceso al recurso
+
+👉 https://profecandelariamorelli-lgtm.github.io/Aprender-con-Datos/
