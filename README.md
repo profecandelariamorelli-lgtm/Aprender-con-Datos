@@ -1,4 +1,4 @@
-# Aprender con Datos — versión 3
+# Aprender con Datos — Versión 2026.1
 
 Teórico digital interactivo de Estadística para explorar datos, analizarlos con herramientas estadísticas e interpretar los resultados con sentido crítico.
 
