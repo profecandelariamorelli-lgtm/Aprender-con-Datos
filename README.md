@@ -1,61 +1,104 @@
+# Aprender con Datos
+
 ## Estadística aplicada a Higiene y Seguridad
+
 **Edición 2026 · Versión 1.0**
 
-<img src="assets/img/logo-departamento.jpeg" alt="Logo" width="160">
+<img src="assets/img/logo-departamento.jpeg" alt="Logo del Departamento de Estadística" width="160">
 
-Recurso educativo digital interactivo diseñado para favorecer el aprendizaje de la Estadística aplicada a Higiene y Seguridad mediante explicaciones, ejemplos contextualizados, actividades y autoevaluaciones.
+Recurso educativo digital interactivo desarrollado para favorecer el aprendizaje de la Estadística aplicada a Higiene y Seguridad mediante explicaciones, ejemplos contextualizados, actividades interactivas y autoevaluaciones.
 
-Esta entrega desarrolla las Unidades 1 y 2 y está preparada para funcionar como sitio estático en GitHub Pages.
+Esta primera edición desarrolla las **Unidades 1 y 2** de la asignatura y puede utilizarse tanto de forma independiente como integrado a un aula virtual (PEDCO/Moodle).
 
-## Estructura
+---
 
-- `index.html`: contenido completo y navegación.
-- `css/estilos.css`: identidad visual, diseño responsive e impresión.
-- `js/app.js`: actividades, gráficos SVG, navegación y guardado local del progreso.
-- `assets/img/`: imágenes institucionales y de la SRT.
-- `assets/documentos/`: informes de la SRT utilizados como fuentes.
+## Objetivos
 
-## Abrir localmente
+El recurso busca que los estudiantes:
 
-1. Descomprimir toda la carpeta.
+- comprendan los conceptos estadísticos fundamentales;
+- interpreten información y gráficos en contextos profesionales;
+- desarrollen pensamiento crítico basado en datos;
+- relacionen la Estadística con situaciones propias de la Higiene y Seguridad;
+- utilicen la evidencia para fundamentar decisiones.
+
+---
+
+## Estructura del proyecto
+
+- `index.html`: contenido principal y navegación.
+- `css/estilos.css`: identidad visual y diseño adaptable (*responsive*).
+- `js/app.js`: actividades interactivas, gráficos, navegación y almacenamiento local del progreso.
+- `assets/img/`: imágenes institucionales y recursos gráficos.
+- `assets/documentos/`: documentos utilizados como fuentes.
+
+---
+
+## Uso local
+
+1. Descomprimir completamente la carpeta.
 2. Abrir `index.html` con Chrome, Edge o Firefox.
-3. No abrir el archivo directamente dentro del ZIP.
+3. No ejecutar el archivo directamente desde el ZIP.
 
-## Publicar en GitHub Pages
+---
+
+## Publicación mediante GitHub Pages
 
 1. Crear un repositorio público.
-2. Subir **el contenido interno** de esta carpeta, de modo que `index.html` quede en la raíz.
-3. Ir a `Settings > Pages`.
-4. Elegir `Deploy from a branch`, rama `main`, carpeta `/ (root)`.
-5. Guardar y esperar a que GitHub muestre la dirección del sitio.
+2. Subir el contenido de esta carpeta dejando `index.html` en la raíz del repositorio.
+3. Ir a **Settings → Pages**.
+4. Seleccionar **Deploy from a branch**, rama **main** y carpeta **/(root)**.
+5. Guardar la configuración y esperar la generación automática del sitio.
+
+---
 
 ## Personalización
 
-- El enlace al aula PEDCO se edita en `index.html`, buscando `id="enlace-pedco"`.
-- Los colores principales están al comienzo de `css/estilos.css`, dentro de `:root`.
-- Los ejemplos interactivos y respuestas se encuentran en `js/app.js`.
-- Los textos teóricos están en `index.html`.
+- El enlace al aula PEDCO se modifica en `index.html` (`id="enlace-pedco"`).
+- La identidad visual puede ajustarse desde `css/estilos.css`.
+- Las actividades y ejemplos interactivos se encuentran en `js/app.js`.
+- Los contenidos teóricos están desarrollados en `index.html`.
+
+---
 
 ## Principios didácticos
 
-- La explicación construye el concepto y la interacción lo potencia.
-- El desarrollo general es independiente del TP vigente.
-- PEDCO concentra materiales oficiales, actividades acreditables y entregas.
-- Solo la estación final vincula explícitamente con el TP1 y Excel.
-- Los contextos profesionales se utilizan para dar sentido a la Estadística sin convertir el sitio en un manual de Higiene y Seguridad.
+El diseño del recurso se apoya en los siguientes criterios:
 
-## Tecnologías
+- la explicación conceptual precede a la interacción;
+- las actividades favorecen la interpretación antes que el cálculo mecánico;
+- los ejemplos se contextualizan en situaciones profesionales de Higiene y Seguridad;
+- el recurso es independiente del Trabajo Práctico vigente;
+- PEDCO concentra los materiales oficiales, las actividades acreditables y las entregas;
+- la última estación integra explícitamente el recurso con el TP1 y el uso de Excel.
 
-HTML5, CSS3, JavaScript, SVG, MathJax y `localStorage`. No requiere servidor ni base de datos.
+---
 
-## Autora: Candelaria Morelli
+## Tecnologías utilizadas
 
-Departamento de Estadística – Facultad de Economía y Administración
+- HTML5
+- CSS3
+- JavaScript
+- SVG
+- MathJax
+- LocalStorage
 
+El recurso funciona completamente del lado del cliente y no requiere servidor ni base de datos.
+
+---
+
+## Autora
+
+**Candelaria Morelli**
+
+Departamento de Estadística  
+Facultad de Economía y Administración  
 Universidad Nacional del Comahue
+
+---
 
 ## Licencia
 
-Este recurso educativo puede utilizarse con fines académicos citando la autoría.
-
 © 2026 Candelaria Morelli – Universidad Nacional del Comahue.
+
+Este recurso educativo puede utilizarse y compartirse con fines académicos, citando adecuadamente la autoría.
