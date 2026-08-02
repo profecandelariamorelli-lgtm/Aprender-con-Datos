@@ -1,9 +1,11 @@
-# Aprender con Datos — Versión 2026.1
+## Estadística aplicada a Higiene y Seguridad
+
+**Edición 2026 · Versión 1.0**
 <img src="assets/img/logo-departamento.jpeg" alt="Logo" width="160">
 
 ## Estadística aplicada a Higiene y Seguridad
 
-Teórico digital interactivo de Estadística para explorar datos, analizarlos con herramientas estadísticas e interpretar los resultados con sentido crítico.
+Recurso educativo digital interactivo diseñado para favorecer el aprendizaje de la Estadística aplicada a Higiene y Seguridad mediante explicaciones, ejemplos contextualizados, actividades y autoevaluaciones.
 
 Esta entrega desarrolla las Unidades 1 y 2 y está preparada para funcionar como sitio estático en GitHub Pages.
 
@@ -48,20 +50,14 @@ Esta entrega desarrolla las Unidades 1 y 2 y está preparada para funcionar como
 
 HTML5, CSS3, JavaScript, SVG, MathJax y `localStorage`. No requiere servidor ni base de datos.
 
-## Versión 5
+## Autora: Candelaria Morelli
 
-Esta edición incorpora la revisión docente de las Unidades 1 y 2: fuentes SRT ampliadas, frecuencias acumuladas en variables discretas y continuas, gráficos completos, ejemplos profesionales, simetría y asimetría, comparación entre media/mediana/moda, tipificación contextualizada, terminología de relación lineal y una autoevaluación ampliada.
+Departamento de Estadística – Facultad de Economía y Administración
 
+Universidad Nacional del Comahue
 
-## Versión final
-Incluye la comparación entre parámetros poblacionales y estadísticos muestrales, el coeficiente de variación y los últimos ajustes editoriales.
+## Licencia
 
+Este recurso educativo puede utilizarse con fines académicos citando la autoría.
 
-## Edición 2026
-Incluye la revisión editorial final de las Unidades 1 y 2, con ejemplos de Higiene y Seguridad, normativa argentina, gráficos corregidos y actividades de uso crítico de IA.
-
-
-## Ajustes finales
-- Interpretación formal de la media.
-- Diagrama de dispersión basado en observaciones.
-- Corrección del margen inferior del gráfico de barras.
+© 2026 Candelaria Morelli – Universidad Nacional del Comahue.
