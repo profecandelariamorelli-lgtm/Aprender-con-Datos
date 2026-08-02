@@ -1,9 +1,7 @@
 ## Estadística aplicada a Higiene y Seguridad
-
 **Edición 2026 · Versión 1.0**
-<img src="assets/img/logo-departamento.jpeg" alt="Logo" width="160">
 
-## Estadística aplicada a Higiene y Seguridad
+<img src="assets/img/logo-departamento.jpeg" alt="Logo" width="160">
 
 Recurso educativo digital interactivo diseñado para favorecer el aprendizaje de la Estadística aplicada a Higiene y Seguridad mediante explicaciones, ejemplos contextualizados, actividades y autoevaluaciones.
 
