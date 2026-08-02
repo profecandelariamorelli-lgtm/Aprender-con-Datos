@@ -1,5 +1,5 @@
 # Aprender con Datos — Versión 2026.1
-![Logo](assets/img/logo.png)
+![Logo](assets/img/logo-departamento.jpeg)
 
 ## Estadística aplicada a Higiene y Seguridad
 
