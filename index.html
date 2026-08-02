@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Aprender con Datos: teórico digital interactivo de Estadística." name="description"/>
+<title>Aprender con Datos · Unidades 1 y 2 · Edición 2026</title>
+<link href="assets/img/logo-departamento.jpeg" rel="icon"/>
+<link href="css/estilos.css" rel="stylesheet"/>
+<script>
+    window.MathJax = {
+      tex: {inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']]},
+      svg: {fontCache: 'global'}
+    };
+  </script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+<div class="marca">
+<img alt="Logo del Departamento de Estadística de la Universidad Nacional del Comahue" src="assets/img/logo-departamento.jpeg"/>
+<div>
+<p class="institucion">Departamento de Estadística · FaEA · UNCo</p>
+<h1>Aprender con Datos</h1>
+<p class="proposito">Explorar datos para comprender fenómenos, analizarlos con herramientas estadísticas e interpretar los resultados con sentido crítico.</p>
+</div>
+</div>
+<div class="acciones-cabecera">
+<button aria-controls="navegacion" aria-expanded="false" class="boton-secundario solo-movil" id="boton-menu">☰ Recorrido</button>
+<button class="boton-secundario" id="boton-imprimir">Imprimir / guardar PDF</button>
+</div>
+</header>
+<div class="distribucion">
+<nav aria-label="Recorrido del módulo" class="navegacion" id="navegacion">
+<p class="titulo-menu">Estadística descriptiva · Unidades 1 y 2</p>
+<button class="nav-item activo" data-seccion="inicio">Inicio</button>
+<button class="nav-item" data-seccion="e1">1. Datos y preguntas</button>
+<button class="nav-item" data-seccion="e2">2. Ciclo PPDAC</button>
+<button class="nav-item" data-seccion="e3">3. Diseñar un estudio</button>
+<button class="nav-item" data-seccion="e4">4. Elegir una muestra</button>
+<button class="nav-item" data-seccion="e5">5. Variables y datos</button>
+<button class="nav-item" data-seccion="e6">6. Tablas de frecuencia</button>
+<button class="nav-item" data-seccion="e7">7. Elegir un gráfico</button>
+<button class="nav-item" data-seccion="e8">8. Medidas de posición</button>
+<button class="nav-item" data-seccion="e9">9. Medidas de dispersión</button>
+<button class="nav-item" data-seccion="e10">10. Diagrama de caja</button>
+<button class="nav-item" data-seccion="e11">11. Tipificación</button>
+<button class="nav-item" data-seccion="e12">12. Dos variables y correlación</button>
+<button class="nav-item" data-seccion="e13">13. Aplicación al TP1</button>
+<button class="nav-item" data-seccion="glosario">Glosario</button>
+<button class="nav-item" data-seccion="autoevaluacion">Autoevaluación</button>
+<div aria-live="polite" class="progreso">
+<span id="texto-progreso">0 de 13 estaciones visitadas</span>
+<div class="barra"><span id="barra-progreso"></span></div>
+</div>
+</nav>
+<main id="contenido" tabindex="-1">
+<section aria-labelledby="titulo-inicio" class="seccion visible" id="inicio">
+<div class="hero">
+<div>
+<p class="etiqueta">Teórico digital interactivo</p>
+<h2 id="titulo-inicio">Estadística descriptiva: de las preguntas a la interpretación</h2>
+<p>Este módulo puede usarse antes de una clase, para estudiar un tema por primera vez o para volver a consultarlo. Las explicaciones, los ejemplos y las actividades forman un recorrido autónomo; la interacción está al servicio de la comprensión.</p>
+<div class="grupo-botones">
+<button class="boton-primario avanzar" data-destino="e1">Comenzar</button>
+<button class="boton-secundario" data-seccion-directa="glosario">Abrir glosario</button>
+</div>
+</div>
+<aside class="tarjeta ruta">
+<h3>Cómo recorrerlo</h3>
+<ol>
+<li>Leé la explicación y seguí el ejemplo.</li>
+<li>Explorá la visualización o actividad.</li>
+<li>Revisá las devoluciones y los errores frecuentes.</li>
+<li>Volvé a la estación cuando necesites repasar.</li>
+</ol>
+<p class="nota">El progreso se guarda únicamente en este navegador.</p>
+</aside>
+</div>
+<div class="rejilla-3">
+<article class="tarjeta"><h3>Explorá</h3><p>Observá información, formulá preguntas y reconocé patrones.</p></article>
+<article class="tarjeta"><h3>Analizá</h3><p>Elegí procedimientos y representaciones adecuados al problema.</p></article>
+<article class="tarjeta"><h3>Interpretá</h3><p>Explicá qué significan los resultados y cuáles son sus límites.</p></article>
+</div>
+</section>
+<section aria-labelledby="e1-titulo" class="seccion" id="e1">
+<p class="etiqueta">Estación 1 · Problema</p>
+<h2 id="e1-titulo">¿Qué podemos aprender de los datos?</h2>
+<p class="bajada">La Estadística ayuda a formular preguntas, organizar información y construir conclusiones fundamentadas. Un número aislado no alcanza: necesitamos saber qué se midió, sobre qué población, con qué definiciones y durante qué período.</p>
+<div class="dos-columnas">
+<figure class="tarjeta figura"><img alt="Fragmento de la infografía anual de accidentabilidad laboral 2024 de la Superintendencia de Riesgos del Trabajo" src="assets/img/srt-panorama.jpg"/><figcaption><strong>Fuente:</strong> Superintendencia de Riesgos del Trabajo (SRT), <em>Informe infográfico anual de accidentabilidad laboral 2024</em>, República Argentina. La sigla <strong>SRT</strong> corresponde a <strong>Superintendencia de Riesgos del Trabajo</strong>.</figcaption></figure>
+<article class="tarjeta estadistica-accion"><h3>¿Qué muestran estos datos?</h3><p>La infografía resume indicadores del Sistema de Riesgos del Trabajo durante 2024. Presenta, entre otros datos, la cantidad de entidades empleadoras, los casos notificados y los accidentes de trabajo o enfermedades laborales con días de baja o secuelas incapacitantes. También distingue entre unidades productivas y casas particulares.</p><p>Estos indicadores ofrecen una primera descripción del período y permiten formular nuevas preguntas para profundizar el análisis.</p><p><strong>¿Por qué analizar informes como este?</strong> En Higiene y Seguridad Laboral, muchas decisiones no se toman a partir de un único accidente o de una observación aislada, sino del análisis de bases de datos, registros e informes estadísticos. Estas fuentes permiten identificar problemas frecuentes, detectar tendencias, priorizar acciones preventivas y fundamentar decisiones con evidencia.</p><p class="nota-contexto"><strong>Para pensar:</strong> ¿qué otras preguntas podrían responderse con este informe? Por ejemplo, ¿qué actividades presentan mayor cantidad de accidentes?, ¿cómo evolucionaron los indicadores respecto de años anteriores? y ¿qué información adicional sería útil para comprender las causas y planificar acciones preventivas?</p><div class="grupo-botones vertical"><a class="boton-primario enlace-boton" href="assets/documentos/Informe-infografico-SRT-2024.pdf" rel="noopener" target="_blank">Abrir el informe infográfico (PDF)</a><a class="boton-secundario enlace-boton" href="assets/documentos/Informe-anual-SRT-2024.pdf" rel="noopener" target="_blank">Consultar el informe anual completo</a><a class="enlace-externo" href="https://www.argentina.gob.ar/srt/estadisticas" rel="noopener" target="_blank">Explorar más estadísticas de la SRT ↗</a></div></article>
+</div>
+<article class="actividad" data-id="e1-afirmacion"><h3>Analizá la siguiente afirmación</h3><blockquote>“En 2024 hubo menos casos notificados que en 2023; por lo tanto, las condiciones laborales mejoraron”.</blockquote><fieldset><legend>¿Cuál de las siguientes opciones representa el mejor análisis de esa afirmación?</legend><label><input name="e1q" type="radio" value="a"/> Está correctamente fundamentada porque el total disminuyó.</label><label><input name="e1q" type="radio" value="b"/> El número total de casos no aporta ninguna información útil.</label><label><input name="e1q" type="radio" value="c"/> La disminución es un dato relevante, pero no alcanza para concluir una mejora sin considerar población cubierta, tasas, criterios de registro y contexto.</label></fieldset><div class="grupo-botones"><button class="boton-primario comprobar" data-correcta="c">Comprobar</button><button class="boton-secundario pista">Ver pista</button></div><p aria-live="polite" class="mensaje"></p><p class="contenido-pista oculto">Una comparación entre períodos requiere analizar tanto los valores observados como el tamaño de la población expuesta y la forma en que fueron construidos los indicadores.</p></article>
+<aside class="idea-clave"><strong>Idea clave:</strong> los datos no “hablan solos”. Las preguntas, las definiciones y el contexto determinan qué podemos aprender de ellos.</aside>
+<button class="boton-primario avanzar" data-destino="e2">Continuar: PPDAC</button>
+</section>
+<section aria-labelledby="e2-titulo" class="seccion" id="e2">
+<p class="etiqueta">Estación 2 · Recorrido de investigación</p>
+<h2 id="e2-titulo">El ciclo PPDAC</h2>
+<p class="bajada">Una investigación estadística es un proceso cíclico e iterativo. Las conclusiones suelen generar nuevas preguntas, revisar el plan o recoger nuevos datos.</p>
+<div class="rejilla-2 bloque-intro-ppdac">
+<article class="definicion">
+<h3>¿Qué significa PPDAC?</h3>
+<p>La sigla toma las iniciales en inglés de cinco momentos de una investigación estadística:</p>
+<ul>
+<li><strong>P — Problem:</strong> Problema.</li>
+<li><strong>P — Plan:</strong> Plan.</li>
+<li><strong>D — Data:</strong> Datos.</li>
+<li><strong>A — Analysis:</strong> Análisis.</li>
+<li><strong>C — Conclusions:</strong> Conclusiones.</li>
+</ul>
+</article>
+<article class="tarjeta estadistica-accion">
+<h3>¿Por qué resulta útil?</h3>
+<p>Ayuda a reconocer que investigar no consiste solo en calcular: primero se formula una pregunta, luego se decide qué observar y registrar, se analizan los datos y se comunican conclusiones que pueden abrir un nuevo ciclo.</p>
+<p>En Higiene y Seguridad, esa lógica aparece al observar condiciones de trabajo, reunir información, clasificar incidentes, buscar patrones y evaluar acciones preventivas.</p>
+</article>
+</div>
+<div class="ppdac-wrap">
+<svg aria-label="Ciclo circular PPDAC: Problema, Plan, Datos, Análisis y Conclusiones" id="ppdac-svg" role="img" viewbox="0 0 620 430">
+<defs><marker id="flecha" markerheight="10" markerwidth="10" orient="auto" refx="8" refy="3"><path d="M0,0 L0,6 L9,3 z"></path></marker></defs>
+<path class="ppdac-flecha" d="M310 75 C440 75 505 145 520 220" marker-end="url(#flecha)"></path>
+<path class="ppdac-flecha" d="M520 220 C520 325 440 365 350 370" marker-end="url(#flecha)"></path>
+<path class="ppdac-flecha" d="M350 370 C245 390 145 340 115 265" marker-end="url(#flecha)"></path>
+<path class="ppdac-flecha" d="M115 265 C70 170 145 90 260 75" marker-end="url(#flecha)"></path>
+<path class="ppdac-flecha" d="M260 75 C280 70 295 70 310 75" marker-end="url(#flecha)"></path>
+<g class="nodo-ppdac" data-etapa="problema" role="button" tabindex="0"><circle cx="310" cy="65" r="54"></circle><text x="310" y="60">P</text><text class="sub" x="310" y="84">Problema</text></g>
+<g class="nodo-ppdac" data-etapa="plan" role="button" tabindex="0"><circle cx="500" cy="210" r="54"></circle><text x="500" y="205">P</text><text class="sub" x="500" y="229">Plan</text></g>
+<g class="nodo-ppdac" data-etapa="datos" role="button" tabindex="0"><circle cx="385" cy="365" r="54"></circle><text x="385" y="360">D</text><text class="sub" x="385" y="384">Datos</text></g>
+<g class="nodo-ppdac" data-etapa="analisis" role="button" tabindex="0"><circle cx="180" cy="340" r="54"></circle><text x="180" y="335">A</text><text class="sub" x="180" y="359">Análisis</text></g>
+<g class="nodo-ppdac" data-etapa="conclusiones" role="button" tabindex="0"><circle cx="105" cy="160" r="54"></circle><text x="105" y="155">C</text><text class="sub" x="105" y="179">Conclusiones</text></g>
+<text class="ppdac-centro" x="310" y="215">PPDAC</text>
+<text class="ppdac-centro-sub" x="310" y="244">investigar, revisar, volver a preguntar</text>
+</svg>
+<article aria-live="polite" class="tarjeta panel-ppdac" id="panel-ppdac"><h3>Seleccioná una etapa</h3><p>Hacé clic en cada nodo para ver qué preguntas orientan esa parte del ciclo.</p></article>
+</div>
+<article class="actividad" data-id="e2-etapas">
+<h3>Reconocé la etapa</h3>
+<p>“Se decide medir ruido, iluminación y temperatura en una muestra de puestos seleccionados por sector”. ¿En qué etapa se encuentra principalmente el estudio?</p>
+<fieldset><legend>Elegí una opción.</legend>
+<label><input name="e2q" type="radio" value="a"/> Problema</label>
+<label><input name="e2q" type="radio" value="b"/> Plan</label>
+<label><input name="e2q" type="radio" value="c"/> Análisis</label>
+</fieldset>
+<button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p aria-live="polite" class="mensaje"></p>
+</article>
+<aside class="fuente-academica">
+<strong>Fuente del modelo:</strong> el ciclo PPDAC forma parte del marco de pensamiento estadístico propuesto por Chris Wild y Maxine Pfannkuch en 1999. La representación es cíclica: las conclusiones pueden generar nuevas preguntas o exigir revisar etapas anteriores.
+  <div class="grupo-botones">
+<a class="boton-secundario enlace-boton" href="https://www.stat.auckland.ac.nz/~iase/publications/isr/99.Wild.Pfannkuch.pdf" rel="noopener" target="_blank">Consultar el artículo original (PDF)</a>
+<a class="enlace-externo" href="https://dataschools.education/about-data-literacy/ppdac-the-data-problem-solving-cycle/" rel="noopener" target="_blank">Explorar una explicación complementaria ↗</a>
+</div>
+</aside>
+<aside class="error-frecuente"><strong>Atención:</strong> PPDAC no es una receta rígida ni estrictamente lineal. En una investigación real puede ser necesario volver al problema, modificar el plan, revisar los datos o replantear el análisis.</aside>
+<button class="boton-primario avanzar" data-destino="e3">Continuar: diseñar un estudio</button>
+</section>
+<section aria-labelledby="e3-titulo" class="seccion" id="e3">
+<p class="etiqueta">Estación 3 · Problema y Plan</p>
+<h2 id="e3-titulo">¿Qué queremos estudiar y sobre quiénes?</h2>
+<div class="caso"><p>Un municipio quiere describir las condiciones de seguridad de los comercios habilitados durante el último año. Para ello releva una selección de establecimientos y registra distintas características.</p></div>
+<h3>Cuatro ideas que deben distinguirse</h3>
+<div class="rejilla-2">
+<article class="definicion"><h4>Población</h4><p>Conjunto completo de unidades sobre las que se desea obtener información.</p><p class="ejemplo-corto"><strong>En el caso:</strong> todos los comercios habilitados del municipio durante el período definido.</p></article>
+<article class="definicion"><h4>Muestra</h4><p>Subconjunto de la población que se observa efectivamente.</p><p class="ejemplo-corto"><strong>En el caso:</strong> los comercios seleccionados para el relevamiento.</p></article>
+<article class="definicion"><h4>Unidad estadística</h4><p>Elemento individual sobre el cual se registran los datos.</p><p class="ejemplo-corto"><strong>En el caso:</strong> cada comercio observado.</p></article>
+<article class="definicion"><h4>Variable</h4><p>Característica que puede tomar diferentes valores o categorías entre las unidades.</p><p class="ejemplo-corto"><strong>En el caso:</strong> rubro, cantidad de trabajadores, presencia de salida de emergencia o nivel de iluminación.</p></article>
+</div>
+<aside class="error-frecuente"><strong>No confundir:</strong> “nivel de iluminación” es una variable; “cada comercio” es la unidad estadística.</aside>
+<article class="actividad" data-id="e3-identificar">
+<h3>Identificá los elementos del estudio</h3>
+<p>Se seleccionan 60 aulas entre todas las aulas de una universidad y se mide la concentración de dióxido de carbono durante una clase.</p>
+<div class="campo-estudio"><label for="e3p">Población</label><select id="e3p"><option value="">Seleccionar</option><option value="a">Todas las aulas de la universidad</option><option value="b">Las 60 mediciones</option><option value="c">La concentración de CO₂</option></select><p aria-live="polite" class="retro-campo" id="retro-e3p"></p></div>
+<div class="campo-estudio"><label for="e3m">Muestra</label><select id="e3m"><option value="">Seleccionar</option><option value="a">Las 60 aulas seleccionadas</option><option value="b">Todos los estudiantes</option><option value="c">El instrumento de medición</option></select><p aria-live="polite" class="retro-campo" id="retro-e3m"></p></div>
+<div class="campo-estudio"><label for="e3u">Unidad estadística</label><select id="e3u"><option value="">Seleccionar</option><option value="a">Cada aula observada</option><option value="b">La universidad</option><option value="c">El CO₂</option></select><p aria-live="polite" class="retro-campo" id="retro-e3u"></p></div>
+<button class="boton-primario" id="comprobar-e3">Comprobar</button><p aria-live="polite" class="mensaje" id="mensaje-e3"></p>
+</article>
+<button class="boton-primario avanzar" data-destino="e4">Continuar: elegir una muestra</button>
+</section>
+<section aria-labelledby="e4-titulo" class="seccion" id="e4">
+<p class="etiqueta">Estación 4 · Plan</p>
+<h2 id="e4-titulo">¿Es necesario observar toda la población?</h2>
+<p class="bajada">Un censo observa todas las unidades. Un estudio muestral observa una parte. La decisión depende del objetivo, el tamaño de la población, el costo, el tiempo y la precisión requerida.</p>
+<div class="comparacion">
+<article class="tarjeta"><h3>Censo</h3><p>Puede ser apropiado cuando la población es pequeña o se necesita información individual de todas las unidades.</p></article>
+<article class="tarjeta"><h3>Muestra</h3><p>Permite trabajar con poblaciones grandes, siempre que el procedimiento de selección sea adecuado al objetivo.</p></article>
+</div>
+<h3>Muestreos probabilísticos</h3>
+<div class="acordeon">
+<details><summary>Aleatorio simple</summary><p>Cada unidad tiene una probabilidad conocida e igual de ser seleccionada. Requiere disponer de un marco o listado de la población.</p><p><strong>Ejemplo:</strong> sortear 50 legajos de una lista completa de trabajadores.</p></details>
+<details><summary>Sistemático</summary><p>Se elige un inicio al azar y luego se selecciona cada unidad número \(k\) de una lista.</p><p><strong>Ejemplo:</strong> inspeccionar cada décimo establecimiento después de elegir al azar el primero.</p></details>
+<details><summary>Estratificado</summary><p>La población se divide en grupos relevantes y se toma una muestra dentro de cada estrato.</p><p><strong>Ejemplo:</strong> seleccionar trabajadores de administración, producción y logística para que los tres sectores estén representados.</p></details>
+<details><summary>Por conglomerados</summary><p>Se seleccionan grupos naturales y se observan todas o algunas unidades dentro de ellos.</p><p><strong>Ejemplo:</strong> seleccionar plantas industriales y relevar puestos dentro de las plantas elegidas.</p></details>
+</div>
+<h3>Muestreos no probabilísticos</h3>
+<p>La selección depende de accesibilidad, voluntariedad, criterio experto u otras decisiones sin probabilidades conocidas. Pueden ser útiles para exploraciones, pero limitan la generalización.</p>
+<article class="actividad" data-id="e4-muestreo"><h3>Elegí un diseño</h3><p>Una empresa desea comparar tres sectores con tamaños muy diferentes y quiere asegurar que todos estén representados. ¿Qué diseño resulta más apropiado?</p><fieldset><legend>Seleccioná una opción.</legend><label><input name="e4q" type="radio" value="a"/> Conveniencia</label><label><input name="e4q" type="radio" value="b"/> Estratificado por sector</label><label><input name="e4q" type="radio" value="c"/> Tomar solo el sector más grande</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p aria-live="polite" class="mensaje"></p></article>
+<aside class="idea-clave"><strong>Idea clave:</strong> una muestra grande puede seguir siendo sesgada. El modo de selección importa tanto como el tamaño.</aside>
+<button class="boton-primario avanzar" data-destino="e5">Continuar: variables y datos</button>
+</section>
+<section aria-labelledby="e5-titulo" class="seccion" id="e5">
+<p class="etiqueta">Estación 5 · Datos</p><h2 id="e5-titulo">¿Toda la información tiene la misma naturaleza?</h2><p class="bajada">Clasificar una variable ayuda a decidir cómo resumirla, qué gráfico usar y qué operaciones tienen sentido.</p>
+<div class="caso"><h3>Del trabajo profesional a los datos</h3><p>Durante una investigación de un <strong>accidente</strong>, un <strong>incidente</strong> o una <strong>enfermedad laboral</strong>, el <strong>encargado de Higiene y Seguridad Laboral</strong> reúne información para comprender la situación. Las respuestas y observaciones registradas pueden transformarse en variables estadísticas.</p><div class="preguntas-variables preguntas-variables-ampliadas"><span><strong>¿Qué ocurrió?</strong> accidente, incidente, enfermedad laboral o condición insegura</span><span><strong>¿Quién estuvo involucrado?</strong> trabajador, contratista o visitante</span><span><strong>¿Dónde?</strong> sector, área o puesto de trabajo</span><span><strong>¿Cuándo?</strong> fecha, turno u hora</span><span><strong>¿A qué estaba expuesto?</strong> ruido, sustancias químicas, polvo, radiación, calor o vibraciones</span><span><strong>¿Cuánto?</strong> nivel de ruido, temperatura, concentración de contaminantes, tiempo de exposición o cantidad de días de baja laboral</span></div><p class="nota-contexto"><strong>Además, pueden registrarse características de la persona involucrada</strong>, como su puesto, antigüedad o capacitación. Esas características constituyen variables diferentes de la pregunta “¿quién estuvo involucrado?”.</p></div>
+<div class="tabla-responsive"><table><thead><tr><th>Variable</th><th>Posibles valores</th><th>Clasificación</th><th>Por qué</th></tr></thead><tbody><tr><td>Tipo de accidente</td><td>Caída, golpe, corte, sobreesfuerzo</td><td>Cualitativa nominal</td><td>Categorías sin orden natural.</td></tr><tr><td>Tipo de incidente</td><td>Caída sin lesión, colisión sin lesión, derrame controlado</td><td>Cualitativa nominal</td><td>Eventos sin lesión, clasificados en categorías.</td></tr><tr><td>Nivel de capacitación</td><td>Inicial, intermedio, avanzado</td><td>Cualitativa ordinal</td><td>Categorías con orden.</td></tr><tr><td>Cantidad de inspecciones</td><td>0, 1, 2, 3, …</td><td>Cuantitativa discreta</td><td>Es un recuento.</td></tr><tr><td>Nivel de ruido</td><td>82,4; 85,1; 87,6 dB(A)</td><td>Cuantitativa continua</td><td>Es una medición.</td></tr><tr><td>Días de baja laboral</td><td>0, 1, 2, 3, …</td><td>Cuantitativa discreta</td><td>Se registra como cantidad de días.</td></tr></tbody></table></div>
+<aside class="error-frecuente"><strong>Codificar no transforma:</strong> si “inicial, intermedio, avanzado” se codifica como 1, 2 y 3, la variable sigue siendo cualitativa ordinal.</aside>
+<article class="actividad" data-id="e5-clasificar"><h3>Clasificá</h3><p>La variable “duración de una tarea, medida en minutos y segundos” es:</p><fieldset><legend>Elegí una opción.</legend><label><input name="e5q" type="radio" value="a"/> Cualitativa nominal</label><label><input name="e5q" type="radio" value="b"/> Cuantitativa discreta</label><label><input name="e5q" type="radio" value="c"/> Cuantitativa continua</label></fieldset><button class="boton-primario comprobar" data-correcta="c">Comprobar</button><p aria-live="polite" class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e6">Continuar: tablas de frecuencia</button>
+</section>
+<section aria-labelledby="e6-titulo" class="seccion" id="e6">
+<p class="etiqueta">Estación 6 · Análisis</p><h2 id="e6-titulo">¿Cómo organizamos muchos datos?</h2><p class="bajada">Una tabla de frecuencias resume cuántas veces aparece cada categoría o valor. Su estructura y sus representaciones dependen del tipo de variable.</p>
+<h3>Frecuencias simples y acumuladas</h3>
+<div class="rejilla-3"><article class="definicion"><h4>Frecuencia absoluta \(f_i\)</h4><p>Cantidad de observaciones que presentan cada categoría, valor o intervalo.</p></article><article class="definicion"><h4>Frecuencia relativa \(h_i\)</h4><p>Proporción correspondiente: \(h_i=f_i/n\).</p></article><article class="definicion"><h4>Porcentaje</h4><p>Frecuencia relativa expresada cada cien: \(100h_i\%\).</p></article></div>
+<div class="rejilla-2"><article class="definicion"><h4>Frecuencia absoluta acumulada \(F_i\)</h4><p>Se obtiene sumando la frecuencia de la fila actual y todas las anteriores. Permite responder cuántas observaciones son menores o iguales que cierto valor.</p></article><article class="definicion"><h4>Frecuencia relativa acumulada \(H_i\) y \(H_i\%\)</h4><p>Expresa la proporción o el porcentaje acumulado hasta cada valor o límite de intervalo.</p></article></div>
+<h3>Variable cuantitativa discreta</h3><p>En 20 inspecciones se registró la cantidad de observaciones preventivas realizadas. <strong>Unidad estadística:</strong> cada inspección. <strong>Variable:</strong> cantidad de observaciones preventivas por inspección. <strong>Tipo:</strong> cuantitativa discreta.</p>
+<div class="tabla-responsive"><table><thead><tr><th>\(x_i\)</th><th>\(f_i\)</th><th>\(h_i\)</th><th>%</th><th>\(F_i\)</th><th>\(H_i\)</th><th>\(H_i\%\)</th></tr></thead><tbody><tr><td>0</td><td>4</td><td>0,20</td><td>20%</td><td>4</td><td>0,20</td><td>20%</td></tr><tr><td>1</td><td>7</td><td>0,35</td><td>35%</td><td>11</td><td>0,55</td><td>55%</td></tr><tr><td>2</td><td>6</td><td>0,30</td><td>30%</td><td>17</td><td>0,85</td><td>85%</td></tr><tr><td>3</td><td>3</td><td>0,15</td><td>15%</td><td>20</td><td>1,00</td><td>100%</td></tr></tbody></table></div>
+<p><strong>Gráficos adecuados:</strong> gráfico de barras para las <strong>frecuencias simples</strong>; gráfico escalonado para las <strong>frecuencias acumuladas</strong>.</p>
+<h3>Variable cuantitativa continua: por qué agrupamos</h3>
+<div class="caso escenario-ruido"><p>En una empresa se evaluó la <strong>exposición ocupacional al ruido</strong> en distintos puestos de trabajo. Para este ejemplo se considera una jornada habitual de <strong>8 horas</strong> y una semana de <strong>40 horas</strong>. La exposición es acumulativa: no alcanza con conocer el nivel en dB(A), sino que también debe considerarse cuánto tiempo dura cada exposición.</p><p>Las mediciones de nivel sonoro continuo equivalente se realizan con un <strong>medidor de nivel sonoro integrador (decibelímetro)</strong> o con un <strong>dosímetro</strong>, según las características del puesto y siguiendo el Protocolo de la Resolución SRT 85/2012.</p></div>
+<div class="rejilla-3 identificacion-estudio"><article class="definicion"><h4>Unidad estadística</h4><p>Cada <strong>jornada de exposición evaluada</strong> en un puesto de trabajo.</p></article><article class="definicion"><h4>Variable</h4><p>Nivel sonoro continuo equivalente de la jornada, expresado en <strong>dB(A)</strong>.</p></article><article class="definicion"><h4>Tipo</h4><p>Cuantitativa continua.</p></article></div>
+<p>Con mediciones como 72,8; 78,3; 81,7; 84,9; 82,1; 79,6; … casi todos los valores pueden ser diferentes. Para resumirlos, se agrupan en intervalos contiguos que cubran todo el rango sin superponerse. La elección de los intervalos influye en la forma que observaremos después en el histograma.</p>
+<div class="tabla-responsive"><table><thead><tr><th>Ruido [dB(A)]</th><th>\(f_i\)</th><th>\(h_i\)</th><th>%</th><th>\(F_i\)</th><th>\(H_i\)</th><th>\(H_i\%\)</th></tr></thead><tbody><tr><td>[70,75)</td><td>2</td><td>0,05</td><td>5%</td><td>2</td><td>0,05</td><td>5%</td></tr><tr><td>[75,80)</td><td>5</td><td>0,125</td><td>12,5%</td><td>7</td><td>0,175</td><td>17,5%</td></tr><tr><td>[80,85)</td><td>11</td><td>0,275</td><td>27,5%</td><td>18</td><td>0,45</td><td>45%</td></tr><tr><td>[85,90)</td><td>12</td><td>0,30</td><td>30%</td><td>30</td><td>0,75</td><td>75%</td></tr><tr><td>[90,95)</td><td>7</td><td>0,175</td><td>17,5%</td><td>37</td><td>0,925</td><td>92,5%</td></tr><tr><td>[95,100)</td><td>3</td><td>0,075</td><td>7,5%</td><td>40</td><td>1,00</td><td>100%</td></tr></tbody></table></div>
+<p><strong>Gráficos adecuados:</strong> histograma y polígono de frecuencias para las <strong>frecuencias simples</strong>; ojiva para las <strong>frecuencias acumuladas</strong>.</p>
+<aside class="aplicacion-profesional"><strong>Aplicación profesional:</strong> la tabla y los gráficos describen las mediciones, pero no permiten decidir por sí solos si la exposición cumple la normativa. También deben considerarse los tiempos efectivos de exposición, la dosis acumulada, las características del puesto y las medidas de control existentes.</aside>
+<article class="actividad actividad-ia"><h3>Exploración crítica con IA y normativa</h3><p>Consultá un asistente de IA con una pregunta como la siguiente:</p><blockquote>Según el Decreto 351/79 y la Resolución SRT 85/2012 de Argentina, ¿cómo se evalúa la exposición al ruido ocupacional durante una jornada de 8 horas? ¿Qué ocurre cuando aumenta el nivel de ruido y qué medidas preventivas deberían evaluarse?</blockquote><p>Después, contrastá la respuesta con las fuentes oficiales:</p><ul><li><a class="enlace-externo" href="https://www.argentina.gob.ar/normativa/recurso/32030/dto351-1979-anexo5/htm" target="_blank" rel="noopener">Anexo V del Decreto 351/79</a></li><li><a class="enlace-externo" href="https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-85-2012-193617/texto" target="_blank" rel="noopener">Resolución SRT 85/2012</a></li></ul><p><strong>Analizá:</strong> ¿la IA relacionó correctamente nivel y tiempo de exposición? ¿Diferenció controles de ingeniería, medidas administrativas y protección auditiva? ¿Qué afirmaciones necesitaste verificar?</p><aside class="recordatorio"><strong>Uso crítico:</strong> una IA puede ayudar a localizar y organizar información, pero una decisión profesional debe fundamentarse en la normativa vigente y en datos completos del puesto.</aside></article>
+<aside class="observacion"><strong>Conexión:</strong> las frecuencias acumuladas permiten localizar mediana, cuartiles y percentiles. En la siguiente estación podrás ver cómo las tablas originan esos gráficos.</aside>
+<article class="actividad" data-id="e6-relativa"><h3>Calculá e interpretá</h3><p>Si 12 de 40 mediciones pertenecen al intervalo [85,90), ¿cuál es su frecuencia relativa?</p><label for="e6resp">Respuesta</label><input id="e6resp" inputmode="decimal" placeholder="0,30 o 30%"/><button class="boton-primario" id="comprobar-e6">Comprobar</button><p aria-live="polite" class="mensaje" id="mensaje-e6"></p></article>
+<button class="boton-primario avanzar" data-destino="e7">Continuar: Estación 7 – Elegir un gráfico</button>
+</section>
+
+
+<section aria-labelledby="e7-titulo" class="seccion" id="e7">
+<p class="etiqueta">Estación 7 · Análisis y comunicación</p><h2 id="e7-titulo">¿Qué gráfico comunica mejor la información?</h2><p class="bajada">Elegir una representación depende del tipo de variable, de la estructura de los datos y de la pregunta que queremos responder.</p>
+<div class="tabla-responsive"><table><thead><tr><th>Gráfico</th><th>Variables adecuadas</th><th>No corresponde cuando</th><th>Puede ser poco conveniente cuando</th></tr></thead><tbody><tr><td>Barras</td><td>Cualitativa o cuantitativa discreta</td><td>La variable es cuantitativa continua sin agrupar</td><td>Hay demasiadas categorías</td></tr><tr><td>Barras subdivididas</td><td>Dos cualitativas</td><td>No existe una variable de agrupación y otra de subdivisión</td><td>Hay muchas categorías o interesa comparar segmentos con precisión</td></tr><tr><td>Circular</td><td>Una cualitativa</td><td>Las categorías se superponen o no forman un total</td><td>Hay muchas categorías o diferencias pequeñas</td></tr><tr><td>Histograma</td><td>Cuantitativa continua agrupada</td><td>La variable es cualitativa</td><td>Los intervalos elegidos ocultan o distorsionan la forma</td></tr><tr><td>Dispersión</td><td>Dos cuantitativas medidas sobre las mismas unidades estadísticas</td><td>Una variable es cualitativa o las observaciones no están emparejadas</td><td>Hay mucha superposición de puntos</td></tr></tbody></table></div>
+<div class="selector-grafico tarjeta"><div><label for="situacion-grafico"><strong>Elegí una situación</strong></label><select id="situacion-grafico"><option value="barras">Comparar tipos de accidentes</option><option value="barras_apiladas">Comparar composición por sector</option><option value="circular">Mostrar composición porcentual de accidentes</option><option value="pictograma">Comunicar un recuento</option><option value="histograma">Explorar niveles de ruido</option><option value="poligono">Construir un polígono de frecuencias</option><option value="ojiva">Leer frecuencias acumuladas continuas</option><option value="escalonado">Leer frecuencias acumuladas discretas</option><option value="lineas">Comparar evoluciones mensuales</option><option value="dispersion">Explorar la relación entre dos mediciones observadas</option></select><div class="explicacion-grafico" id="explicacion-grafico"></div></div><div id="grafico-elegido" role="img"></div></div>
+<aside class="idea-clave"><strong>Todo gráfico debería incluir, cuando corresponda:</strong> título descriptivo, nombres de los ejes, unidades, escala, leyenda, tamaño muestral y fuente.</aside>
+<article class="actividad" data-id="e7-eleccion"><h3>Elegí con criterio</h3><p>Se desea representar la evolución mensual de la cantidad de accidentes de trabajo durante un año.</p><fieldset><legend>¿Qué gráfico resulta más adecuado?</legend><label><input name="e7q" type="radio" value="a"/> Gráfico de líneas</label><label><input name="e7q" type="radio" value="b"/> Histograma</label><label><input name="e7q" type="radio" value="c"/> Gráfico circular</label></fieldset><button class="boton-primario comprobar" data-correcta="a">Comprobar</button><p aria-live="polite" class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e8">Continuar: medidas de posición</button>
+</section>
+<section aria-labelledby="e8-titulo" class="seccion" id="e8">
+<p class="etiqueta">Estación 8 · Centro y posición</p><h2 id="e8-titulo">¿Cómo resumimos la posición de los datos?</h2>
+<div class="caso"><h3>Una misma pregunta, distintas respuestas</h3><p>En un simulacro se registraron los tiempos de evacuación de diez sectores: <strong>3, 4, 4, 5, 5, 5, 6, 6, 7 y 15 minutos</strong>. ¿Qué valor utilizarías para describir un tiempo “típico”? La respuesta depende de qué aspecto del conjunto queramos resumir.</p></div>
+<h3>Medidas de posición central</h3><div class="rejilla-3"><article class="definicion"><h4>Media</h4><p>Se obtiene sumando todos los valores y dividiendo por la cantidad de observaciones.</p><p><strong>Notación habitual:</strong> \(\mu\) representa la media poblacional y \(\bar{x}\) la media muestral.</p><p><strong>Interpretación:</strong> sintetiza el conjunto en un único valor representativo que tiene en cuenta todas las observaciones.</p></article><article class="definicion"><h4>Mediana</h4><p>Es el valor central de los datos ordenados: deja aproximadamente el 50% por debajo y el 50% por encima.</p><p><strong>Responde:</strong> ¿qué valor ocupa el centro del orden?</p></article><article class="definicion"><h4>Moda</h4><p>Es el valor o categoría de mayor frecuencia. Puede no existir o puede haber más de una.</p><p><strong>Responde:</strong> ¿qué valor aparece con mayor frecuencia?</p></article></div>
+<h3>Cuartiles: dividir los datos ordenados</h3><p>Los cuartiles dividen los datos ordenados en cuatro partes aproximadamente iguales. Son medidas de posición, aunque no todas describen el centro.</p>
+<div aria-label="Esquema de cuartiles desde el mínimo hasta el máximo" class="tarjeta esquema-cuartiles" role="img"><div class="linea-cuartiles"><span>Mínimo</span><span>\(Q_1\)<small>25%</small></span><span>\(Q_2\)<small>50%</small></span><span>\(Q_3\)<small>75%</small></span><span>Máximo</span></div></div>
+<div class="rejilla-3"><article class="definicion"><h4>Primer cuartil \(Q_1\)</h4><p>Deja aproximadamente el 25% de las observaciones por debajo.</p></article><article class="definicion"><h4>Segundo cuartil \(Q_2\)</h4><p>Coincide con la <strong>mediana</strong> y con el percentil 50.</p></article><article class="definicion"><h4>Tercer cuartil \(Q_3\)</h4><p>Deja aproximadamente el 75% de las observaciones por debajo.</p></article></div>
+<aside class="observacion"><strong>Importante:</strong> existen distintos criterios de cálculo para ubicar cuartiles cuando la posición no coincide exactamente con un dato. En este recorrido interesa comprender su significado y su interpretación.</aside>
+<h3>La forma de la distribución también importa</h3><p>La forma del histograma brinda información sobre cómo se distribuyen los datos. Para facilitar su interpretación, se representa una curva suavizada que resalta la forma general. Observá hacia qué lado se extiende la cola.</p><div class="tarjeta" id="visual-simetria"></div>
+<div class="rejilla-3"><article class="tarjeta"><h4>Asimétrica a izquierda</h4><p>La cola se prolonga hacia los valores pequeños. Suele ocurrir que media &lt; mediana.</p></article><article class="tarjeta"><h4>Aproximadamente simétrica</h4><p>Las colas tienen extensión semejante. Media y mediana suelen ser próximas.</p></article><article class="tarjeta"><h4>Asimétrica a derecha</h4><p>La cola se prolonga hacia los valores grandes. Suele ocurrir que media &gt; mediana.</p></article></div>
+<article class="actividad" data-id="e8-medida"><h3>Elegí una medida</h3><p>La mayoría de los sectores demora entre 3 y 5 minutos en evacuar, pero unos pocos presentan demoras mucho mayores debido a dificultades operativas.</p><fieldset><legend>¿Qué medida de posición representa mejor el tiempo típico de evacuación?</legend><label><input name="e8q" type="radio" value="a"/> Media</label><label><input name="e8q" type="radio" value="b"/> Mediana</label><label><input name="e8q" type="radio" value="c"/> Moda</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p aria-live="polite" class="mensaje"></p><p class="devolucion-conceptual">La moda responde cuál es el tiempo más frecuente; la mediana, en cambio, resume mejor el centro cuando unos pocos valores muy altos desplazan la media.</p></article>
+<h3>Explorá el efecto de un valor extremo</h3><div class="tarjeta centro-interactivo"><label for="valor-extremo">Mové el último dato</label><input id="valor-extremo" max="100" min="25" type="range" value="29"/><p id="datos-centro"></p><div class="rejilla-3"><div><strong>Media</strong><output id="media-centro"></output></div><div><strong>Mediana</strong><output id="mediana-centro"></output></div><div><strong>Moda</strong><output id="moda-centro"></output></div></div><p id="interpretacion-centro"></p></div>
+<aside class="idea-clave"><strong>Idea clave:</strong> ninguna medida es “la mejor” en todos los casos. La elección depende de la forma de la distribución y de la pregunta que se desea responder.</aside>
+<button class="boton-primario avanzar" data-destino="e9">Continuar: dispersión</button>
+</section>
+<section aria-labelledby="e9-titulo" class="seccion" id="e9">
+<p class="etiqueta">Estación 9 · Dispersión</p><h2 id="e9-titulo">¿Por qué el centro no alcanza?</h2>
+<div class="caso"><p>Se midió el <strong>tiempo de evacuación</strong> en siete sectores de la Planta A y siete sectores de la Planta B. Cada punto representa un sector. Ambos grupos tienen tiempos medios cercanos a 40 segundos, pero la distribución de las mediciones es muy diferente.</p><p><strong>Antes de seguir:</strong> ¿en cuál planta los tiempos parecen más uniformes? ¿En cuál resultaría menos previsible el tiempo de evacuación?</p></div>
+<div class="tarjeta" id="comparador-dispersion" role="img"></div>
+<div class="rejilla-2"><article class="definicion"><h4>Rango</h4><p>Diferencia entre el máximo y el mínimo. Depende exclusivamente de los dos valores extremos.</p></article><article class="definicion"><h4>Rango intercuartílico (RIC)</h4><p>\(Q_3-Q_1\). Mide la amplitud del 50% central de los datos y es poco sensible a valores extremos.</p></article></div>
+<aside class="observacion"><strong>Valor extremo:</strong> dato muy pequeño o muy grande respecto del resto. <strong>Valor atípico:</strong> valor que, además, cumple un criterio estadístico para considerarse inusualmente alejado, como el criterio de \(1{,}5\,RIC\). Todo valor atípico es extremo, pero no todo extremo es necesariamente atípico.</aside>
+<h3>Varianza y desvío estándar</h3>
+<p>Estas medidas consideran la distancia de <strong>todos</strong> los datos respecto de la media. La <strong>varianza</strong> utiliza los desvíos elevados al cuadrado; el <strong>desvío estándar</strong> es su raíz cuadrada y, por eso, vuelve a expresarse en las unidades originales de la variable.</p>
+<div class="rejilla-2 comparacion-parametros">
+  <article class="tarjeta">
+    <h4>Población · parámetros</h4>
+    <p><strong>Varianza poblacional:</strong></p>
+    <div class="formula">\[\sigma^2=\frac{\sum_{i=1}^{N}(x_i-\mu)^2}{N}\]</div>
+    <p><strong>Desvío estándar poblacional:</strong></p>
+    <div class="formula">\[\sigma=\sqrt{\sigma^2}\]</div>
+  </article>
+  <article class="tarjeta">
+    <h4>Muestra · estadísticos</h4>
+    <p><strong>Varianza muestral:</strong></p>
+    <div class="formula">\[s^2=\frac{\sum_{i=1}^{n}(x_i-\bar{x})^2}{n-1}\]</div>
+    <p><strong>Desvío estándar muestral:</strong></p>
+    <div class="formula">\[s=\sqrt{s^2}\]</div>
+  </article>
+</div>
+<aside class="observacion"><strong>Notación:</strong> \(\sigma^2\) y \(\sigma\) representan la varianza y el desvío estándar de la <strong>población</strong>; son parámetros. En cambio, \(s^2\) y \(s\) representan la varianza y el desvío estándar calculados en una <strong>muestra</strong>; son estadísticos y pueden utilizarse para estimar los parámetros poblacionales.</aside>
+<details class="profundizar"><summary>Ver fórmula de cálculo de la varianza muestral</summary><p>Una forma equivalente, útil para el cálculo manual, es:</p><div class="formula">\[s^2=\frac{\sum x_i^2-\frac{(\sum x_i)^2}{n}}{n-1}\]</div></details>
+
+<h3>Coeficiente de variación</h3>
+<div class="formula">\[CV=\frac{s}{\bar{x}}\times100\%\]</div>
+<p>El coeficiente de variación expresa la dispersión en relación con la media. Al no tener unidades, permite comparar la <strong>variabilidad relativa</strong> de conjuntos medidos en escalas diferentes o con medias muy distintas, siempre que la media sea positiva y tenga sentido como referencia.</p>
+<aside class="observacion"><strong>Importante:</strong> el \(CV\) se expresa como porcentaje. No conviene utilizarlo cuando la media es cero o muy cercana a cero, porque el cociente puede resultar inestable o poco interpretable.</aside>
+<article class="actividad" data-id="e9-cv">
+  <h3>Compará la variabilidad relativa</h3>
+  <p><strong>Grupo A:</strong> \(\bar{x}=80\), \(s=4\). <strong>Grupo B:</strong> \(\bar{x}=40\), \(s=3\).</p>
+  <fieldset><legend>¿Cuál de los dos grupos tiene menor variabilidad relativa?</legend>
+    <label><input name="e9cv" type="radio" value="a"/> El grupo A, porque su \(CV\) es 5%.</label>
+    <label><input name="e9cv" type="radio" value="b"/> El grupo B, porque su \(CV\) es 7,5%.</label>
+    <label><input name="e9cv" type="radio" value="c"/> Ambos tienen la misma variabilidad relativa.</label>
+    <label><input name="e9cv" type="radio" value="d"/> No puede determinarse con la información disponible.</label>
+  </fieldset>
+  <button class="boton-primario comprobar" data-correcta="a">Comprobar</button><p aria-live="polite" class="mensaje"></p>
+  <p class="devolucion-conceptual">\(CV_A=4/80\times100=5\%\) y \(CV_B=3/40\times100=7{,}5\%\). Por lo tanto, el grupo A presenta menor variabilidad relativa, aunque el grupo B tenga un desvío estándar absoluto más pequeño.</p>
+</article>
+<aside class="idea-clave"><strong>Idea clave:</strong> dos grupos pueden tener la misma media y una variabilidad muy diferente. Por eso el centro y la dispersión deben interpretarse conjuntamente.</aside>
+<button class="boton-primario avanzar" data-destino="e10">Continuar: boxplot</button>
+</section>
+<section aria-labelledby="e10-titulo" class="seccion" id="e10">
+<p class="etiqueta">Estación 10 · Análisis</p><h2 id="e10-titulo">¿Cómo se construye un diagrama de caja?</h2><p class="bajada">El boxplot resume posición, dispersión, asimetría y posibles valores atípicos a partir de los cuartiles.</p>
+<div class="constructor-boxplot tarjeta"><div id="boxplot-svg"></div><div class="pasos-boxplot"><button class="boton-secundario paso-box activo" data-paso="1">1. Ordenar datos</button><button class="boton-secundario paso-box" data-paso="2">2. Marcar cuartiles</button><button class="boton-secundario paso-box" data-paso="3">3. Dibujar caja</button><button class="boton-secundario paso-box" data-paso="4">4. Bigotes y atípico</button></div><p id="texto-boxplot"></p></div>
+<div class="rejilla-2"><article class="definicion"><h3>La caja</h3><p>Se extiende desde \(Q_1\) hasta \(Q_3\). Su longitud es el rango intercuartílico y contiene el 50% central de los datos.</p></article><article class="definicion"><h3>Los bigotes</h3><p>Llegan hasta los valores observados más extremos que todavía se encuentran dentro de los límites internos.</p></article></div>
+<aside class="recordatorio"><strong>¿No recordás el RIC?</strong> Es la diferencia entre el tercer y el primer cuartil: \(RIC=Q_3-Q_1\). Podés volver a la estación anterior para revisar su significado.</aside>
+<div class="formula">\[L_i=Q_1-1{,}5\,RIC \qquad L_s=Q_3+1{,}5\,RIC\]</div><p><strong>Importante:</strong> los bigotes no terminan en los límites internos, sino en el menor y el mayor dato observado que permanecen dentro de ellos.</p><p>Los valores fuera de esos límites se representan por separado como <strong>posibles valores atípicos</strong>. No deben eliminarse automáticamente: primero hay que investigar su origen y su significado.</p>
+<aside class="convencion"><strong>Convención utilizada:</strong> en este material los bigotes llegan hasta los valores observados no atípicos más extremos, según el criterio de \(1{,}5\,RIC\). Existen otras variantes en la bibliografía, como bigotes hasta el mínimo y el máximo u otros criterios para señalar valores inusuales.</aside>
+<article class="actividad" data-id="e10-interpretar"><h3>Interpretá</h3><p>Dos sectores tienen diagramas de caja construidos sobre una misma escala. Uno presenta una caja más ancha.</p><fieldset><legend>¿Qué puede concluirse?</legend><label><input name="e10q" type="radio" value="a"/> El 50% central de sus mediciones presenta mayor dispersión.</label><label><input name="e10q" type="radio" value="b"/> Su media es necesariamente mayor.</label><label><input name="e10q" type="radio" value="c"/> Se registraron más observaciones.</label></fieldset><button class="boton-primario comprobar" data-correcta="a">Comprobar</button><p aria-live="polite" class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e11">Continuar: tipificación</button>
+</section>
+<section aria-labelledby="e11-titulo" class="seccion" id="e11">
+<p class="etiqueta">Estación 11 · Posición relativa</p><h2 id="e11-titulo">¿Qué valor se aleja más de su grupo?</h2>
+<div class="caso"><h3>Una comparación que no puede resolverse mirando solo los valores</h3><p>El encargado de Higiene y Seguridad Laboral debe decidir cuál de dos mediciones de ruido resulta más inusual dentro de su propio sector. Como los sectores tienen niveles habituales y variabilidades diferentes, comparar únicamente 88 dB(A) con 95 dB(A) puede conducir a una conclusión equivocada.</p><p><strong>Mantenimiento:</strong> medición 88 dB(A), media 84 dB(A), desvío 2 dB(A).<br/><strong>Sala de compresores:</strong> medición 95 dB(A), media 92 dB(A), desvío 1 dB(A).</p><p>¿En cuál de los dos sectores la medición se aleja más de lo habitual?</p></div>
+<p>La tipificación expresa cada observación en cantidad de desvíos estándar respecto de la media de su grupo.</p><div class="formula">\[z=\frac{x-\mu}{\sigma}\]</div><p>En esta expresión, \(\mu\) es la media poblacional y \(\sigma\) el desvío estándar poblacional. Cuando se describe la posición respecto de una muestra, se utilizan \(\bar{x}\) y \(s\):</p><div class="formula">\[z=\frac{x-\bar{x}}{s}\]</div><p><strong>Interpretación:</strong> \(z=0\) indica que el dato coincide con la media; un valor positivo está por encima y uno negativo, por debajo.</p><div class="rejilla-2"><article class="tarjeta"><h3>Mantenimiento</h3><div class="formula">\[z=\frac{88-84}{2}=2\]</div></article><article class="tarjeta"><h3>Sala de compresores</h3><div class="formula">\[z=\frac{95-92}{1}=3\]</div></article></div><p><strong>Conclusión:</strong> aunque 95 dB(A) es el mayor valor absoluto, lo importante es que se encuentra tres desvíos por encima de la media de la sala de compresores. Por eso resulta más inusual respecto de su sector.</p>
+<div class="calculadora-z tarjeta"><div><label for="zx">Valor</label><input id="zx" type="number" value="95"/><label for="zmedia">Media</label><input id="zmedia" type="number" value="92"/><label for="zdesvio">Desvío</label><input id="zdesvio" min="0.01" step="0.1" type="number" value="1"/></div><div><output id="zresultado">3,00</output><p id="zinterpretacion"></p></div></div>
+<article class="actividad" data-id="e11-z"><h3>Interpretá</h3><p>¿Qué significa obtener \(z=-1{,}7\) para una medición?</p><fieldset><legend>Elegí la interpretación correcta.</legend><label><input name="e11q" type="radio" value="a"/> La medición está 1,7 unidades por debajo de cero.</label><label><input name="e11q" type="radio" value="b"/> La medición está 1,7 desvíos estándar por debajo de la media.</label><label><input name="e11q" type="radio" value="c"/> La media del grupo es negativa.</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e12">Continuar: correlación</button>
+</section>
+<section aria-labelledby="e12-titulo" class="seccion" id="e12">
+<p class="etiqueta">Estación 12 · Dos variables</p><h2 id="e12-titulo">¿Existe una relación lineal?</h2><p class="bajada">Cada punto representa una <strong>unidad estadística</strong> mediante el par \((x_i,y_i)\): las dos variables fueron medidas sobre esa misma unidad. Primero observamos si una relación lineal describe razonablemente la nube; luego, si corresponde, resumimos su dirección e intensidad mediante el coeficiente de correlación.</p>
+<div class="selector-correlacion tarjeta"><div><label for="patron-correlacion"><strong>Explorá patrones</strong></label><select id="patron-correlacion"><option value="positiva">Directa fuerte</option><option value="positiva_mod">Directa moderada</option><option value="positiva_debil">Directa débil</option><option value="negativa">Inversa fuerte</option><option value="negativa_mod">Inversa moderada</option><option value="negativa_debil">Inversa débil</option><option value="nula">Sin relación lineal apreciable</option><option value="curva">Relación no lineal</option><option value="atipico">Punto influyente</option></select><div id="texto-correlacion"></div></div><div id="grafico-correlacion"></div></div>
+<aside class="idea-clave"><strong>Antes de calcular:</strong> verificá que ambas variables sean cuantitativas y que una relación lineal resulte razonable al observar la nube de puntos.</aside><h3>Coeficiente de correlación lineal de Pearson</h3><p>Es un número sin unidades que mide la <strong>dirección</strong> y la <strong>intensidad</strong> de una relación lineal entre dos variables cuantitativas.</p><div class="formula">\[-1\le r\le1\]</div><div class="formula">\[r=\frac{\operatorname{Cov}(X,Y)}{s_X\,s_Y}\]</div><p>La covarianza indica si ambas variables tienden a apartarse de sus medias en el mismo sentido o en sentidos opuestos. Dividir por sus desvíos estándar elimina las unidades y lleva el resultado a una escala común.</p>
+<details class="profundizar"><summary>Ver las fórmulas desarrollada y de cálculo</summary><div class="dos-formulas"><div><h4>Con desviaciones respecto de las medias</h4><div class="formula">\[r=\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2}\,\sqrt{\sum_{i=1}^{n}(y_i-\bar{y})^2}}\]</div></div><div><h4>Fórmula de cálculo</h4><div class="formula">\[r=\frac{n\sum x_i y_i-(\sum x_i)(\sum y_i)}{\sqrt{\left[n\sum x_i^2-(\sum x_i)^2\right]\left[n\sum y_i^2-(\sum y_i)^2\right]}}\]</div></div></div><p><strong>No es necesario memorizar estas expresiones.</strong> Se incluyen para reconocer las formas que pueden aparecer en distintos libros o resoluciones.</p></details>
+<ul><li>El signo indica si la relación lineal es directa o inversa.</li><li>El valor absoluto de \(r\) resume su intensidad lineal.</li><li>Un valor cercano a cero no descarta una relación no lineal.</li><li>Correlación no implica causalidad.</li></ul>
+<article class="actividad" data-id="e12-r"><h3>Interpretá</h3><p>Entre la temperatura exterior y el consumo de calefacción se obtuvo \(r=-0{,}82\).</p><fieldset><legend>¿Cuál es la interpretación más adecuada?</legend><label><input name="e12q" type="radio" value="a"/> Existe una relación lineal inversa fuerte: cuando aumenta la temperatura, el consumo tiende a disminuir.</label><label><input name="e12q" type="radio" value="b"/> La temperatura causa el 82% de los cambios del consumo.</label><label><input name="e12q" type="radio" value="c"/> No existe relación entre las variables.</label></fieldset><button class="boton-primario comprobar" data-correcta="a">Comprobar</button><p class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e13">Continuar</button>
+</section>
+<section aria-labelledby="e13-titulo" class="seccion" id="e13">
+<p class="etiqueta">Estación 13 · Aplicación de la cátedra</p><h2 id="e13-titulo">Ahora sí: aplicalo al TP1 con Excel</h2>
+<p>Esta es la única estación vinculada con el trabajo práctico vigente. Todo el recorrido anterior es independiente de la base y puede consultarse como teoría general.</p>
+<div class="dos-columnas"><article class="tarjeta"><h3>En PEDCO</h3><p>Consultá la hoja de ruta, la consigna oficial, la base de datos y las actividades obligatorias cuando la cátedra las habilite.</p><a aria-disabled="true" class="boton-secundario enlace-boton deshabilitado" href="#" id="enlace-pedco">Enlace PEDCO pendiente de configurar</a></article><article class="tarjeta"><h3>Videos de apoyo para Excel</h3><p>La lista de reproducción muestra procedimientos utilizados en distintos incisos del TP. Usala después de identificar qué se pide y qué herramienta corresponde.</p><a class="boton-primario enlace-boton" href="https://youtube.com/playlist?list=PLxwlaqRfgmdqpMF3LJ-owtnwE5-ZCtziq&amp;si=e9YF4FFL5J5Gt25d" rel="noopener" target="_blank">Abrir lista de reproducción</a></article></div>
+<aside class="idea-clave"><strong>La secuencia:</strong> comprender en Aprender con Datos → aplicar con Excel en clase y en el TP → realizar en PEDCO las actividades registrables cuando correspondan.</aside><aside class="observacion"><strong>Recordá:</strong> obtener un resultado numérico es solo una parte del trabajo estadístico. Lo central es interpretarlo correctamente y utilizarlo para fundamentar conclusiones o decisiones.</aside>
+<button class="boton-primario" data-seccion-directa="autoevaluacion">Ir a la autoevaluación</button>
+</section>
+<section aria-labelledby="glosario-titulo" class="seccion" id="glosario">
+<p class="etiqueta">Consulta rápida</p><h2 id="glosario-titulo">Glosario</h2>
+<label for="buscar-glosario">Buscar un concepto</label><input id="buscar-glosario" placeholder="Ej.: muestra, desvío, correlación" type="search"/>
+<div class="glosario-grid" id="lista-glosario"></div>
+</section>
+<section aria-labelledby="auto-titulo" class="seccion" id="autoevaluacion">
+<p class="etiqueta">Síntesis formativa</p><h2 id="auto-titulo">Autoevaluación</h2><p class="bajada">Las preguntas combinan conceptos, elección de representaciones e interpretación estadística.</p>
+<form class="autoevaluacion" id="form-autoevaluacion">
+<fieldset><legend>1. En un estudio estadístico, ¿cómo se denomina el subconjunto de unidades efectivamente observado para obtener información sobre la población?</legend><label><input name="a1" type="radio" value="a"/> Población</label><label><input name="a1" type="radio" value="b"/> Muestra</label><label><input name="a1" type="radio" value="c"/> Variable</label></fieldset>
+<fieldset><legend>2. La variable “nivel de capacitación”, con categorías inicial, intermedio y avanzado, es de tipo:</legend><label><input name="a2" type="radio" value="a"/> Cualitativa ordinal</label><label><input name="a2" type="radio" value="b"/> Cuantitativa discreta</label><label><input name="a2" type="radio" value="c"/> Cualitativa nominal</label></fieldset>
+<fieldset><legend>3. Se registraron muchas mediciones de nivel de ruido y se agruparon en intervalos. ¿Qué gráfico resulta más adecuado para representar su distribución?</legend><label><input name="a3" type="radio" value="a"/> Histograma</label><label><input name="a3" type="radio" value="b"/> Gráfico circular</label><label><input name="a3" type="radio" value="c"/> Gráfico de barras</label></fieldset>
+<fieldset><legend>4. Dos sectores tienen el mismo tiempo medio de evacuación, pero uno presenta un desvío estándar mayor. ¿Qué significa?</legend><label><input name="a4" type="radio" value="a"/> Sus tiempos de evacuación son más variables.</label><label><input name="a4" type="radio" value="b"/> Su tiempo medio es mayor.</label><label><input name="a4" type="radio" value="c"/> Su procedimiento es necesariamente mejor.</label></fieldset>
+<fieldset><legend>5. Dos diagramas de caja están construidos sobre la misma escala y uno presenta una caja más ancha. ¿Qué puede concluirse?</legend><label><input name="a5" type="radio" value="a"/> El 50% central de sus datos presenta mayor dispersión.</label><label><input name="a5" type="radio" value="b"/> Su media es mayor.</label><label><input name="a5" type="radio" value="c"/> Tiene más observaciones.</label></fieldset>
+<fieldset><legend>6. Si se desea representar la evolución mensual de la cantidad de accidentes de trabajo, ¿qué gráfico resulta más adecuado?</legend><label><input name="a6" type="radio" value="a"/> Gráfico de líneas</label><label><input name="a6" type="radio" value="b"/> Histograma</label><label><input name="a6" type="radio" value="c"/> Gráfico circular</label></fieldset>
+<fieldset><legend>7. En una ojiva, el porcentaje acumulado es 75% para un nivel de ruido de 90 dB(A). ¿Qué significa?</legend><label><input name="a7" type="radio" value="a"/> El 75% de las mediciones no supera los 90 dB(A).</label><label><input name="a7" type="radio" value="b"/> El nivel medio es 90 dB(A).</label><label><input name="a7" type="radio" value="c"/> El 75% de las mediciones supera los 90 dB(A).</label></fieldset>
+<fieldset><legend>8. Si en un diagrama de caja aparece una observación dibujada fuera de los bigotes, ese punto representa:</legend><label><input name="a8" type="radio" value="a"/> Es un posible valor atípico.</label><label><input name="a8" type="radio" value="b"/> Es necesariamente un error de medición.</label><label><input name="a8" type="radio" value="c"/> Representa la media del conjunto.</label></fieldset>
+<fieldset><legend>9. Si el coeficiente de correlación de Pearson es \(r=-0{,}70\), ¿cuál es la interpretación más adecuada?</legend><label><input name="a9" type="radio" value="a"/> Existe una relación lineal inversa de intensidad apreciable.</label><label><input name="a9" type="radio" value="b"/> No existe relación lineal.</label><label><input name="a9" type="radio" value="c"/> Una variable causa el 70% de los cambios de la otra.</label></fieldset>
+<fieldset><legend>10. Antes de comparar las alturas de las barras en dos gráficos distintos, ¿qué conviene verificar primero?</legend><label><input name="a10" type="radio" value="a"/> Que ambos utilicen la misma escala en el eje vertical.</label><label><input name="a10" type="radio" value="b"/> Que las barras tengan el mismo color.</label><label><input name="a10" type="radio" value="c"/> Que las categorías estén ordenadas alfabéticamente.</label></fieldset>
+<button class="boton-primario" type="submit">Corregir</button><p class="mensaje" id="resultado-auto"></p></form>
+</section>
+</main>
+</div>
+<footer>
+<div><strong>Aprender con Datos</strong><p>Proyecto educativo del Departamento de Estadística, Facultad de Economía y Administración, Universidad Nacional del Comahue.</p></div>
+<div><strong>Coordinación académica y desarrollo de contenidos</strong><p>Candelaria Morelli</p><p>Sugerencias, comentarios o consultas: <a href="mailto:profecandelariamorelli@gmail.com">profecandelariamorelli@gmail.com</a></p></div>
+<p class="version">Edición 2026.0 · 2026</p>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
