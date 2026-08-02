@@ -1,6 +1,6 @@
 # Aprender con Datos — Versión 2026.1
-![Logo](assets/img/logo-departamento.jpeg)
 <img src="assets/img/logo-departamento.jpeg" alt="Logo" width="160">
+
 ## Estadística aplicada a Higiene y Seguridad
 
 Teórico digital interactivo de Estadística para explorar datos, analizarlos con herramientas estadísticas e interpretar los resultados con sentido crítico.
