@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Aprender con Datos: teórico digital interactivo de Estadística." name="description"/>
-<title>Aprender con Datos · Unidades 1 y 2 · Edición 2026</title>
+<title>Aprender con Datos · Unidades 1 a 3 · Edición 2026</title>
 <link href="assets/img/logo-departamento.jpeg" rel="icon"/>
 <link href="css/estilos.css" rel="stylesheet"/>
 <script>
@@ -24,6 +24,7 @@
 <div>
 <p class="institucion">Departamento de Estadística · FaEA · UNCo</p>
 <h1>Aprender con Datos</h1>
+<p class="subtitulo-materia">Material digital de Estadística · Tecnicatura Universitaria en Higiene y Seguridad en el Trabajo · UNCo</p>
 <p class="proposito">Explorar datos para comprender fenómenos, analizarlos con herramientas estadísticas e interpretar los resultados con sentido crítico.</p>
 </div>
 </div>
@@ -34,8 +35,19 @@
 </header>
 <div class="distribucion">
 <nav aria-label="Recorrido del módulo" class="navegacion" id="navegacion">
-<p class="titulo-menu">Estadística descriptiva · Unidades 1 y 2</p>
+<p class="titulo-menu">Aprender con Datos · Unidades 1 a 3</p>
 <button class="nav-item activo" data-seccion="inicio">Inicio</button>
+<button aria-expanded="false" aria-controls="menu-modulo-1" class="grupo-menu boton-modulo bloqueado" data-modulo-toggle="1"><span><span aria-hidden="true" class="candado-modulo">🔒</span> Módulo 1 · Unidades 1 y 2 · Descriptiva</span><span aria-hidden="true" class="icono-plegado">▸</span></button>
+<div class="contenido-modulo oculto" id="menu-modulo-1">
+<div class="desbloqueo-modulo" id="desbloqueo-modulo-1">
+<p><strong>Este módulo todavía no está habilitado.</strong></p>
+<p class="nota">Buscá la clave de acceso en PEDCO o solicitala en clase.</p>
+<label for="clave-modulo-1">Clave del Módulo 1</label>
+<input autocomplete="off" id="clave-modulo-1" inputmode="text" type="password"/>
+<button class="boton-primario boton-clave" id="desbloquear-modulo-1" type="button">Desbloquear</button>
+<p aria-live="polite" class="mensaje-clave" id="mensaje-clave-modulo-1"></p>
+</div>
+<div class="estaciones-modulo oculto" id="estaciones-modulo-1">
 <button class="nav-item" data-seccion="e1">1. Datos y preguntas</button>
 <button class="nav-item" data-seccion="e2">2. Ciclo PPDAC</button>
 <button class="nav-item" data-seccion="e3">3. Diseñar un estudio</button>
@@ -49,10 +61,37 @@
 <button class="nav-item" data-seccion="e11">11. Tipificación</button>
 <button class="nav-item" data-seccion="e12">12. Dos variables y correlación</button>
 <button class="nav-item" data-seccion="e13">13. Aplicación al TP1</button>
+<button class="nav-item nav-evaluacion" data-seccion="autoevaluacion">Autoevaluación · Módulo 1</button>
+</div>
+</div>
+<button aria-expanded="false" aria-controls="menu-modulo-2" class="grupo-menu separador-modulo boton-modulo bloqueado" data-modulo-toggle="2"><span><span aria-hidden="true" class="candado-modulo">🔒</span> Módulo 2 · Unidad 3 · Probabilidad</span><span aria-hidden="true" class="icono-plegado">▸</span></button>
+<div class="contenido-modulo oculto" id="menu-modulo-2">
+<div class="desbloqueo-modulo" id="desbloqueo-modulo-2">
+<p><strong>Este módulo todavía no está habilitado.</strong></p>
+<p class="nota">Buscá la clave de acceso en PEDCO o solicitala en clase.</p>
+<label for="clave-modulo-2">Clave del Módulo 2</label>
+<input autocomplete="off" id="clave-modulo-2" inputmode="text" type="password"/>
+<button class="boton-primario boton-clave" id="desbloquear-modulo-2" type="button">Desbloquear</button>
+<p aria-live="polite" class="mensaje-clave" id="mensaje-clave-modulo-2"></p>
+</div>
+<div class="estaciones-modulo oculto" id="estaciones-modulo-2">
+<button class="nav-item" data-seccion="e14">1. Experimentos, resultados y eventos</button>
+<button class="nav-item" data-seccion="e15">2. ¿Cómo asignamos probabilidad?</button>
+<button class="nav-item" data-seccion="e22">3. Probabilidad y prevención</button>
+<button class="nav-item" data-seccion="e16">4. Operaciones y propiedades</button>
+<button class="nav-item" data-seccion="e17">5. Probabilidades en una tabla</button>
+<button class="nav-item" data-seccion="e18">6. Probabilidad condicionada</button>
+<button class="nav-item" data-seccion="e19">7. Independencia o exclusión</button>
+<button class="nav-item" data-seccion="e20">8. Árboles y probabilidad total</button>
+<button class="nav-item" data-seccion="e21">9. Invertir la condición</button>
+<button class="nav-item" data-seccion="e23">10. Aplicación al TP2</button>
+<button class="nav-item nav-evaluacion" data-seccion="autoevaluacion-u3">Autoevaluación · Módulo 2</button>
+</div>
+</div>
+<p class="grupo-menu separador-modulo">Consulta</p>
 <button class="nav-item" data-seccion="glosario">Glosario</button>
-<button class="nav-item" data-seccion="autoevaluacion">Autoevaluación</button>
 <div aria-live="polite" class="progreso">
-<span id="texto-progreso">0 de 13 estaciones visitadas</span>
+<span id="texto-progreso">0 de 23 estaciones visitadas</span>
 <div class="barra"><span id="barra-progreso"></span></div>
 </div>
 </nav>
@@ -61,8 +100,8 @@
 <div class="hero">
 <div>
 <p class="etiqueta">Teórico digital interactivo</p>
-<h2 id="titulo-inicio">Estadística descriptiva: de las preguntas a la interpretación</h2>
-<p>Este módulo puede usarse antes de una clase, para estudiar un tema por primera vez o para volver a consultarlo. Las explicaciones, los ejemplos y las actividades forman un recorrido autónomo; la interacción está al servicio de la comprensión.</p>
+<h2 id="titulo-inicio">De los datos a la incertidumbre</h2>
+<p>Este material reúne las Unidades 1, 2 y 3. El primer recorrido describe datos; el segundo incorpora la probabilidad para razonar sobre resultados inciertos. Podés usarlo antes de una clase, para estudiar un tema por primera vez o para volver a consultarlo.</p>
 <div class="grupo-botones">
 <button class="boton-primario avanzar" data-destino="e1">Comenzar</button>
 <button class="boton-secundario" data-seccion-directa="glosario">Abrir glosario</button>
@@ -324,14 +363,157 @@
 <details class="profundizar"><summary>Ver las fórmulas desarrollada y de cálculo</summary><div class="dos-formulas"><div><h4>Con desviaciones respecto de las medias</h4><div class="formula">\[r=\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2}\,\sqrt{\sum_{i=1}^{n}(y_i-\bar{y})^2}}\]</div></div><div><h4>Fórmula de cálculo</h4><div class="formula">\[r=\frac{n\sum x_i y_i-(\sum x_i)(\sum y_i)}{\sqrt{\left[n\sum x_i^2-(\sum x_i)^2\right]\left[n\sum y_i^2-(\sum y_i)^2\right]}}\]</div></div></div><p><strong>No es necesario memorizar estas expresiones.</strong> Se incluyen para reconocer las formas que pueden aparecer en distintos libros o resoluciones.</p></details>
 <ul><li>El signo indica si la relación lineal es directa o inversa.</li><li>El valor absoluto de \(r\) resume su intensidad lineal.</li><li>Un valor cercano a cero no descarta una relación no lineal.</li><li>Correlación no implica causalidad.</li></ul>
 <article class="actividad" data-id="e12-r"><h3>Interpretá</h3><p>Entre la temperatura exterior y el consumo de calefacción se obtuvo \(r=-0{,}82\).</p><fieldset><legend>¿Cuál es la interpretación más adecuada?</legend><label><input name="e12q" type="radio" value="a"/> Existe una relación lineal inversa fuerte: cuando aumenta la temperatura, el consumo tiende a disminuir.</label><label><input name="e12q" type="radio" value="b"/> La temperatura causa el 82% de los cambios del consumo.</label><label><input name="e12q" type="radio" value="c"/> No existe relación entre las variables.</label></fieldset><button class="boton-primario comprobar" data-correcta="a">Comprobar</button><p class="mensaje"></p></article>
-<button class="boton-primario avanzar" data-destino="e13">Continuar</button>
+<button class="boton-primario avanzar" data-destino="e13">Aplicación al TP1 →</button>
 </section>
 <section aria-labelledby="e13-titulo" class="seccion" id="e13">
 <p class="etiqueta">Estación 13 · Aplicación de la cátedra</p><h2 id="e13-titulo">Ahora sí: aplicalo al TP1 con Excel</h2>
 <p>Esta es la única estación vinculada con el trabajo práctico vigente. Todo el recorrido anterior es independiente de la base y puede consultarse como teoría general.</p>
 <div class="dos-columnas"><article class="tarjeta"><h3>En PEDCO</h3><p>Consultá la hoja de ruta, la consigna oficial, la base de datos y las actividades obligatorias cuando la cátedra las habilite.</p><a aria-disabled="true" class="boton-secundario enlace-boton deshabilitado" href="#" id="enlace-pedco">Enlace PEDCO pendiente de configurar</a></article><article class="tarjeta"><h3>Videos de apoyo para Excel</h3><p>La lista de reproducción muestra procedimientos utilizados en distintos incisos del TP. Usala después de identificar qué se pide y qué herramienta corresponde.</p><a class="boton-primario enlace-boton" href="https://youtube.com/playlist?list=PLxwlaqRfgmdqpMF3LJ-owtnwE5-ZCtziq&amp;si=e9YF4FFL5J5Gt25d" rel="noopener" target="_blank">Abrir lista de reproducción</a></article></div>
 <aside class="idea-clave"><strong>La secuencia:</strong> comprender en Aprender con Datos → aplicar con Excel en clase y en el TP → realizar en PEDCO las actividades registrables cuando correspondan.</aside><aside class="observacion"><strong>Recordá:</strong> obtener un resultado numérico es solo una parte del trabajo estadístico. Lo central es interpretarlo correctamente y utilizarlo para fundamentar conclusiones o decisiones.</aside>
-<button class="boton-primario" data-seccion-directa="autoevaluacion">Ir a la autoevaluación</button>
+<div class="grupo-botones"><button class="boton-primario" data-seccion-directa="autoevaluacion">Autoevaluación · Módulo 1</button><button class="boton-secundario avanzar" data-destino="e14">Continuar: Módulo 2 · Probabilidad</button></div>
+</section>
+<section aria-labelledby="e14-titulo" class="seccion unidad-probabilidad" id="e14">
+<p class="etiqueta">Unidad 3 · Estación 1</p>
+<h2 id="e14-titulo">Cuando el resultado no se conoce de antemano</h2>
+<p class="bajada">La probabilidad empieza con una pregunta sencilla: ¿qué resultados podrían ocurrir y cuál de ellos nos interesa?</p>
+<div class="rejilla-3">
+<article class="definicion"><h3>Experimento aleatorio</h3><p>Proceso u observación cuyo resultado no puede conocerse con certeza antes de realizarlo, aunque podamos describir los resultados posibles.</p><p class="ejemplo-corto"><strong>Ejemplo:</strong> seleccionar al azar un trabajador y registrar si tiene vigente una capacitación obligatoria.</p></article>
+<article class="definicion"><h3>Espacio muestral \(\Omega\)</h3><p>Conjunto de todos los resultados posibles del experimento.</p><p class="ejemplo-corto"><strong>Ejemplo:</strong> al inspeccionar dos sensores, cada uno puede <strong>activar una alarma (A)</strong> o <strong>no activarla (N)</strong>. Entonces \(\Omega=\{NN,NA,AN,AA\}\).</p></article>
+<article class="definicion"><h3>Evento o suceso</h3><p>Conjunto de uno o más resultados del espacio muestral que cumplen una condición de interés. Por lo tanto, un evento es un subconjunto de \(\Omega\).</p><p class="ejemplo-corto"><strong>Ejemplo:</strong> si \(E\) es “al menos uno de los dos sensores activa una alarma”, entonces \(E=\{NA,AN,AA\}\).</p></article>
+</div>
+<aside class="idea-clave"><strong>La incertidumbre está en el resultado, no necesariamente en la acción.</strong> Medir ruido, observar una condición o seleccionar una unidad pueden formar parte de un experimento aleatorio si el valor que se obtendrá todavía es incierto.</aside>
+<article class="actividad" data-id="e14-evento"><h3>Del lenguaje al evento</h3><p>En una inspección se observan tres elementos de protección personal. Para cada uno se registra si su uso es <strong>correcto (C)</strong> o <strong>incorrecto (I)</strong>.</p><p>El espacio muestral es \(\Omega=\{CCC,CCI,CIC,ICC,CII,ICI,IIC,III\}\).</p><p>Sea \(E\): “el uso es incorrecto en <strong>más de uno</strong> de los tres elementos de protección”.</p><fieldset><legend>¿Qué resultados forman el evento \(E\)?</legend><label><input name="e14q" type="radio" value="a"/> \(\{CCI,CIC,ICC\}\)</label><label><input name="e14q" type="radio" value="b"/> \(\{CII,ICI,IIC,III\}\)</label><label><input name="e14q" type="radio" value="c"/> \(\{CCI,CIC,ICC,CII,ICI,IIC,III\}\)</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e15">¿Cómo asignamos probabilidad? →</button>
+</section>
+
+<section aria-labelledby="e15-titulo" class="seccion unidad-probabilidad" id="e15">
+<p class="etiqueta">Unidad 3 · Estación 2</p>
+<h2 id="e15-titulo">¿Cómo asignamos una probabilidad?</h2>
+<p class="bajada">Una probabilidad es un número entre 0 y 1 que cuantifica la posibilidad de ocurrencia de un evento. El modo de obtenerla depende de la información disponible.</p>
+<div class="comparacion">
+<article class="tarjeta"><h3>Definición clásica</h3><p>Si los resultados elementales son <strong>equiprobables</strong> y el espacio muestral es finito:</p><div class="formula">\[P(A)=\frac{\#A}{\#\Omega}=\frac{\text{casos favorables}}{\text{casos posibles}}\]</div><p class="nota"><strong>Notación:</strong> \(\#\) indica el <strong>cardinal</strong> de un conjunto, es decir, la cantidad de elementos que contiene. Así, \(\#A\) es la cantidad de resultados favorables y \(\#\Omega\), la cantidad total de resultados posibles.</p><p><strong>Ejemplo:</strong> en un dado equilibrado, \(P(\{2,4,6\})=3/6=0{,}5\).</p><aside class="error-frecuente"><strong>No alcanza con contar.</strong> La fórmula clásica no corresponde si los resultados no son equiprobables.</aside></article>
+<article class="tarjeta"><h3>Enfoque frecuencial</h3><p>Al repetir muchas veces un mismo experimento bajo condiciones comparables, la frecuencia relativa de \(A\) tiende a estabilizarse alrededor de su probabilidad.</p><div class="formula">\[\frac{f_A}{n}\longrightarrow P(A)\]</div><p>En datos reales, la frecuencia relativa observada funciona como una <strong>estimación</strong> de una probabilidad, no como una garantía sobre el próximo caso.</p></article>
+</div>
+<article class="actividad simulador-geogebra"><h3>Explorá la estabilización: acertar al blanco</h3><p>En esta simulación se realizan tiros al azar sobre un blanco cuadrado que contiene una diana circular. Repetí la experiencia y observá qué ocurre con la <strong>frecuencia relativa de tiros que aciertan en la diana</strong> a medida que aumenta la cantidad de tiros.</p><div class="geogebra-responsive"><iframe src="https://www.geogebra.org/material/iframe/id/gpVcB3T8/width/900/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" title="Simulación de tiro al blanco en GeoGebra" loading="lazy" allowfullscreen></iframe></div><p class="nota"><strong>Para observar:</strong> con pocos tiros, la frecuencia relativa puede variar bastante. ¿Qué sucede cuando repetís el experimento muchas veces? Compará ese comportamiento con la idea de probabilidad frecuencial presentada arriba.</p><div class="nota"><strong>¿Y cuál es la probabilidad teórica de acertar?</strong><p>La simulación también permite visualizar ese valor. Pero, ¿podrías pensar cómo calcularlo sin realizar ningún tiro?</p><p><strong>Pista:</strong> pensá en las <strong>áreas</strong> del blanco cuadrado y de la diana circular.</p></div><p class="nota"><a href="https://www.geogebra.org/m/gpVcB3T8" target="_blank" rel="noopener">Abrir la simulación en GeoGebra</a> si no se visualiza correctamente en esta página.</p></article>
+<aside class="idea-clave"><strong>Dos propiedades básicas.</strong> Para cualquier evento \(A\), \(P(A)\ge 0\), y la probabilidad del espacio muestral completo es \(P(\Omega)=1\). La propiedad aditiva aparecerá después de definir unión y eventos mutuamente excluyentes.</aside>
+<button class="boton-primario avanzar" data-destino="e22">Probabilidad y prevención →</button>
+</section>
+
+<section aria-labelledby="e22-titulo" class="seccion unidad-probabilidad" id="e22">
+<p class="etiqueta">Unidad 3 · Estación 3</p>
+<h2 id="e22-titulo">La probabilidad también habla el lenguaje de la prevención</h2>
+<p class="bajada">En Higiene y Seguridad, registrar y analizar lo que ocurre permite comparar situaciones y aportar información para prevenir. La normativa argentina le asigna un lugar explícito a ese trabajo estadístico.</p>
+<div class="dos-columnas">
+<article class="tarjeta"><h3>¿Por qué aparecen estadísticas en la normativa?</h3><p>La Ley 19.587 incluye entre sus principios la investigación de los factores que determinan accidentes y enfermedades del trabajo y la realización de estadísticas como antecedente para estudiar y prevenir sus causas.</p><p>La Resolución SRT 905/2015 también establece la elaboración de estadísticas vinculadas con accidentes, enfermedades profesionales y ausentismo, evaluadas mediante índices de frecuencia, gravedad, incidencia, riesgos y otros indicadores.</p></article>
+<article class="tarjeta"><h3>Un indicador para reconocer: índice de incidencia</h3><p>La SRT define los índices de incidencia como medidas resumen que relacionan acontecimientos ocurridos durante un período con la población expuesta durante ese período. En accidentabilidad laboral, uno de los indicadores se expresa por cada 1000 personas trabajadoras cubiertas:</p><div class="formula">\[I=\frac{\text{casos ocurridos}}{\text{personas trabajadoras cubiertas}}\times1000\]</div><p>Por ejemplo, un índice de 25 indica <strong>25 casos por cada 1000 personas trabajadoras cubiertas</strong> en el período considerado.</p></article>
+</div>
+<aside class="idea-clave"><strong>Conectá con lo que ya sabés.</strong> El índice de incidencia no es, por definición, una probabilidad. Pero su construcción retoma una idea familiar: relacionar la cantidad de acontecimientos observados con la población sobre la que se los estudia. El factor 1000 permite expresarlo “por cada 1000”.</aside>
+<article class="actividad exploracion-normativa"><h3>Leé, buscá, investigá</h3><p>No hace falta memorizar artículos ni índices. La propuesta es reconocer cómo aparece la Estadística en documentos reales de la profesión.</p><ol><li>Entrá a la <strong>Ley 19.587</strong> y buscá en el artículo 5 las referencias a investigación, estadísticas y prevención. ¿Qué relación establece entre ellas?</li><li>En la <strong>Resolución SRT 905/2015</strong>, localizá la función que menciona los índices de frecuencia, gravedad e incidencia. ¿Para qué tipo de información se propone utilizarlos?</li><li>Explorá las <strong>definiciones de accidentabilidad de la SRT</strong>. Elegí un índice de incidencia e identificá: ¿qué se cuenta en el numerador?, ¿qué población aparece en el denominador?, ¿a qué período se refiere?</li></ol><div class="grupo-botones"><a class="boton-secundario enlace-boton" href="https://www.argentina.gob.ar/normativa/nacional/17612/texto" target="_blank" rel="noopener">Leer Ley 19.587</a><a class="boton-secundario enlace-boton" href="https://www.argentina.gob.ar/normativa/nacional/246509/texto" target="_blank" rel="noopener">Leer Resolución SRT 905/2015</a><a class="boton-primario enlace-boton" href="https://www.srt.gob.ar/estadisticas/acc_definiciones.php" target="_blank" rel="noopener">Explorar definiciones SRT</a></div></article>
+<aside class="observacion"><strong>Alcance de esta unidad:</strong> estos indicadores se presentan para contextualizar la probabilidad y reconocer usos reales de la Estadística en Higiene y Seguridad. Su desarrollo técnico corresponde a los espacios en los que se estudien específicamente la accidentabilidad y la gestión de riesgos.</aside>
+<button class="boton-primario avanzar" data-destino="e16">Operaciones y propiedades →</button>
+</section>
+
+<section aria-labelledby="e16-titulo" class="seccion unidad-probabilidad" id="e16">
+<p class="etiqueta">Unidad 3 · Estación 4</p>
+<h2 id="e16-titulo">Combinar eventos: “no”, “y” y “o”</h2>
+<p class="bajada">Las palabras del problema indican qué operación necesitamos. Traducirlas antes de calcular evita buena parte de los errores.</p>
+<div class="rejilla-3">
+<article class="definicion"><h3>Complemento</h3><p>“No ocurre \(A\)” se representa \(A^c\). También puede encontrarse escrito como \(A'\); en este material usaremos siempre \(A^c\).</p><div class="formula">\[A\cup A^c=\Omega\qquad A\cap A^c=\varnothing\]</div><div class="formula">\[P(A^c)=1-P(A)\]</div></article>
+<article class="definicion"><h3>Intersección</h3><p>“Ocurren \(A\) <strong>y</strong> \(B\)” se representa \(A\cap B\). Es una probabilidad conjunta.</p></article>
+<article class="definicion"><h3>Unión</h3><p>“Ocurre \(A\) <strong>o</strong> \(B\), o ambos” se representa \(A\cup B\).</p><div class="formula">\[P(A\cup B)=P(A)+P(B)-P(A\cap B)\]</div></article>
+</div>
+<p class="nota-contexto"><strong>Una representación visual.</strong> Los diagramas de Venn permiten representar el espacio muestral y visualizar operaciones entre eventos. En los tres dibujos, el rectángulo representa \(\Omega\) y la zona sombreada representa el evento indicado.</p>
+<div class="venn-grid" aria-label="Representaciones visuales con diagramas de Venn de complemento, intersección y unión">
+<figure class="venn"><svg viewBox="0 0 220 130" role="img" aria-label="Complemento de A sombreado fuera de A"><rect class="venn-universo sombreado" x="5" y="5" width="210" height="120" rx="8"/><circle class="venn-circulo blanco" cx="110" cy="65" r="43"/><text class="venn-evento" x="106" y="69">A</text><text class="venn-complemento" x="38" y="30">Aᶜ</text><text class="venn-omega" x="190" y="20">Ω</text></svg><figcaption>Complemento: <span class="venn-notacion">A<sup>c</sup></span></figcaption></figure>
+<figure class="venn"><svg viewBox="0 0 220 130" role="img" aria-label="Intersección de A y B sombreada en la zona común"><defs><clipPath id="clip-b"><circle cx="132" cy="65" r="43"/></clipPath></defs><rect class="venn-universo" x="5" y="5" width="210" height="120" rx="8"/><circle class="venn-circulo" cx="88" cy="65" r="43"/><circle class="venn-circulo" cx="132" cy="65" r="43"/><circle class="venn-sombreado" cx="88" cy="65" r="43" clip-path="url(#clip-b)"/><text class="venn-evento" x="58" y="69">A</text><text class="venn-evento" x="153" y="69">B</text><text class="venn-omega" x="190" y="20">Ω</text></svg><figcaption>Intersección: <span class="venn-notacion">A ∩ B</span></figcaption></figure>
+<figure class="venn"><svg viewBox="0 0 220 130" role="img" aria-label="Unión de A y B sombreada en ambos conjuntos"><rect class="venn-universo" x="5" y="5" width="210" height="120" rx="8"/><circle class="venn-circulo sombreado" cx="88" cy="65" r="43"/><circle class="venn-circulo sombreado" cx="132" cy="65" r="43"/><text class="venn-evento" x="58" y="69">A</text><text class="venn-evento" x="153" y="69">B</text><text class="venn-omega" x="190" y="20">Ω</text></svg><figcaption>Unión: <span class="venn-notacion">A ∪ B</span></figcaption></figure>
+</div>
+<aside class="idea-clave"><strong>Propiedades que conviene tener a mano:</strong> \(P(\varnothing)=0\), \(0\le P(A)\le1\) y, si \(A\subseteq B\), entonces \(P(A)\le P(B)\). Junto con la regla del complemento y la de la unión, permiten resolver muchos cálculos sin volver a contar casos.</aside>
+<aside class="convencion"><strong>Sobre el nombre “probabilidad compuesta”.</strong> En esta materia lo usaremos para probabilidades que combinan dos o más eventos, como una intersección o una unión. La terminología varía entre textos; por eso conviene identificar siempre la operación concreta.</aside>
+<div class="dos-columnas"><article class="tarjeta"><h3>Mutuamente excluyentes</h3><p>No pueden ocurrir simultáneamente:</p><div class="formula">\[A\cap B=\varnothing\quad\Rightarrow\quad P(A\cap B)=0\]</div><svg class="venn-excluyentes" viewBox="0 0 260 125" role="img" aria-label="Dos eventos mutuamente excluyentes sin superposición"><rect class="venn-universo" x="5" y="5" width="250" height="115" rx="8"/><circle class="venn-circulo" cx="80" cy="63" r="38"/><circle class="venn-circulo" cx="180" cy="63" r="38"/><text x="76" y="68">A</text><text x="176" y="68">B</text><text x="225" y="22">Ω</text></svg><p>Por eso, para dos eventos excluyentes: \(P(A\cup B)=P(A)+P(B)\).</p></article><article class="tarjeta"><h3>Exhaustivos</h3><p><strong>Dos eventos</strong> \(A\) y \(B\) son exhaustivos si juntos cubren todo el espacio muestral:</p><div class="formula">\[A\cup B=\Omega\qquad\Rightarrow\qquad P(A\cup B)=P(\Omega)=1\]</div><p>La idea se generaliza a tres o más eventos cuya unión sea \(\Omega\). Si además son mutuamente excluyentes, forman una partición. Un evento y su complementario son el ejemplo más sencillo.</p></article></div>
+<aside class="idea-clave"><strong>Propiedad aditiva.</strong> Una vez definida la exclusión, podemos expresarla con precisión: si los eventos de una colección son mutuamente excluyentes, la probabilidad de su unión es la suma de sus probabilidades.</aside>
+<article class="actividad" data-id="e16-o"><h3>¿Qué ocurre cuando los sucesos se superponen?</h3><p>En una planta industrial se analiza qué tipo de protección necesitan los trabajadores según su riesgo y exposición laboral. Si se selecciona al azar un trabajador, el 30% necesita protección auditiva, el 25% necesita protección respiratoria y el 10% necesita ambos tipos de protección.</p><p>Definimos \(A\): “necesita protección auditiva” y \(B\): “necesita protección respiratoria”.</p><fieldset><legend>¿Cuál es la probabilidad de que necesite al menos uno de los dos tipos de protección, es decir, \(P(A\cup B)\)?</legend><label><input name="e16q" type="radio" value="a"/> 0,55</label><label><input name="e16q" type="radio" value="b"/> 0,45</label><label><input name="e16q" type="radio" value="c"/> 0,075</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p class="mensaje"></p><p class="devolucion-conceptual oculto">La zona común representa el 10% que quedaría contado dos veces si solo sumáramos 30% + 25%. Por eso se resta una vez la intersección.</p></article>
+<button class="boton-primario avanzar" data-destino="e17">Probabilidades en una tabla →</button>
+</section>
+
+<section aria-labelledby="e17-titulo" class="seccion unidad-probabilidad" id="e17">
+<p class="etiqueta">Unidad 3 · Estación 5</p>
+<h2 id="e17-titulo">De frecuencias a probabilidades en una tabla</h2>
+<p class="bajada">Una tabla de contingencia permite leer probabilidades simples o marginales y probabilidades conjuntas.</p>
+<p>En una recorrida de observación se registró si 450 trabajadores utilizaban <strong>de manera completa y correcta</strong> las medidas de protección previstas para la tarea en ese momento. Se consideró “No” cuando faltaba algún elemento o no estaba utilizado como correspondía; por ejemplo, protección ocular levantada o un elemento retirado momentáneamente.</p>
+<div class="tabla-responsive"><table class="tabla-prob"><thead><tr><th>Uso completo y correcto</th><th>Hombres</th><th>Mujeres</th><th>Total</th></tr></thead><tbody><tr><th>Sí</th><td>205</td><td class="celda-destacable">190</td><td>395</td></tr><tr><th>No</th><td>25</td><td>30</td><td>55</td></tr><tr class="total"><th>Total</th><td>230</td><td>220</td><td>450</td></tr></tbody></table></div>
+<aside class="observacion"><strong>De frecuencias a probabilidades.</strong> Si seleccionamos al azar uno de los 450 trabajadores observados, todos tienen la misma probabilidad de ser elegidos. Por eso, las frecuencias relativas de esta tabla pueden leerse como probabilidades para esa selección. No significa que las categorías de la tabla sean equiprobables.</aside>
+<div class="dos-columnas"><article class="tarjeta"><h3>Simple o marginal</h3><p>Usa un total marginal. Si \(M\) es “la persona seleccionada es mujer”:</p><p>\(P(M)=220/450\approx0{,}489\).</p><p><strong>Interpretación:</strong> aproximadamente el 48,9% de las personas observadas son mujeres.</p></article><article class="tarjeta"><h3>Conjunta</h3><p>Usa una celda interior. Si \(U\) es “uso completo y correcto”, buscamos la intersección de la columna <strong>Mujeres</strong> con la fila <strong>“Sí”</strong>:</p><p>\(P(M\cap U)=190/450\approx0{,}422\).</p><p><strong>Interpretación:</strong> aproximadamente el 42,2% de los trabajadores observados son mujeres y presentan uso completo y correcto.</p></article></div>
+<article class="actividad" data-id="e17-tabla"><h3>Leé la tabla</h3><fieldset><legend>¿Cuál es la probabilidad de seleccionar un trabajador que NO presente uso completo y correcto?</legend><label><input name="e17q" type="radio" value="a"/> \(55/450\)</label><label><input name="e17q" type="radio" value="b"/> \(30/220\)</label><label><input name="e17q" type="radio" value="c"/> \(395/450\)</label></fieldset><button class="boton-primario comprobar" data-correcta="a">Comprobar</button><p class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e18">Probabilidad condicionada →</button>
+</section>
+
+<section aria-labelledby="e18-titulo" class="seccion unidad-probabilidad" id="e18">
+<p class="etiqueta">Unidad 3 · Estación 6</p>
+<h2 id="e18-titulo">Cuando cambia la información disponible</h2>
+<p class="bajada">Una probabilidad condicionada responde una pregunta dentro de un grupo que ya quedó restringido por la información disponible.</p>
+<article class="definicion"><h3>Probabilidad condicionada</h3><p>La expresión \(P(A\mid B)\) se lee <strong>“probabilidad de \(A\) dado \(B\)”</strong>. Significa que sabemos que ocurrió \(B\) y queremos estudiar la ocurrencia de \(A\) solamente dentro de ese nuevo espacio de referencia.</p><p>El símbolo \(\mid\) se lee “dado que”; no significa división.</p></article>
+<div class="formula formula-principal">\[P(A\mid B)=\frac{P(A\cap B)}{P(B)},\qquad P(B)>0\]</div>
+<p>Al despejar la intersección obtenemos la <strong>regla multiplicativa</strong>:</p><div class="formula">\[P(A\cap B)=P(B)\,P(A\mid B)=P(A)\,P(B\mid A)\]</div>
+<aside class="idea-clave"><strong>El denominador cuenta la historia.</strong> En \(P(A\mid B)\), el evento \(B\) ya ocurrió; por eso el espacio de referencia pasa de \(\Omega\) a \(B\).</aside>
+<article class="caso"><h3>Volvamos a la tabla anterior</h3><p>Definimos \(M\): “la persona seleccionada es mujer” y \(U\): “presenta uso completo y correcto de las medidas de protección”. En la tabla hay 220 mujeres y, entre ellas, 190 se encuentran en la fila <strong>“Sí”</strong> correspondiente a uso completo y correcto.</p><div class="formula">\[P(U\mid M)=\frac{190}{220}\approx0{,}864\]</div><p><strong>Interpretación:</strong> entre las mujeres observadas, aproximadamente el 86,4% presenta uso completo y correcto de las medidas de protección.</p></article>
+<article class="actividad" data-id="e18-cond"><h3>¿Qué notación expresa correctamente la siguiente pregunta?</h3><p>Definimos \(R\): “la persona usa protección respiratoria” y \(O\): “la persona usa protección ocular”.</p><fieldset><legend>Entre quienes usan protección respiratoria, ¿qué proporción también usa protección ocular?</legend><label><input name="e18q" type="radio" value="a"/> \(P(R\mid O)\)</label><label><input name="e18q" type="radio" value="b"/> \(P(O\mid R)\)</label><label><input name="e18q" type="radio" value="c"/> \(P(O\cap R)\)</label><label><input name="e18q" type="radio" value="d"/> \(P(O)\)</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p class="mensaje"></p><p class="devolucion-conceptual oculto"><strong>Interpretación:</strong> \(P(O\mid R)\) es la proporción de personas que usan protección ocular <em>entre aquellas que ya sabemos que usan protección respiratoria</em>.</p></article>
+<button class="boton-primario avanzar" data-destino="e19">Independencia o exclusión →</button>
+</section>
+
+<section aria-labelledby="e19-titulo" class="seccion unidad-probabilidad" id="e19">
+<p class="etiqueta">Unidad 3 · Estación 7</p>
+<h2 id="e19-titulo">Independientes no significa excluyentes</h2>
+<p class="bajada">Son ideas distintas: la exclusión habla de si dos eventos pueden ocurrir juntos; la independencia, de si conocer uno cambia la probabilidad del otro.</p>
+<div class="comparacion comparacion-prob"><article class="tarjeta"><h3>Mutuamente excluyentes</h3><p>Su intersección es vacía:</p><div class="formula">\[A\cap B=\varnothing\quad\Rightarrow\quad P(A\cap B)=0\]</div><p>No pueden ocurrir simultáneamente.</p></article><article class="tarjeta"><h3>Independientes o dependientes</h3><p>Son <strong>independientes</strong> si conocer que ocurrió \(B\) no cambia la probabilidad de \(A\): \(P(A\mid B)=P(A)\).</p><p><strong>De manera equivalente:</strong></p><div class="formula">\[P(A\cap B)=P(A)P(B)\]</div><p>Si la modifica, los eventos son <strong>dependientes</strong>.</p></article></div>
+<article class="actividad desafio" data-id="e19-desafio"><h3>Para pensar</h3><p>Si \(A\) y \(B\) son mutuamente excluyentes y ambos tienen probabilidad positiva, ¿podrían ser independientes? Intentá justificarlo usando las definiciones anteriores.</p><div class="grupo-botones"><button class="boton-secundario pista" type="button">Ver una pista</button></div><p class="contenido-pista oculto">Si son excluyentes, \(P(A\cap B)=0\). Si fueran independientes, debería cumplirse \(P(A\cap B)=P(A)P(B)\). ¿Puede ese producto ser 0 si ambas probabilidades son positivas?</p></article>
+<article class="actividad" data-id="e19-ind"><h3>Comprobá con números</h3><p>En un relevamiento sobre el uso de elementos de protección se observa que \(P(C)=0{,}80\), \(P(M)=0{,}90\) y \(P(C\cap M)=0{,}72\), donde \(C\) representa “usar casco” y \(M\), “usar mascarilla”.</p><fieldset><legend>¿Qué puede concluirse?</legend><label><input name="e19q" type="radio" value="a"/> Son excluyentes porque 0,72 es menor que 0,90.</label><label><input name="e19q" type="radio" value="b"/> Son independientes porque \(0{,}80\times0{,}90=0{,}72\).</label><label><input name="e19q" type="radio" value="c"/> No puede evaluarse la independencia con esos datos.</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e20">Árboles y probabilidad total →</button>
+</section>
+
+<section aria-labelledby="e20-titulo" class="seccion unidad-probabilidad" id="e20">
+<p class="etiqueta">Unidad 3 · Estación 8</p>
+<h2 id="e20-titulo">Seguir caminos: árboles y probabilidad total</h2>
+<p class="bajada">Un árbol organiza situaciones que se desarrollan por etapas y permite seguir los distintos caminos posibles.</p>
+<div class="dos-columnas arbol-bloque"><div id="arbol-maquinas" class="arbol-prob" aria-label="Árbol de probabilidades de tres máquinas y producción defectuosa"></div><article class="tarjeta"><h3>Producción de tres máquinas</h3><p>Las máquinas M1, M2 y M3 producen 50%, 30% y 20% del total. Sus porcentajes de defectuosos son 3%, 4% y 5%.</p><p>Los eventos \(M_1,M_2,M_3\) forman una partición: son excluyentes y exhaustivos.</p><div class="formula">\[P(D)=\sum_i P(M_i)P(D\mid M_i)\]</div><p>\[P(D)=0{,}50(0{,}03)+0{,}30(0{,}04)+0{,}20(0{,}05)=0{,}037\]</p><p><strong>Resultado:</strong> la probabilidad total de seleccionar un artículo defectuoso es 3,7%.</p></article></div>
+<aside class="idea-clave"><strong>¿Cómo se calculan probabilidades con un árbol?</strong><br/>Para obtener la probabilidad de un <strong>camino completo</strong>, multiplicamos las probabilidades de las ramas que recorremos. Si el evento buscado puede alcanzarse a través de los distintos casos de una <strong>partición</strong>, calculamos la probabilidad de cada camino y luego las sumamos.<br/><br/><strong>Esta forma de obtener la probabilidad de un evento sumando los caminos posibles se conoce como regla de la probabilidad total.</strong></aside>
+<article class="actividad" data-id="e20-total"><h3>Leé un camino</h3><p>¿Cuál es la probabilidad de seleccionar un artículo que haya sido producido por M1 <strong>y</strong> sea defectuoso?</p><fieldset><legend>Elegí el cálculo.</legend><label><input name="e20q" type="radio" value="a"/> \(0{,}50+0{,}03\)</label><label><input name="e20q" type="radio" value="b"/> \(0{,}50\times0{,}03=0{,}015\)</label><label><input name="e20q" type="radio" value="c"/> \(0{,}03/0{,}50\)</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e21">Invertir la condición →</button>
+</section>
+
+<section aria-labelledby="e21-titulo" class="seccion unidad-probabilidad" id="e21">
+<p class="etiqueta">Unidad 3 · Estación 9</p>
+<h2 id="e21-titulo">La condición no se puede dar vuelta sin calcular</h2>
+<p class="bajada">Saber cuán probable es un resultado si existe una condición no responde automáticamente cuán probable es la condición después de observar ese resultado.</p>
+<div class="caso"><h3>Alarma de un detector de gases</h3><p>Un detector monitorea la concentración de un gas. Llamamos \(G\) al evento “existe una concentración peligrosa” y \(A\) al evento “se activa la alarma”. En situaciones comparables, una concentración peligrosa aparece el <strong>1%</strong> de las veces. Si existe esa concentración, el detector activa la alarma con probabilidad <strong>0,99</strong>. Si no existe, puede activar una falsa alarma con probabilidad <strong>0,01</strong>.</p><p>La pregunta profesional que interesa después de escuchar la alarma es: <strong>¿cuál es la probabilidad de que realmente exista una concentración peligrosa?</strong></p></div>
+<div class="dos-columnas"><div id="arbol-test" class="arbol-prob" aria-label="Árbol de probabilidades de concentración peligrosa y activación de alarma"></div><article class="tarjeta"><h3>Primero: probabilidad total de alarma</h3><div class="formula">\[P(A)=0{,}01(0{,}99)+0{,}99(0{,}01)=0{,}0198\]</div><h3>Después: actualizar con la alarma observada</h3><div class="formula">\[P(G\mid A)=\frac{P(G\cap A)}{P(A)}=\frac{0{,}0099}{0{,}0198}=0{,}50\]</div><p>Ante una alarma, la probabilidad de que realmente exista una concentración peligrosa es <strong>50%</strong>. No es 99%: \(P(A\mid G)\) y \(P(G\mid A)\) responden preguntas diferentes.</p></article></div>
+<aside class="error-frecuente"><strong>Error frecuente:</strong> confundir \(P(A\mid G)=0{,}99\) con \(P(G\mid A)\). Cambiar el orden cambia la información que se toma como dada.</aside>
+<article class="tarjeta teorema-bayes"><h3>Teorema de Bayes</h3><p>Bayes es un resultado general que permite <strong>actualizar la probabilidad de un suceso cuando disponemos de nueva información</strong>. Su fundamento y alcance son más amplios que lo que desarrollaremos en esta materia. Aquí utilizaremos su forma operativa para resolver situaciones de probabilidad condicionada:</p><div class="formula formula-principal">\[P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}\]</div><p>Como vimos al trabajar con árboles, cuando \(P(B)\) no se conoce directamente puede obtenerse mediante la <strong>regla de la probabilidad total</strong>, sumando las probabilidades de los caminos que conducen a \(B\).</p></article>
+<article class="actividad" data-id="e21-bayes"><h3>Interpretá antes de calcular</h3><p>En una evaluación práctica sobre uso de extintores se observa que, entre quienes realizaron una capacitación específica, el 90% ejecutó correctamente el procedimiento.</p><fieldset><legend>¿Podemos afirmar que, entre quienes ejecutaron correctamente el procedimiento, el 90% había realizado la capacitación?</legend><label><input name="e21q" type="radio" value="a"/> Sí, porque se trata de las mismas personas.</label><label><input name="e21q" type="radio" value="b"/> No. Se está invirtiendo la condición y necesitamos información adicional para determinar esa probabilidad.</label><label><input name="e21q" type="radio" value="c"/> Sí, porque una proporción del 90% indica una asociación suficientemente alta.</label></fieldset><button class="boton-primario comprobar" data-correcta="b">Comprobar</button><p class="mensaje"></p></article>
+<button class="boton-primario avanzar" data-destino="e23">Aplicación al TP2 →</button>
+</section>
+
+<section aria-labelledby="e23-titulo" class="seccion unidad-probabilidad" id="e23">
+<p class="etiqueta">Unidad 3 · Estación 10 · Aplicación de la cátedra</p>
+<h2 id="e23-titulo">Ahora sí: aplicalo al TP2</h2>
+<p class="bajada">En este trabajo práctico vas a combinar procedimientos realizados a mano con el uso de Excel para organizar información y responder preguntas de probabilidad.</p>
+<div class="rejilla-3"><article class="tarjeta"><h3>A mano</h3><p>Identificá y definí eventos, traducí las consignas a notación probabilística, elegí las operaciones necesarias y realizá los cálculos que correspondan.</p></article><article class="tarjeta"><h3>Con Excel</h3><p>Cuando trabajes con la base de datos, utilizá Excel para obtener y organizar las <strong>tablas de contingencia</strong>. Después, leé esas tablas para plantear y calcular las probabilidades solicitadas.</p></article><article class="tarjeta"><h3>En PEDCO</h3><p>Consultá la consigna oficial del TP2, la base de datos y los materiales que la cátedra habilite. Las actividades registrables se realizan allí cuando corresponda.</p><a aria-disabled="true" class="boton-secundario enlace-boton deshabilitado" href="#">Enlace PEDCO pendiente de configurar</a></article></div>
+<aside class="idea-clave"><strong>La herramienta no reemplaza el razonamiento.</strong> Excel ayuda a obtener y organizar la información; identificar qué probabilidad responde la pregunta, plantear el cálculo e interpretar el resultado sigue siendo parte de tu trabajo estadístico.</aside>
+<button class="boton-primario" data-seccion-directa="autoevaluacion-u3">Autoevaluación · Módulo 2</button>
+</section>
+
+<section aria-labelledby="auto-u3-titulo" class="seccion" id="autoevaluacion-u3">
+<p class="etiqueta">Unidad 3 · Síntesis formativa</p><h2 id="auto-u3-titulo">Autoevaluación de Probabilidad</h2><p class="bajada">El objetivo no es reconocer una fórmula por su aspecto, sino decidir qué probabilidad corresponde y justificar el cálculo.</p>
+<form class="autoevaluacion" id="form-autoevaluacion-u3">
+<fieldset><legend>1. La definición clásica \(P(A)=\#A/\#\Omega\) puede usarse directamente cuando:</legend><label><input name="p1" type="radio" value="a"/> Los resultados elementales son equiprobables.</label><label><input name="p1" type="radio" value="b"/> Se dispone de cualquier conjunto de datos históricos.</label><label><input name="p1" type="radio" value="c"/> El evento tiene más de un resultado favorable.</label></fieldset>
+<fieldset><legend>2. Si \(P(A)=0{,}35\), entonces \(P(A^c)\) es:</legend><label><input name="p2" type="radio" value="a"/> 0,65</label><label><input name="p2" type="radio" value="b"/> 0,35</label><label><input name="p2" type="radio" value="c"/> 1,35</label></fieldset>
+<fieldset><legend>3. Si \(P(A)=0{,}4\), \(P(B)=0{,}5\) y \(P(A\cap B)=0{,}2\), ¿cuánto vale \(P(A\cup B)\)?</legend><label><input name="p3" type="radio" value="a"/> 0,7</label><label><input name="p3" type="radio" value="b"/> 0,9</label><label><input name="p3" type="radio" value="c"/> 0,2</label></fieldset>
+<fieldset><legend>4. En \(P(A\mid B)\), ¿qué evento define el nuevo espacio de referencia?</legend><label><input name="p4" type="radio" value="a"/> B</label><label><input name="p4" type="radio" value="b"/> A</label><label><input name="p4" type="radio" value="c"/> \(A^c\)</label></fieldset>
+<fieldset><legend>5. Dos eventos con probabilidades positivas son mutuamente excluyentes. Entonces:</legend><label><input name="p5" type="radio" value="a"/> No son independientes.</label><label><input name="p5" type="radio" value="b"/> Son necesariamente independientes.</label><label><input name="p5" type="radio" value="c"/> Tienen la misma probabilidad.</label></fieldset>
+<fieldset><legend>6. En un árbol, la probabilidad de un camino completo se obtiene:</legend><label><input name="p6" type="radio" value="a"/> Multiplicando las probabilidades sucesivas de sus ramas.</label><label><input name="p6" type="radio" value="b"/> Sumando siempre todas las ramas.</label><label><input name="p6" type="radio" value="c"/> Dividiendo la primera rama por la última.</label></fieldset>
+<fieldset><legend>7. En un árbol, un mismo evento puede alcanzarse por varios caminos. Para obtener su probabilidad total se debe:</legend><label><input name="p7" type="radio" value="a"/> Sumar las probabilidades de todos los caminos que conducen al evento buscado.</label><label><input name="p7" type="radio" value="b"/> Elegir solamente el camino de mayor probabilidad.</label><label><input name="p7" type="radio" value="c"/> Promediar las probabilidades de las últimas ramas.</label></fieldset>
+<fieldset><legend>8. En una planta se sabe que el 90% de los trabajadores expuestos a cierto riesgo utiliza protección respiratoria. ¿Podemos concluir que el 90% de quienes utilizan protección respiratoria está expuesto a ese riesgo?</legend><label><input name="p8" type="radio" value="a"/> No. Invertir la condición cambia la probabilidad y se necesita información adicional.</label><label><input name="p8" type="radio" value="b"/> Sí. Una probabilidad condicionada puede leerse en ambos sentidos.</label><label><input name="p8" type="radio" value="c"/> Sí, porque 90% es una proporción suficientemente alta.</label></fieldset>
+<button class="boton-primario" type="submit">Corregir</button><p class="mensaje" id="resultado-auto-u3"></p></form><button class="boton-secundario" data-seccion-directa="glosario" type="button">Consultar el glosario</button>
 </section>
 <section aria-labelledby="glosario-titulo" class="seccion" id="glosario">
 <p class="etiqueta">Consulta rápida</p><h2 id="glosario-titulo">Glosario</h2>
@@ -351,14 +533,15 @@
 <fieldset><legend>8. Si en un diagrama de caja aparece una observación dibujada fuera de los bigotes, ese punto representa:</legend><label><input name="a8" type="radio" value="a"/> Es un posible valor atípico.</label><label><input name="a8" type="radio" value="b"/> Es necesariamente un error de medición.</label><label><input name="a8" type="radio" value="c"/> Representa la media del conjunto.</label></fieldset>
 <fieldset><legend>9. Si el coeficiente de correlación de Pearson es \(r=-0{,}70\), ¿cuál es la interpretación más adecuada?</legend><label><input name="a9" type="radio" value="a"/> Existe una relación lineal inversa de intensidad apreciable.</label><label><input name="a9" type="radio" value="b"/> No existe relación lineal.</label><label><input name="a9" type="radio" value="c"/> Una variable causa el 70% de los cambios de la otra.</label></fieldset>
 <fieldset><legend>10. Antes de comparar las alturas de las barras en dos gráficos distintos, ¿qué conviene verificar primero?</legend><label><input name="a10" type="radio" value="a"/> Que ambos utilicen la misma escala en el eje vertical.</label><label><input name="a10" type="radio" value="b"/> Que las barras tengan el mismo color.</label><label><input name="a10" type="radio" value="c"/> Que las categorías estén ordenadas alfabéticamente.</label></fieldset>
-<button class="boton-primario" type="submit">Corregir</button><p class="mensaje" id="resultado-auto"></p></form>
+<button class="boton-primario" type="submit">Corregir</button><p class="mensaje" id="resultado-auto"></p></form><button class="boton-secundario" data-seccion-directa="e14" type="button">Continuar: Módulo 2 · Probabilidad</button>
 </section>
 </main>
 </div>
 <footer>
 <div><strong>Aprender con Datos</strong><p>Proyecto educativo del Departamento de Estadística, Facultad de Economía y Administración, Universidad Nacional del Comahue.</p></div>
 <div><strong>Coordinación académica y desarrollo de contenidos</strong><p>Candelaria Morelli</p><p>Sugerencias, comentarios o consultas: <a href="mailto:profecandelariamorelli@gmail.com">profecandelariamorelli@gmail.com</a></p></div>
-<p class="version">Edición 2026.0 · 2026</p>
+<p class="version">Edición 2026.3 · 2026</p>
+<div class="licencia"><p>© 2026 Candelaria Morelli. <em>Aprender con Datos</em>.</p><p>Excepto donde se indique lo contrario, los contenidos originales de este sitio se distribuyen bajo licencia <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es" rel="license noopener" target="_blank">Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)</a>. Los materiales de terceros conservan sus respectivas condiciones de uso.</p></div>
 </footer>
 <script src="js/app.js"></script>
 </body>

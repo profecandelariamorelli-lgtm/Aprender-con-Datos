@@ -1,110 +1,75 @@
-# Aprender con Datos
+# Aprender con Datos — Edición 2026.3
 
-## Estadística aplicada a Higiene y Seguridad
+Teórico digital interactivo de Estadística para explorar datos, analizarlos con herramientas estadísticas e interpretar los resultados con sentido crítico.
 
-**Edición 2026 · Versión 1.0**
+Esta entrega desarrolla las Unidades 1, 2 y 3 y está preparada para funcionar como sitio estático en GitHub Pages.
 
-<img src="assets/img/logo-departamento.jpeg" alt="Logo del Departamento de Estadística" width="160">
+## Estructura
 
-Recurso educativo digital interactivo desarrollado para favorecer el aprendizaje de la Estadística aplicada a Higiene y Seguridad mediante explicaciones, ejemplos contextualizados, actividades interactivas y autoevaluaciones.
+- `index.html`: contenido completo y navegación.
+- `css/estilos.css`: identidad visual, diseño responsive e impresión.
+- `js/app.js`: actividades, gráficos SVG, navegación y guardado local del progreso.
+- `assets/img/`: imágenes institucionales y de la SRT.
+- `assets/documentos/`: informes de la SRT utilizados como fuentes.
 
-Esta primera edición desarrolla las **Unidades 1 y 2** de la asignatura y puede utilizarse tanto de forma independiente como integrado a un aula virtual (PEDCO/Moodle).
+## Abrir localmente
 
----
-
-## Objetivos
-
-El recurso busca que los estudiantes:
-
-- comprendan los conceptos estadísticos fundamentales;
-- interpreten información y gráficos en contextos profesionales;
-- desarrollen pensamiento crítico basado en datos;
-- relacionen la Estadística con situaciones propias de la Higiene y Seguridad;
-- utilicen la evidencia para fundamentar decisiones.
-
----
-
-## Estructura del proyecto
-
-- `index.html`: contenido principal y navegación.
-- `css/estilos.css`: identidad visual y diseño adaptable (*responsive*).
-- `js/app.js`: actividades interactivas, gráficos, navegación y almacenamiento local del progreso.
-- `assets/img/`: imágenes institucionales y recursos gráficos.
-- `assets/documentos/`: documentos utilizados como fuentes.
-
----
-
-## Uso local
-
-1. Descomprimir completamente la carpeta.
+1. Descomprimir toda la carpeta.
 2. Abrir `index.html` con Chrome, Edge o Firefox.
-3. No ejecutar el archivo directamente desde el ZIP.
+3. No abrir el archivo directamente dentro del ZIP.
 
----
-
-## Publicación mediante GitHub Pages
+## Publicar en GitHub Pages
 
 1. Crear un repositorio público.
-2. Subir el contenido de esta carpeta dejando `index.html` en la raíz del repositorio.
-3. Ir a **Settings → Pages**.
-4. Seleccionar **Deploy from a branch**, rama **main** y carpeta **/(root)**.
-5. Guardar la configuración y esperar la generación automática del sitio.
-
----
+2. Subir **el contenido interno** de esta carpeta, de modo que `index.html` quede en la raíz.
+3. Ir a `Settings > Pages`.
+4. Elegir `Deploy from a branch`, rama `main`, carpeta `/ (root)`.
+5. Guardar y esperar a que GitHub muestre la dirección del sitio.
 
 ## Personalización
 
-- El enlace al aula PEDCO se modifica en `index.html` (`id="enlace-pedco"`).
-- La identidad visual puede ajustarse desde `css/estilos.css`.
-- Las actividades y ejemplos interactivos se encuentran en `js/app.js`.
-- Los contenidos teóricos están desarrollados en `index.html`.
-
----
+- El enlace al aula PEDCO se edita en `index.html`, buscando `id="enlace-pedco"`.
+- Los colores principales están al comienzo de `css/estilos.css`, dentro de `:root`.
+- Los ejemplos interactivos y respuestas se encuentran en `js/app.js`.
+- Los textos teóricos están en `index.html`.
 
 ## Principios didácticos
 
-El diseño del recurso se apoya en los siguientes criterios:
+- La explicación construye el concepto y la interacción lo potencia.
+- El desarrollo general es independiente del TP vigente.
+- PEDCO concentra materiales oficiales, actividades acreditables y entregas.
+- La aplicación de las Unidades 1 y 2 vincula explícitamente con el TP1 y Excel; la Unidad 3 mantiene un recorrido teórico autónomo compatible con el TP de Probabilidad.
+- Los contextos profesionales se utilizan para dar sentido a la Estadística sin convertir el sitio en un manual de Higiene y Seguridad.
 
-- la explicación conceptual precede a la interacción;
-- las actividades favorecen la interpretación antes que el cálculo mecánico;
-- los ejemplos se contextualizan en situaciones profesionales de Higiene y Seguridad;
-- el recurso es independiente del Trabajo Práctico vigente;
-- PEDCO concentra los materiales oficiales, las actividades acreditables y las entregas;
-- la última estación integra explícitamente el recurso con el TP1 y el uso de Excel.
+## Tecnologías
 
----
+HTML5, CSS3, JavaScript, SVG, MathJax y `localStorage`. No requiere servidor ni base de datos.
 
-## Tecnologías utilizadas
+## Versión 5
 
-- HTML5
-- CSS3
-- JavaScript
-- SVG
-- MathJax
-- LocalStorage
+Esta edición incorpora la revisión docente de las Unidades 1 y 2: fuentes SRT ampliadas, frecuencias acumuladas en variables discretas y continuas, gráficos completos, ejemplos profesionales, simetría y asimetría, comparación entre media/mediana/moda, tipificación contextualizada, terminología de relación lineal y una autoevaluación ampliada.
 
-El recurso funciona completamente del lado del cliente y no requiere servidor ni base de datos.
 
----
+## Versión final
+Incluye la comparación entre parámetros poblacionales y estadísticos muestrales, el coeficiente de variación y los últimos ajustes editoriales.
 
-## Autora
 
-**Candelaria Morelli**
+## Edición 2026
+Incluye la revisión editorial final de las Unidades 1 y 2, con ejemplos de Higiene y Seguridad, normativa argentina, gráficos corregidos y actividades de uso crítico de IA.
 
-Departamento de Estadística  
-Facultad de Economía y Administración  
-Universidad Nacional del Comahue
 
----
+## Ajustes finales
+- Interpretación formal de la media.
+- Diagrama de dispersión basado en observaciones.
+- Corrección del margen inferior del gráfico de barras.
 
-## Licencia
-
-© 2026 Candelaria Morelli – Universidad Nacional del Comahue.
-
-Este recurso educativo puede utilizarse y compartirse con fines académicos, citando adecuadamente la autoría.
-
----
-
-## 🌐 Acceso al recurso
-
-👉 https://profecandelariamorelli-lgtm.github.io/Aprender-con-Datos/
+## Edición 2026.2 · Unidad 3
+- Incorpora un recorrido de ocho estaciones sobre Probabilidad.
+- Distingue los enfoques clásico y frecuencial y explicita sus condiciones de uso.
+- Integra complemento, unión e intersección con diagramas de Venn y una secuencia formal progresiva.
+- Define la probabilidad condicionada antes de utilizarla en tablas y explicita el cambio del espacio de referencia.
+- Contrasta eventos independientes y mutuamente excluyentes e incluye un desafío conceptual de justificación.
+- Incorpora árboles con notación de ramas diferenciada del producto y desarrolla la probabilidad total como suma de caminos.
+- Presenta el teorema de Bayes como un resultado general de actualización ante nueva información y utiliza en la materia su forma operativa.
+- Prioriza ejemplos contextualizados en Higiene y Seguridad y explicita la interpretación de los resultados.
+- Añade simulación frecuencial, árboles visuales, actividades breves, glosario ampliado y autoevaluación específica.
