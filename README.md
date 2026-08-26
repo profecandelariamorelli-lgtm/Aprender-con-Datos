@@ -73,3 +73,27 @@ Incluye la revisión editorial final de las Unidades 1 y 2, con ejemplos de Higi
 - Presenta el teorema de Bayes como un resultado general de actualización ante nueva información y utiliza en la materia su forma operativa.
 - Prioriza ejemplos contextualizados en Higiene y Seguridad y explicita la interpretación de los resultados.
 - Añade simulación frecuencial, árboles visuales, actividades breves, glosario ampliado y autoevaluación específica.
+
+## Edición en progreso · Unidad 4
+Se incorporó el Módulo 3 (Unidad 4 · Distribuciones de probabilidad) con las tres primeras estaciones:
+1. puente desde experimento aleatorio y espacio muestral;
+2. variable aleatoria discreta/continua;
+3. distribución de probabilidad discreta genérica.
+
+Clave provisoria del Módulo 3: `DISTRIB2026`.
+Las estaciones de esperanza/variancia y los modelos Binomial, Poisson y Normal se incorporarán en la siguiente iteración.
+
+
+## Ajustes v41
+- Se compactó el bloque de parámetros de la Normal y se corrigió la sigma residual.
+- Se normalizó la tipografía de los eventos y de la regla empírica.
+- Se ajustó el contenedor de GeoGebra para que escale dentro de la tarjeta.
+- El applet Normal de Matt Bognar ahora ocupa el ancho completo del bloque, sin ventana angosta, y conserva el botón externo como alternativa.
+
+
+## Ajustes v42
+- Se centró el encabezado `x` en la tabla de la distribución discreta.
+- Se nombró explícitamente la función de cuantía (o función de probabilidad).
+- Se igualó la altura de las tarjetas que comparan los efectos de μ y σ.
+- Se redujo el tamaño visual del gráfico interactivo de la regla empírica.
+- Se compactó el encuadre del applet Normal de Matt Bognar.

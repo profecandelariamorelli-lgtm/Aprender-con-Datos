@@ -3,23 +3,30 @@ const $=(s,c=document)=>c.querySelector(s);const $$=(s,c=document)=>[...c.queryS
 const secciones=$$('.seccion');const navItems=$$('.nav-item');const visitadas=new Set(JSON.parse(localStorage.getItem('acd-v5-visitadas')||'[]'));
 const CLAVE_MODULO_1='DATOS2026';
 const CLAVE_MODULO_2='PROBA2026';
+const CLAVE_MODULO_3='DISTRIB2026';
 const seccionesModulo1=new Set(['e1','e2','e3','e4','e5','e6','e7','e8','e9','e10','e11','e12','e13','autoevaluacion']);
 const seccionesModulo2=new Set(['e14','e15','e16','e17','e18','e19','e20','e21','e22','e23','autoevaluacion-u3']);
+const seccionesModulo3=new Set(['e24','e25','e26','e27','e28','e29','e30','autoevaluacion-u4']);
 let modulo1Desbloqueado=localStorage.getItem('acd-modulo-1-desbloqueado')==='si';
 let modulo2Desbloqueado=localStorage.getItem('acd-modulo-2-desbloqueado')==='si';
+let modulo3Desbloqueado=localStorage.getItem('acd-modulo-3-desbloqueado')==='si';
 function setModuloAbierto(numero,abierto){const boton=$(`[data-modulo-toggle="${numero}"]`),contenido=$(`#menu-modulo-${numero}`);if(!boton||!contenido)return;boton.setAttribute('aria-expanded',String(abierto));contenido.classList.toggle('oculto',!abierto);$('.icono-plegado',boton).textContent=abierto?'▾':'▸'}
 function actualizarBloqueoModulo1(){const boton=$('[data-modulo-toggle="1"]'),candado=$('.candado-modulo',boton),desbloqueo=$('#desbloqueo-modulo-1'),estaciones=$('#estaciones-modulo-1');boton.classList.toggle('bloqueado',!modulo1Desbloqueado);candado.textContent=modulo1Desbloqueado?'':'🔒';desbloqueo.classList.toggle('oculto',modulo1Desbloqueado);estaciones.classList.toggle('oculto',!modulo1Desbloqueado);if($('#texto-progreso'))actualizarProgreso()}
 function actualizarBloqueoModulo2(){const boton=$('[data-modulo-toggle="2"]'),candado=$('.candado-modulo',boton),desbloqueo=$('#desbloqueo-modulo-2'),estaciones=$('#estaciones-modulo-2');boton.classList.toggle('bloqueado',!modulo2Desbloqueado);candado.textContent=modulo2Desbloqueado?'':'🔒';desbloqueo.classList.toggle('oculto',modulo2Desbloqueado);estaciones.classList.toggle('oculto',!modulo2Desbloqueado);if($('#texto-progreso'))actualizarProgreso()}
+function actualizarBloqueoModulo3(){const boton=$('[data-modulo-toggle="3"]'),candado=$('.candado-modulo',boton),desbloqueo=$('#desbloqueo-modulo-3'),estaciones=$('#estaciones-modulo-3');boton.classList.toggle('bloqueado',!modulo3Desbloqueado);candado.textContent=modulo3Desbloqueado?'':'🔒';desbloqueo.classList.toggle('oculto',modulo3Desbloqueado);estaciones.classList.toggle('oculto',!modulo3Desbloqueado);if($('#texto-progreso'))actualizarProgreso()}
 actualizarBloqueoModulo1();
 actualizarBloqueoModulo2();
+actualizarBloqueoModulo3();
 $$('[data-modulo-toggle]').forEach(b=>b.addEventListener('click',()=>{const n=b.dataset.moduloToggle;setModuloAbierto(n,b.getAttribute('aria-expanded')!=='true')}));
 $('#desbloquear-modulo-1').addEventListener('click',()=>{const entrada=$('#clave-modulo-1'),mensaje=$('#mensaje-clave-modulo-1');if(entrada.value.trim().toUpperCase()===CLAVE_MODULO_1){modulo1Desbloqueado=true;localStorage.setItem('acd-modulo-1-desbloqueado','si');entrada.value='';mensaje.textContent='Módulo habilitado en este navegador.';mensaje.className='mensaje-clave correcto';actualizarBloqueoModulo1();setModuloAbierto('1',true)}else{mensaje.textContent='La clave no coincide. Revisala e intentá nuevamente.';mensaje.className='mensaje-clave incorrecto'}});
 $('#clave-modulo-1').addEventListener('keydown',e=>{if(e.key==='Enter'){$('#desbloquear-modulo-1').click()}});
 $('#desbloquear-modulo-2').addEventListener('click',()=>{const entrada=$('#clave-modulo-2'),mensaje=$('#mensaje-clave-modulo-2');if(entrada.value.trim().toUpperCase()===CLAVE_MODULO_2){modulo2Desbloqueado=true;localStorage.setItem('acd-modulo-2-desbloqueado','si');entrada.value='';mensaje.textContent='Módulo habilitado en este navegador.';mensaje.className='mensaje-clave correcto';actualizarBloqueoModulo2();setModuloAbierto('2',true)}else{mensaje.textContent='La clave no coincide. Revisala e intentá nuevamente.';mensaje.className='mensaje-clave incorrecto'}});
 $('#clave-modulo-2').addEventListener('keydown',e=>{if(e.key==='Enter'){$('#desbloquear-modulo-2').click()}});
-function mostrar(id){if(seccionesModulo1.has(id)&&!modulo1Desbloqueado){setModuloAbierto('2',false);setModuloAbierto('1',true);$('#clave-modulo-1').focus();return}if(seccionesModulo2.has(id)&&!modulo2Desbloqueado){setModuloAbierto('1',false);setModuloAbierto('2',true);$('#clave-modulo-2').focus();return}if(seccionesModulo2.has(id)){setModuloAbierto('1',false);setModuloAbierto('2',true)}else if(seccionesModulo1.has(id)){setModuloAbierto('1',true);setModuloAbierto('2',false)}secciones.forEach(s=>s.classList.toggle('visible',s.id===id));navItems.forEach(b=>b.classList.toggle('activo',b.dataset.seccion===id));if(/^e\d+$/.test(id)){visitadas.add(id);localStorage.setItem('acd-v5-visitadas',JSON.stringify([...visitadas]));actualizarProgreso()}history.replaceState(null,'','#'+id);$('#contenido').focus({preventScroll:true});window.scrollTo({top:0,behavior:'smooth'});$('#navegacion').classList.remove('abierto')}
+$('#desbloquear-modulo-3').addEventListener('click',()=>{const entrada=$('#clave-modulo-3'),mensaje=$('#mensaje-clave-modulo-3');if(entrada.value.trim().toUpperCase()===CLAVE_MODULO_3){modulo3Desbloqueado=true;localStorage.setItem('acd-modulo-3-desbloqueado','si');entrada.value='';mensaje.textContent='Módulo habilitado en este navegador.';mensaje.className='mensaje-clave correcto';actualizarBloqueoModulo3();setModuloAbierto('3',true)}else{mensaje.textContent='La clave no coincide. Revisala e intentá nuevamente.';mensaje.className='mensaje-clave incorrecto'}});
+$('#clave-modulo-3').addEventListener('keydown',e=>{if(e.key==='Enter'){$('#desbloquear-modulo-3').click()}});
+function mostrar(id){if(seccionesModulo1.has(id)&&!modulo1Desbloqueado){setModuloAbierto('2',false);setModuloAbierto('3',false);setModuloAbierto('1',true);$('#clave-modulo-1').focus();return}if(seccionesModulo2.has(id)&&!modulo2Desbloqueado){setModuloAbierto('1',false);setModuloAbierto('3',false);setModuloAbierto('2',true);$('#clave-modulo-2').focus();return}if(seccionesModulo3.has(id)&&!modulo3Desbloqueado){setModuloAbierto('1',false);setModuloAbierto('2',false);setModuloAbierto('3',true);$('#clave-modulo-3').focus();return}if(seccionesModulo3.has(id)){setModuloAbierto('1',false);setModuloAbierto('2',false);setModuloAbierto('3',true)}else if(seccionesModulo2.has(id)){setModuloAbierto('1',false);setModuloAbierto('2',true);setModuloAbierto('3',false)}else if(seccionesModulo1.has(id)){setModuloAbierto('1',true);setModuloAbierto('2',false);setModuloAbierto('3',false)}secciones.forEach(s=>s.classList.toggle('visible',s.id===id));navItems.forEach(b=>b.classList.toggle('activo',b.dataset.seccion===id));if(/^e\d+$/.test(id)){visitadas.add(id);localStorage.setItem('acd-v5-visitadas',JSON.stringify([...visitadas]));actualizarProgreso()}history.replaceState(null,'','#'+id);$('#contenido').focus({preventScroll:true});window.scrollTo({top:0,behavior:'smooth'});$('#navegacion').classList.remove('abierto')}
 navItems.forEach(b=>b.addEventListener('click',()=>mostrar(b.dataset.seccion)));$$('[data-destino]').forEach(b=>b.addEventListener('click',()=>mostrar(b.dataset.destino)));$$('[data-seccion-directa]').forEach(b=>b.addEventListener('click',()=>mostrar(b.dataset.seccionDirecta)));
-function actualizarProgreso(){const disponibles=new Set();if(modulo1Desbloqueado)for(let i=1;i<=13;i++)disponibles.add(`e${i}`);if(modulo2Desbloqueado)for(let i=14;i<=23;i++)disponibles.add(`e${i}`);const total=disponibles.size;const n=[...visitadas].filter(x=>disponibles.has(x)).length;$('#texto-progreso').textContent=total?`${n} de ${total} estaciones disponibles visitadas`:'0 estaciones disponibles · desbloqueá un módulo para comenzar';$('#barra-progreso').style.width=total?`${n/total*100}%`:'0%'}actualizarProgreso();
+function actualizarProgreso(){const disponibles=new Set();if(modulo1Desbloqueado)for(let i=1;i<=13;i++)disponibles.add(`e${i}`);if(modulo2Desbloqueado)for(let i=14;i<=23;i++)disponibles.add(`e${i}`);if(modulo3Desbloqueado)for(let i=24;i<=30;i++)disponibles.add(`e${i}`);const total=disponibles.size;const n=[...visitadas].filter(x=>disponibles.has(x)).length;$('#texto-progreso').textContent=total?`${n} de ${total} estaciones disponibles visitadas`:'0 estaciones disponibles · desbloqueá un módulo para comenzar';$('#barra-progreso').style.width=total?`${n/total*100}%`:'0%'}actualizarProgreso();
 $('#boton-menu').addEventListener('click',()=>{const n=$('#navegacion');n.classList.toggle('abierto');$('#boton-menu').setAttribute('aria-expanded',n.classList.contains('abierto'))});$('#boton-imprimir').addEventListener('click',()=>window.print());
 $$('.comprobar').forEach(btn=>btn.addEventListener('click',()=>{const act=btn.closest('.actividad');const elegido=$('input[type=radio]:checked',act);const m=$('.mensaje',act);const devolucion=$('.devolucion-conceptual.oculto',act);if(!elegido){m.textContent='Seleccioná una opción antes de comprobar.';m.className='mensaje incorrecto';return}if(elegido.value===btn.dataset.correcta){m.textContent='Correcto. La elección está bien fundamentada.';m.className='mensaje correcto';if(devolucion)devolucion.classList.remove('oculto')}else{m.textContent=act.dataset.id==='e18-cond'?'Revisá cuál es el grupo que la frase “entre quienes…” toma como referencia y volvé a intentarlo.':'Revisá la explicación de la estación y volvé a intentarlo.';m.className='mensaje incorrecto'}}));$$('.pista').forEach(b=>b.addEventListener('click',()=>$('.contenido-pista',b.closest('.actividad')).classList.toggle('oculto')));
 const etapas={problema:['Problema','¿Qué queremos comprender? ¿Cuál es la pregunta concreta y por qué importa?'],plan:['Plan','¿Qué unidades observaremos? ¿Qué variables registraremos? ¿Cómo seleccionaremos los casos?'],datos:['Datos','¿Cómo se obtendrán, registrarán y revisarán los datos? ¿Hay faltantes, errores o unidades inconsistentes?'],analisis:['Análisis','¿Qué tablas, gráficos y medidas responden a la pregunta? ¿Qué patrones o diferencias aparecen?'],conclusiones:['Conclusiones','¿Qué aprendimos, con qué límites y cómo lo comunicaremos? ¿Qué nuevas preguntas surgen?']};
@@ -73,7 +80,176 @@ const corrText={positiva:'Dirección directa (positiva), forma aproximadamente l
 function renderCorr(){const v=$('#patron-correlacion').value;$('#grafico-correlacion').innerHTML=svgDispersion(corrData[v]);$('#texto-correlacion').innerHTML=`<h3>${$('#patron-correlacion option:checked').textContent}</h3><p>${corrText[v]}</p>`}$('#patron-correlacion').addEventListener('change',renderCorr);renderCorr();
 function arbolMaquinas(){const el=$('#arbol-maquinas');if(!el)return;el.innerHTML=`<p class="nota arbol-leyenda"><strong>Lectura:</strong> el valor entre paréntesis indica la probabilidad correspondiente a esa rama.</p><svg viewBox="0 0 700 430" role="img" aria-label="Tres ramas para M1, M2 y M3, cada una dividida en defectuoso y no defectuoso, con la probabilidad conjunta calculada al final de cada camino"><g class="ramas"><path d="M55 215 L245 75 M55 215 L245 215 M55 215 L245 355"/><path d="M245 75 L500 45 M245 75 L500 115 M245 215 L500 185 M245 215 L500 255 M245 355 L500 325 M245 355 L500 395"/></g><g class="nodos"><circle cx="55" cy="215" r="9"/><circle cx="245" cy="75" r="8"/><circle cx="245" cy="215" r="8"/><circle cx="245" cy="355" r="8"/></g><g class="etiquetas"><text x="145" y="125">M1 (0,50)</text><text x="145" y="205">M2 (0,30)</text><text x="145" y="315">M3 (0,20)</text><text x="355" y="48">D (0,03)</text><text x="355" y="112">No D (0,97)</text><text x="355" y="188">D (0,04)</text><text x="355" y="252">No D (0,96)</text><text x="355" y="328">D (0,05)</text><text x="355" y="392">No D (0,95)</text><text class="resultado" x="520" y="48">0,015</text><text class="resultado" x="520" y="112">0,485</text><text class="resultado" x="520" y="188">0,012</text><text class="resultado" x="520" y="252">0,288</text><text class="resultado" x="520" y="328">0,010</text><text class="resultado" x="520" y="392">0,190</text></g></svg>`}arbolMaquinas();
 function arbolTest(){const el=$('#arbol-test');if(!el)return;el.innerHTML=`<p class="nota arbol-leyenda"><strong>Lectura:</strong> el valor entre paréntesis indica la probabilidad de esa rama.</p><svg viewBox="0 0 700 360" role="img" aria-label="Árbol con presencia o ausencia de concentración peligrosa y activación o no de la alarma"><g class="ramas"><path d="M55 180 L250 95 M55 180 L250 275"/><path d="M250 95 L500 55 M250 95 L500 135 M250 275 L500 235 M250 275 L500 315"/></g><g class="nodos"><circle cx="55" cy="180" r="9"/><circle cx="250" cy="95" r="8"/><circle cx="250" cy="275" r="8"/></g><g class="etiquetas"><text x="140" y="120">G (0,01)</text><text x="140" y="255">No G (0,99)</text><text x="360" y="58">A (0,99)</text><text x="360" y="132">No A (0,01)</text><text x="360" y="238">A (0,01)</text><text x="360" y="312">No A (0,99)</text><text class="resultado" x="520" y="58">0,0099</text><text class="resultado" x="520" y="138">0,0001</text><text class="resultado" x="520" y="238">0,0099</text><text class="resultado" x="520" y="318">0,9801</text></g></svg>`}arbolTest();
-const glosario=[['Población','Conjunto completo de unidades sobre las que se desea obtener información.'],['Muestra','Subconjunto de la población efectivamente observado.'],['Unidad estadística','Elemento individual sobre el que se registran datos.'],['Variable','Característica que puede tomar distintos valores o categorías.'],['Frecuencia absoluta','Cantidad de observaciones de una categoría o valor.'],['Frecuencia relativa','Proporción de observaciones: frecuencia absoluta dividida por el total.'],['Media','Suma de los valores dividida por la cantidad de observaciones.'],['Mediana','Valor central de los datos ordenados; coincide con el segundo cuartil (Q2) y el percentil 50.'],['Moda','Valor o categoría de mayor frecuencia.'],['Varianza','Promedio corregido de los cuadrados de las desviaciones respecto de la media.'],['Desvío estándar','Raíz cuadrada de la varianza; expresa dispersión en las unidades originales.'],['Rango intercuartílico','Diferencia Q3−Q1; amplitud del 50% central.'],['Coeficiente de variación','Desvío estándar en relación con la media, expresado generalmente en porcentaje.'],['Valor tipificado','Posición de un valor medida en cantidad de desvíos estándar respecto de la media.'],['Simetría','Forma aproximadamente equilibrada de una distribución alrededor de su centro.'],['Asimetría','Forma de una distribución con una cola más prolongada hacia valores grandes o pequeños.'],['Cuartil','Medida de posición que divide los datos ordenados en cuatro partes aproximadamente iguales.'],['Correlación lineal de Pearson','Coeficiente que resume la dirección y la intensidad de la relación lineal entre dos variables cuantitativas.'],['Experimento aleatorio','Proceso u observación cuyo resultado no puede conocerse con certeza antes de realizarlo, aunque se describan sus resultados posibles.'],['Espacio muestral','Conjunto de todos los resultados posibles de un experimento aleatorio; se representa habitualmente con Ω.'],['Evento o suceso','Conjunto de uno o más resultados del espacio muestral que cumplen una condición de interés; es un subconjunto de Ω.'],['Cardinal de un conjunto','Cantidad de elementos que contiene un conjunto. En la notación usada aquí se representa con #.'],['Probabilidad clásica','Cociente entre casos favorables y casos posibles cuando los resultados elementales son equiprobables.'],['Probabilidad frecuencial','Interpretación de la probabilidad a partir de la estabilización de frecuencias relativas en muchas repeticiones comparables.'],['Probabilidad simple o marginal','Probabilidad de un solo evento, obtenida por ejemplo a partir de un total marginal de una tabla.'],['Probabilidad compuesta','En esta materia, probabilidad que combina dos o más eventos mediante operaciones como intersección o unión.'],['Probabilidad conjunta','Probabilidad de que ocurran simultáneamente dos eventos; corresponde a una intersección.'],['Probabilidad condicionada','Probabilidad de un evento cuando se sabe que otro ya ocurrió; la información dada cambia el espacio de referencia.'],['Probabilidad total','Regla que obtiene la probabilidad de un evento sumando las probabilidades de los distintos caminos que conducen a él a través de una partición.'],['Eventos mutuamente excluyentes','Eventos que no pueden ocurrir simultáneamente; su intersección es vacía.'],['Eventos exhaustivos','Eventos que, considerados en conjunto, cubren todo el espacio muestral.'],['Eventos independientes','Eventos para los que conocer la ocurrencia de uno no modifica la probabilidad del otro.'],['Eventos dependientes','Eventos para los que conocer la ocurrencia de uno modifica la probabilidad del otro.'],['Teorema de Bayes','Resultado general que permite actualizar la probabilidad de un suceso cuando se dispone de nueva información. En esta materia se utiliza su forma operativa para resolver situaciones de probabilidad condicionada.']];function renderGlosario(f=''){const q=f.toLowerCase();$('#lista-glosario').innerHTML=glosario.filter(([t,d])=>(t+' '+d).toLowerCase().includes(q)).map(([t,d])=>`<article class="glosario-item"><h3>${t}</h3><p>${d}</p></article>`).join('')||'<p>No se encontraron conceptos.</p>'}$('#buscar-glosario').addEventListener('input',e=>renderGlosario(e.target.value));renderGlosario();
-$('#form-autoevaluacion').addEventListener('submit',e=>{e.preventDefault();const claves={a1:'b',a2:'a',a3:'a',a4:'a',a5:'a',a6:'a',a7:'a',a8:'a',a9:'a',a10:'a'};let c=0;for(const [n,v] of Object.entries(claves)){const r=$(`input[name=${n}]:checked`);if(r&&r.value===v)c++}const m=$('#resultado-auto');m.textContent=`Resultado: ${c}/10. ${c===10?'Dominás las ideas centrales.':c>=7?'Buen avance; revisá las preguntas incorrectas.':'Conviene volver a las estaciones relacionadas antes de reintentar.'}`;m.className='mensaje '+(c>=7?'correcto':'incorrecto')});
-$('#form-autoevaluacion-u3').addEventListener('submit',e=>{e.preventDefault();const claves={p1:'a',p2:'a',p3:'a',p4:'a',p5:'a',p6:'a',p7:'a',p8:'a'};let c=0;for(const [n,v] of Object.entries(claves)){const r=$(`input[name=${n}]:checked`);if(r&&r.value===v)c++}const m=$('#resultado-auto-u3');m.textContent=`Resultado: ${c}/8. ${c===8?'Dominás las ideas centrales de la unidad.':c>=6?'Buen avance; revisá las preguntas incorrectas.':'Conviene volver a las estaciones de Probabilidad antes de reintentar.'}`;m.className='mensaje '+(c>=6?'correcto':'incorrecto')});
+
+if($('#comprobar-e25-va'))$('#comprobar-e25-va').addEventListener('click',()=>{const r=$('input[name=e25va]:checked'),m=$('#mensaje-e25-va');if(!r){m.textContent='Seleccioná una opción antes de comprobar.';m.className='mensaje incorrecto';return}const ok=r.value==='c';m.textContent=ok?'Correcto. La concentración es una variable continua: puede tomar valores reales dentro de un intervalo.':'Revisá qué valores puede tomar la concentración, no cuántas unidades se observan ni con qué instrumento se mide.';m.className='mensaje '+(ok?'correcto':'incorrecto')});
+if($('#comprobar-e26'))$('#comprobar-e26').addEventListener('click',()=>{const entrada=$('#respuesta-e26'),m=$('#mensaje-e26');const v=parseFloat(entrada.value.trim().replace(',','.').replace('%',''));const ok=Math.abs(v-.69)<.001||Math.abs(v-69)<.001;m.textContent=ok?'Correcto: “como máximo uno” incluye X=0 y X=1, por lo que 0,25 + 0,44 = 0,69.':'“Como máximo uno” incluye los valores 0 y 1. Sumá las probabilidades correspondientes.';m.className='mensaje '+(ok?'correcto':'incorrecto')});
+if($('#comprobar-e27'))$('#comprobar-e27').addEventListener('click',()=>{const elegido=document.querySelector('input[name="e27esp"]:checked'),m=$('#mensaje-e27');if(!elegido){m.textContent='Elegí una opción antes de comprobar.';m.className='mensaje incorrecto';return}const ok=elegido.value==='b';m.textContent=ok?'Correcto. La esperanza es un promedio teórico de largo plazo; no predice el valor exacto de una observación.':'Revisá la idea de largo plazo: la esperanza no indica qué ocurrirá exactamente en la próxima semana.';m.className='mensaje '+(ok?'correcto':'incorrecto')});
+
+const glosario=[
+['Población','Conjunto completo de unidades sobre las que se desea obtener información.'],
+['Muestra','Subconjunto de la población efectivamente observado.'],
+['Unidad estadística','Elemento individual sobre el que se registran datos.'],
+['Variable','Característica que puede tomar distintos valores o categorías.'],
+['Frecuencia absoluta','Cantidad de observaciones de una categoría o valor.'],
+['Frecuencia relativa','Proporción de observaciones: frecuencia absoluta dividida por el total.'],
+['Media muestral (x̄)','Media calculada a partir de los valores observados en una muestra. Se simboliza x̄.'],
+['Media poblacional (μ)','Media de los valores de una variable en toda la población. Se simboliza μ.'],
+['Mediana','Valor central de los datos ordenados; coincide con el segundo cuartil (Q2) y el percentil 50.'],
+['Moda','Valor o categoría de mayor frecuencia.'],
+['Varianza muestral (s²)','Medida de dispersión calculada a partir de una muestra. Se simboliza s².'],
+['Varianza poblacional (σ²)','Medida de la variabilidad de una variable en toda la población. Se simboliza σ².'],
+['Desvío estándar muestral (s)','Raíz cuadrada de la varianza muestral. Se simboliza s y se expresa en las mismas unidades que la variable.'],
+['Desvío estándar poblacional (σ)','Raíz cuadrada de la varianza poblacional. Se simboliza σ y se expresa en las mismas unidades que la variable.'],
+['Rango intercuartílico','Diferencia Q3−Q1; amplitud del 50% central.'],
+['Coeficiente de variación','Desvío estándar en relación con la media, expresado generalmente en porcentaje.'],
+['Valor tipificado','Posición de un valor medida en cantidad de desvíos estándar respecto de la media.'],
+['Simetría','Forma aproximadamente equilibrada de una distribución alrededor de su centro.'],
+['Asimetría','Forma de una distribución con una cola más prolongada hacia valores grandes o pequeños.'],
+['Cuartil (Q₁, Q₂, Q₃)','Medidas de posición que dividen los datos ordenados en cuatro partes aproximadamente iguales. Q₁ deja aproximadamente el 25% de los datos por debajo, Q₂ coincide con la mediana y Q₃ deja aproximadamente el 75% por debajo.'],
+['Correlación lineal de Pearson (r)','Coeficiente r que resume la dirección y la intensidad de la relación lineal entre dos variables cuantitativas. Toma valores entre −1 y 1.'],
+['Experimento aleatorio','Proceso u observación cuyo resultado no puede conocerse con certeza antes de realizarlo, aunque se describan sus resultados posibles.'],
+['Espacio muestral','Conjunto de todos los resultados posibles de un experimento aleatorio; se representa habitualmente con Ω.'],
+['Evento o suceso','Conjunto de uno o más resultados del espacio muestral que cumplen una condición de interés; es un subconjunto de Ω.'],
+['Cardinal de un conjunto','Cantidad de elementos que contiene un conjunto. En la notación usada aquí se representa con #.'],
+['Probabilidad clásica','Cociente entre casos favorables y casos posibles cuando los resultados elementales son equiprobables.'],
+['Probabilidad frecuencial','Interpretación de la probabilidad a partir de la estabilización de frecuencias relativas en muchas repeticiones comparables.'],
+['Probabilidad simple o marginal','Probabilidad de un solo evento, obtenida por ejemplo a partir de un total marginal de una tabla.'],
+['Probabilidad compuesta','En esta materia, probabilidad que combina dos o más eventos mediante operaciones como intersección o unión.'],
+['Probabilidad conjunta','Probabilidad de que ocurran simultáneamente dos eventos; corresponde a una intersección.'],
+['Probabilidad condicionada','Probabilidad de un evento cuando se sabe que otro ya ocurrió; la información dada cambia el espacio de referencia.'],
+['Probabilidad total','Regla que obtiene la probabilidad de un evento sumando las probabilidades de los distintos caminos que conducen a él a través de una partición.'],
+['Eventos mutuamente excluyentes','Eventos que no pueden ocurrir simultáneamente; su intersección es vacía.'],
+['Eventos exhaustivos','Eventos que, considerados en conjunto, cubren todo el espacio muestral.'],
+['Eventos independientes','Eventos para los que conocer la ocurrencia de uno no modifica la probabilidad del otro.'],
+['Eventos dependientes','Eventos para los que conocer la ocurrencia de uno modifica la probabilidad del otro.'],
+['Teorema de Bayes','Resultado general que permite actualizar la probabilidad de un suceso cuando se dispone de nueva información. En esta materia se utiliza su forma operativa para resolver situaciones de probabilidad condicionada.'],
+['Variable aleatoria','Función que asigna un valor numérico a cada resultado de un experimento aleatorio.'],
+['Recorrido de una variable aleatoria (Rₓ)','Conjunto de valores posibles que puede tomar una variable aleatoria. En este material se representa con Rₓ.'],
+['Variable aleatoria discreta','Variable aleatoria cuyo recorrido es finito o infinito numerable.'],
+['Variable aleatoria continua','Variable aleatoria que puede tomar cualquier valor dentro de un intervalo o conjunto continuo de valores.'],
+['Distribución de probabilidad','Descripción de cómo se reparte la probabilidad entre los valores posibles de una variable aleatoria o entre intervalos de valores.'],
+['Función de cuantía (o función de probabilidad)','En una variable aleatoria discreta, función que asigna a cada valor x la probabilidad P(X=x). Cumple la ley de no negatividad, P(X=x)≥0, y la ley de cierre: la suma de las probabilidades sobre todos los valores del recorrido es 1.'],
+['Función de densidad','Función que describe cómo se distribuye la probabilidad para una variable aleatoria continua. La probabilidad se asigna a intervalos y corresponde al área bajo la curva de densidad. La densidad no puede ser negativa y el área total bajo la curva es 1. Para una variable continua, P(X=x)=0.'],
+['Función de distribución acumulada','Función F(x)=P(X≤x), que representa la probabilidad acumulada hasta un valor x. Si X es discreta, se obtiene sumando las probabilidades de los valores menores o iguales que x. Si X es continua, corresponde al área acumulada bajo la curva de densidad desde −∞ hasta x (o, si el recorrido tiene un límite inferior, desde ese límite hasta x).'],
+['Esperanza o valor esperado','Media teórica de una variable aleatoria. Se simboliza E(X) y también μ para la media de su distribución. En una variable discreta se obtiene ponderando cada valor por su probabilidad.'],
+['Varianza de una variable aleatoria','Medida de la variabilidad de una variable aleatoria respecto de su esperanza. Se simboliza V(X) o σ².'],
+['Desvío estándar de una variable aleatoria','Raíz cuadrada de la varianza de una variable aleatoria. Se simboliza σ y se expresa en las mismas unidades que X.'],
+['Ensayo de Bernoulli','Experiencia aleatoria con dos resultados posibles, convencionalmente denominados éxito y fracaso, con probabilidades p y 1−p.'],
+['Distribución Binomial','Modelo de probabilidad discreto para el número de éxitos en un número fijo de ensayos independientes, con la misma probabilidad de éxito en cada ensayo. Se escribe X∼B(n,p).'],
+['Parámetros de la Binomial (n, p)','n es el número fijo de ensayos y p es la probabilidad de éxito en cada ensayo.'],
+['Media y variabilidad de la Binomial','E(X)=μ=np; V(X)=σ²=np(1−p); σ=√[np(1−p)].'],
+['Distribución de Poisson','Modelo de probabilidad discreto para contar ocurrencias de un evento sobre una extensión o región continua determinada, bajo las condiciones del modelo. Se escribe X∼Po(λ).'],
+['Parámetro de Poisson (λ)','Número medio de ocurrencias esperado sobre la extensión o región considerada.'],
+['Media y variabilidad de Poisson','E(X)=μ=λ; V(X)=σ²=λ; σ=√λ.'],
+['Número combinatorio','El número combinatorio \\(\\binom{n}{x}\\) indica cuántas formas hay de elegir \\(x\\) elementos entre \\(n\\) sin importar el orden. Se calcula como \\(\\binom{n}{x}=\\frac{n!}{x!(n-x)!}\\).'],
+['Factorial','Producto de los números enteros positivos desde un número natural x hasta 1. Se escribe x!. Por definición, 0!=1.'],
+['Modelo probabilístico','Representación teórica que describe el comportamiento probabilístico de una variable bajo determinados supuestos y parámetros. Se elige cuando esos supuestos resultan razonables para el fenómeno y el propósito del análisis.'],
+['Distribución Normal','Modelo de probabilidad continuo, de forma acampanada y simétrica respecto de su media μ. Queda determinado por μ y σ; en este modelo media, mediana y moda coinciden.'],
+['Parámetros de la Normal (μ, σ)','μ determina el centro o ubicación de la distribución Normal y σ su dispersión. Un cambio en μ desplaza la curva; un cambio en σ modifica su extensión manteniendo el área total igual a 1.'],
+['Normal estándar','Distribución Normal de la variable tipificada Z, con media 0 y desvío estándar 1. Se escribe Z∼N(0,1).'],
+['Tipificación','Transformación Z=(X−μ)/σ que expresa la posición de un valor en cantidad de desvíos estándar respecto de la media. En este material se usa principalmente para interpretar posiciones relativas y comparar escalas; la herramienta digital permite calcular probabilidades sin tipificar previamente.'],
+['Regla empírica 68–95–99,7','Referencia aproximada para una distribución Normal: alrededor del 68% de los valores queda entre μ±σ, el 95% entre μ±2σ y el 99,7% entre μ±3σ.'],
+['Percentil en un modelo continuo','Valor que deja acumulada por debajo una proporción determinada de la distribución. Por ejemplo, el percentil 10 deja aproximadamente el 10% del área a su izquierda.']
+];
+function renderGlosario(f=''){const q=f.toLowerCase();$('#lista-glosario').innerHTML=glosario.filter(([t,d])=>(t+' '+d).toLowerCase().includes(q)).map(([t,d])=>`<article class="glosario-item"><h3>${t}</h3><p>${d}</p></article>`).join('')||'<p>No se encontraron conceptos.</p>';if(window.MathJax?.typesetPromise)window.MathJax.typesetPromise([$('#lista-glosario')]).catch(()=>{})}$('#buscar-glosario').addEventListener('input',e=>renderGlosario(e.target.value));renderGlosario();
+function prepararFeedbackAuto(formulario){
+  if(!formulario)return;
+  $$('fieldset',formulario).forEach(fs=>{
+    if(!$('.feedback-autoeval',fs)){
+      const p=document.createElement('p');
+      p.className='feedback-autoeval';
+      fs.appendChild(p);
+    }
+  });
+}
+function corregirAutoevaluacion({form,claves,pistas,resultado,umbral}){
+  prepararFeedbackAuto(form);
+  let c=0;
+  for(const [n,v] of Object.entries(claves)){
+    const r=$(`input[name=${n}]:checked`,form);
+    const fs=$(`input[name=${n}]`,form)?.closest('fieldset');
+    const f=fs?$('.feedback-autoeval',fs):null;
+    if(r&&r.value===v){
+      c++;
+      if(f){f.textContent='✓ Correcta';f.className='feedback-autoeval correcto';}
+      if(fs)fs.classList.remove('respuesta-incorrecta');
+    }else{
+      const pista=pistas[n]||'Revisá esta respuesta y volvé a la estación relacionada.';
+      if(f){f.textContent='✗ Revisá esta respuesta. '+pista;f.className='feedback-autoeval incorrecto';}
+      if(fs)fs.classList.add('respuesta-incorrecta');
+    }
+  }
+  const total=Object.keys(claves).length;
+  resultado.textContent=`Resultado: ${c}/${total}. ${c===total?'Dominás las ideas centrales del módulo.':c>=umbral?'Buen avance. Revisá las preguntas señaladas para completar el recorrido.':'Conviene revisar las preguntas señaladas y volver a las estaciones relacionadas antes de reintentar.'}`;
+  resultado.className='mensaje '+(c>=umbral?'correcto':'incorrecto');
+}
+const formAuto1=$('#form-autoevaluacion');
+prepararFeedbackAuto(formAuto1);
+formAuto1.addEventListener('submit',e=>{e.preventDefault();corregirAutoevaluacion({
+  form:formAuto1,
+  claves:{a1:'b',a2:'a',a3:'a',a4:'a',a5:'a',a6:'a',a7:'a',a8:'a',a9:'a',a10:'a'},
+  pistas:{
+    a1:'Revisá la diferencia entre una variable cualitativa y una cuantitativa.',
+    a2:'Volvé a distinguir población, muestra y unidad estadística.',
+    a3:'Revisá qué tipo de muestreo garantiza representación de grupos definidos previamente.',
+    a4:'Pensá qué gráfico corresponde al tipo de variable planteado.',
+    a5:'Revisá qué medida de posición es más resistente a valores extremos.',
+    a6:'Volvé a la interpretación de los cuartiles y del rango intercuartílico.',
+    a7:'Revisá qué mide el coeficiente de variación y cuándo permite comparar dispersiones.',
+    a8:'Volvé a la lectura del diagrama de caja y sus componentes.',
+    a9:'Revisá qué expresa un valor tipificado respecto de la media y el desvío estándar.',
+    a10:'Para comparar visualmente dos distribuciones, revisá qué condiciones de escala hacen válida la comparación.'
+  },resultado:$('#resultado-auto'),umbral:7});
+});
+const formAuto2=$('#form-autoevaluacion-u3');
+prepararFeedbackAuto(formAuto2);
+formAuto2.addEventListener('submit',e=>{e.preventDefault();corregirAutoevaluacion({
+  form:formAuto2,
+  claves:{p1:'a',p2:'a',p3:'a',p4:'a',p5:'a',p6:'a',p7:'a',p8:'a'},
+  pistas:{
+    p1:'Revisá qué caracteriza a un experimento aleatorio y a su espacio muestral.',
+    p2:'Volvé a distinguir probabilidad clásica de frecuencia relativa.',
+    p3:'Revisá la regla del complemento y qué evento representa.',
+    p4:'Pensá cuándo se suman probabilidades y qué papel cumple la intersección.',
+    p5:'Revisá cómo se lee una tabla de contingencia para construir el denominador correcto.',
+    p6:'En una probabilidad condicionada, fijate cuál es el grupo que queda como nuevo espacio de referencia.',
+    p7:'Revisá la diferencia entre independencia y exclusión: no significan lo mismo.',
+    p8:'Invertir una condición cambia el grupo de referencia; revisá qué información adicional hace falta.'
+  },resultado:$('#resultado-auto-u3'),umbral:6});
+});
+
+if($('#form-autoevaluacion-u4'))$('#form-autoevaluacion-u4').addEventListener('submit',e=>{e.preventDefault();
+const claves={d1:'b',d2:'a',d3:'b',d4:'b',d5:'b',d6:'a',d7:'b',d8:'b',d9:'c',d10:'b'};
+const pistas={
+d1:'Revisá la diferencia entre contar valores separados y medir una magnitud que puede tomar cualquier valor dentro de un intervalo.',
+d2:'Revisá qué información asigna la función de cuantía a cada valor posible de una variable aleatoria discreta.',
+d3:'Recordá que F(x) acumula la probabilidad de todos los valores menores o iguales que x.',
+d4:'La esperanza describe un comportamiento promedio a largo plazo; no tiene que ser un valor que la variable pueda tomar en una observación.',
+d5:'Al transformar Y=a+bX, el desvío estándar se multiplica por |b|; sumar una constante no modifica la dispersión.',
+d6:'Identificá qué se está contando, cuántos ensayos hay, la probabilidad de éxito y qué significa “al menos 5”.',
+d7:'Se cuentan sucesos en un intervalo con una frecuencia media conocida. Revisá el modelo correspondiente y calculá la probabilidad de observar 0.',
+d8:'Compará las curvas con igual centro y distinta dispersión: el área total no cambia.',
+d9:'Si buscamos el 10 % de las mediciones más altas, el límite deja el 90 % acumulado a su izquierda.',
+d10:'Revisá qué modelo usamos para contar sucesos poco frecuentes en un intervalo cuando puede considerarse estable su frecuencia media.'
+};
+let c=0;
+for(const [n,v] of Object.entries(claves)){
+ const r=$(`input[name=${n}]:checked`);
+ const f=$(`#feedback-${n}`);
+ const fs=r?r.closest('fieldset'):$(`input[name=${n}]`).closest('fieldset');
+ if(r&&r.value===v){
+   c++;
+   if(f){f.textContent='✓ Correcta';f.className='feedback-auto-u4 correcto';}
+   if(fs)fs.classList.remove('respuesta-incorrecta');
+ }else{
+   if(f){f.textContent='✗ Revisá esta respuesta. '+pistas[n];f.className='feedback-auto-u4 incorrecto';}
+   if(fs)fs.classList.add('respuesta-incorrecta');
+ }
+}
+const m=$('#resultado-auto-u4');
+m.textContent=`Resultado: ${c}/10. ${c===10?'Dominás las ideas centrales del módulo.':c>=7?'Buen avance. Revisá las preguntas señaladas para completar el recorrido.':'Conviene revisar las preguntas señaladas y volver a las estaciones relacionadas antes de reintentar.'}`;
+m.className='mensaje '+(c>=7?'correcto':'incorrecto');
+});
 const inicial=location.hash.slice(1);if(inicial&&$('#'+inicial))mostrar(inicial);
+
+if($('#comprobar-e28'))$('#comprobar-e28').addEventListener('click',()=>{const elegidos=[...document.querySelectorAll('input[name="e28rec"]:checked')].map(x=>x.value),m=$('#mensaje-e28');if(!elegidos.length){m.textContent='Marcá al menos una situación antes de comprobar.';m.className='mensaje incorrecto';return}const ok=elegidos.length===2&&elegidos.includes('b')&&elegidos.includes('d');m.textContent=ok?'Correcto. Las situaciones 2 y 4 no responden a una Binomial. En la 2, al extraer sin reposición de una población finita, cada extracción modifica la composición del lote y puede cambiar la probabilidad de las siguientes; este tipo de situación abre la puerta al modelo Hipergeométrico. En la 4, el número de ensayos no está fijado de antemano: se continúa hasta alcanzar el tercer defectuoso. En cambio, la situación del dado sí puede modelarse con una Binomial: en cada lanzamiento definimos éxito como obtener 5 o 6, de modo que p=2/6=1/3.':'Revisá una por una las condiciones. Hay dos situaciones que no corresponden a una Binomial. Ojo: que un dado tenga seis resultados posibles no impide usar una Binomial si cada lanzamiento puede clasificarse en éxito o fracaso para el evento que queremos contar.';m.className='mensaje '+(ok?'correcto':'incorrecto')});

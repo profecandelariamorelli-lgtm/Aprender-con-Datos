@@ -271,6 +271,77 @@ blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:5px solid var(--turque
   .herramienta-card .applet-frame:not(.normal-applet-frame){height:470px}
 }
 
+/* v44 · ajustes de revisión: Poisson, applets, regla empírica y cierre Box */
+.historia-poisson{display:grid;grid-template-columns:78px minmax(0,1fr);gap:1rem;align-items:start;background:#f7faf3;border:1px solid #dce7bb;border-left:5px solid var(--verde);border-radius:14px;padding:1rem 1.1rem;margin:1rem 0}
+.historia-poisson-marca{font-weight:900;font-size:1.15rem;color:#61762b;background:#fff;border:1px solid #dce7bb;border-radius:999px;text-align:center;padding:.42rem .25rem}
+.historia-poisson h3{margin:.05rem 0 .35rem}.historia-poisson p{margin:.35rem 0}
+
+/* Los applets discretos conservan el ancho de las tarjetas, pero sin gran caja vacía. */
+.herramienta-card .applet-frame:not(.normal-applet-frame){height:390px!important;margin:.35rem auto 0!important;border-radius:10px!important}
+.herramienta-card .enlace-herramienta{margin-bottom:.15rem}
+
+/* Regla empírica: curva actual, controles y espacios más compactos. */
+.regla-interactiva{padding-top:1rem!important;padding-bottom:.85rem!important}
+.regla-interactiva>p{margin:.35rem 0 .55rem}
+.regla-controles{gap:.45rem!important;margin:.55rem 0 .35rem!important}
+.regla-btn{padding:.34rem .7rem!important;font-size:.88rem!important;line-height:1.2!important}
+.regla-grafico{margin:.15rem auto 0!important}
+.regla-grafico svg{display:block;margin:0 auto}
+.formula-regla{margin:-.05rem 0 .25rem!important}
+.regla-interactiva>.nota{margin:.3rem 0 0!important}
+
+/* Cierre Box: dos columnas compactas y alineadas desde arriba. */
+.idea-clave:has(.box-cierre){padding:1rem 1.15rem!important}
+.idea-clave:has(.box-cierre)>h3{margin:.05rem 0 .65rem}
+.box-cierre{grid-template-columns:minmax(0,1.7fr) minmax(245px,.7fr)!important;gap:1rem!important;align-items:start!important}
+.box-cierre>div>p{margin:.1rem 0 .6rem}
+.box-cierre blockquote{margin:.6rem 0 0!important;padding:.65rem .85rem!important}
+.box-contexto{padding:.8rem .9rem!important;margin:0!important}
+.box-contexto h4{margin:0 0 .3rem!important}.box-contexto p{margin:.25rem 0!important}
+
+@media(max-width:900px){
+ .herramienta-card .applet-frame:not(.normal-applet-frame){height:390px!important}
+ .box-cierre{grid-template-columns:1fr!important}
+}
+@media(max-width:760px){
+ .historia-poisson{grid-template-columns:1fr}.historia-poisson-marca{width:78px}
+ .herramienta-card .applet-frame:not(.normal-applet-frame){height:420px!important}
+ .regla-btn{font-size:.9rem!important}
+}
+
+/* v45 · ajustes de cierre: GeoGebra, Box y secuencia Poisson */
+.geogebra-embed{
+  min-height:0!important;
+  height:auto!important;
+  margin:.7rem 0 .55rem!important;
+}
+.geogebra-embed .applet_scaler,
+.geogebra-embed .applet_container,
+.geogebra-embed>div{
+  margin:0 auto!important;
+}
+.geogebra-bloque>.nota{margin-top:.45rem!important;}
+
+.idea-clave:has(.box-cierre){padding:.9rem 1.05rem!important;}
+.idea-clave:has(.box-cierre)>h3{margin:.05rem 0 .55rem!important;}
+.box-cierre{
+  grid-template-columns:minmax(0,1.25fr) minmax(330px,1fr)!important;
+  gap:.9rem!important;
+  align-items:start!important;
+}
+.box-cierre>div>p{margin:.05rem 0 .5rem!important;}
+.box-cierre blockquote{margin:.5rem 0 0!important;padding:.6rem .8rem!important;}
+.box-contexto{padding:.7rem .8rem!important;align-self:start!important;}
+.box-contexto h4{margin:0 0 .25rem!important;}
+.box-contexto p{margin:.18rem 0!important;line-height:1.45!important;}
+.box-contexto .nota{font-size:.94em!important;}
+
+.historia-poisson{margin:.85rem 0!important;}
+
+@media(max-width:900px){
+  .box-cierre{grid-template-columns:1fr!important;}
+}
+
 /* v46 · GeoGebra sin escalado vertical y cápsula Poisson después del ejemplo */
 .geogebra-embed{
   width:min(100%,1000px)!important;
@@ -319,98 +390,165 @@ blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:5px solid var(--turque
   .geogebra-embed{aspect-ratio:auto;height:520px!important;overflow-x:auto!important;}
 }
 
-/* U4 v50: compactación y cierre conceptual del módulo */
-.graficos-normal{align-items:start!important;}
-.graficos-normal>.tarjeta{height:auto!important;min-height:0!important;padding-bottom:1rem!important;}
-.graficos-normal svg{margin:.25rem 0 .45rem!important;}
-.graficos-normal .tarjeta p:last-child{margin-top:.55rem!important;margin-bottom:0!important;}
+/* v48: alinear las dos tarjetas de presentación del modelo Normal */
+.normal-presentacion{
+  align-items:stretch!important;
+}
+.normal-presentacion>.tarjeta{
+  align-self:stretch!important;
+  height:100%!important;
+  margin-top:1.1rem!important;
+  margin-bottom:1.1rem!important;
+}
 
-.ejemplo-integrador-pasos{align-items:start!important;}
-.ejemplo-integrador-pasos>.tarjeta,
-.tarjetas-compactas>.tarjeta{height:auto!important;min-height:0!important;align-self:start!important;}
-.ejemplo-integrador-modelos .tarjeta{padding:1rem 1.1rem!important;}
-.ejemplo-integrador-modelos .tarjeta p:last-child{margin-bottom:0!important;}
-.complemento-al-menos-uno{margin-top:.8rem!important;height:auto!important;min-height:0!important;}
-.nota-clave{margin:.7rem 0 0;padding:.65rem .8rem;border-left:4px solid #91aa32;background:#f7f9e9;border-radius:0 8px 8px 0;}
-.cierre-modulo-u4{margin:1.25rem 0;padding:1.15rem 1.2rem;background:#f4f8ee;border:1px solid #dce7c5;border-left:5px solid #91aa32;border-radius:14px;}
-.cierre-modulo-u4 h3{margin-top:.2rem;}
-.cierre-modulo-u4 .dos-columnas{margin-top:.8rem;}
+/* v49 · equilibrio tipográfico del ejemplo integrador */
+.ejemplo-integrador-modelos .formula-integrador{
+  font-size:clamp(1rem,1.35vw,1.18rem)!important;
+  line-height:1.3;
+  padding:.42rem .6rem;
+  margin:.65rem auto;
+  max-width:100%;
+}
+.ejemplo-integrador-modelos>.formula-integrador{max-width:460px;}
+.ejemplo-integrador-modelos .tarjeta h3{font-size:clamp(1.05rem,1.45vw,1.22rem);}
+.ejemplo-integrador-modelos .tarjeta{font-size:1rem;}
 
-/* U4 v51: revisión global de ritmo vertical y tarjetas */
-.comparacion-va,
-.normal-presentacion,
-.graficos-normal,
-.ejemplo-integrador-pasos{
-  align-items:start!important;
-  gap:1.25rem!important;
+/* v53 reconstruida desde v51: correcciones locales, sin tocar tarjetas globales */
+
+/* Estación 8: discreta/continua */
+#e31 .comparacion-va{
+  align-items:start !important;
+  gap:1rem !important;
 }
-.comparacion-va>.tarjeta,
-.normal-presentacion>.tarjeta,
-.graficos-normal>.tarjeta,
-.ejemplo-integrador-pasos>.tarjeta{
-  height:auto!important;
-  min-height:0!important;
-  align-self:start!important;
+#e31 .comparacion-va > .tarjeta{
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
 }
-.comparacion-va .formula-principal,
-.comparacion-va .formula-continua{
-  font-size:1.18rem!important;
-  padding:.55rem .75rem!important;
-  margin:.65rem 0!important;
+#e31 .comparacion-va .formula-principal,
+#e31 .comparacion-va .formula-continua{
+  font-size:1.02rem !important;
+  line-height:1.2 !important;
+  padding:.38rem .5rem !important;
+  margin:.5rem 0 !important;
 }
-.normal-presentacion .formula-principal{
-  font-size:1.2rem!important;
-  padding:.6rem!important;
+#e31 .comparacion-va .tarjeta p{
+  margin:.4rem 0 !important;
 }
-.graficos-normal>.tarjeta{
-  display:block!important;
-  padding-bottom:1rem!important;
+
+/* Estación 9: presentación del modelo */
+#e32 .normal-presentacion{
+  align-items:start !important;
+  gap:1rem !important;
+  margin:.75rem 0 !important;
 }
-.graficos-normal svg{
-  display:block!important;
-  margin:.2rem auto .7rem!important;
-  max-height:220px!important;
+#e32 .normal-presentacion > .tarjeta{
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 !important;
 }
-.graficos-normal .tarjeta p:last-child{
-  margin:.55rem 0 0!important;
+#e32 .normal-presentacion .formula-principal{
+  font-size:1.05rem !important;
+  padding:.42rem .55rem !important;
+  margin:.5rem 0 !important;
 }
+
+/* ÚNICO rediseño visual conservado de v52: gráficos de mu y sigma */
+#e32 .graficos-normal{
+  align-items:start !important;
+  gap:1rem !important;
+}
+#e32 .graficos-normal > .grafico-parametro{
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
+  padding:1rem 1.05rem !important;
+  display:block !important;
+}
+#e32 .graficos-normal > .grafico-parametro svg{
+  height:190px !important;
+  max-height:190px !important;
+  min-height:0 !important;
+  margin:.2rem 0 .5rem !important;
+}
+#e32 .graficos-normal > .grafico-parametro p:last-child{
+  margin:.45rem 0 0 !important;
+  padding-top:0 !important;
+}
+
+/* Menor separación SOLO entre bloques de la estación Normal */
 #e32 .caso,
+#e32 .idea-clave,
 #e32 .recordatorio,
-#e32 .tarjeta,
-#e32 .idea-clave{
-  margin-bottom:1.35rem;
+#e32 .actividad,
+#e32 .observacion{
+  margin-top:.85rem !important;
+  margin-bottom:.85rem !important;
 }
-#e32 .caso + .caso,
-#e32 .tarjeta + .tarjeta{
-  margin-top:0;
+
+/* Camino inverso: tarjetas alineadas arriba y fórmulas discretas */
+#e32 .inversa-normal .dos-columnas{
+  align-items:start !important;
 }
-.ejemplo-integrador-pasos>.tarjeta{
-  padding:1rem 1.1rem!important;
+#e32 .inversa-normal .dos-columnas > .tarjeta{
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
 }
-.nota-ancho{
-  margin:.2rem 0 1rem!important;
+#e32 .inversa-normal .formula-media{
+  font-size:1.02rem !important;
+  padding:.4rem .5rem !important;
 }
-.complemento-al-menos-uno{
-  margin-top:.4rem!important;
-  padding:1rem 1.1rem!important;
+
+/* Ejemplo integrador: reglas locales; no afectan otros pares de tarjetas */
+#e32 .ejemplo-integrador-modelos .dos-columnas{
+  align-items:start !important;
+  gap:1rem !important;
 }
-.complemento-al-menos-uno .formula-integrador{
-  font-size:1.12rem!important;
-  padding:.5rem .7rem!important;
-  margin:.55rem 0!important;
+#e32 .ejemplo-integrador-modelos .dos-columnas > .tarjeta{
+  align-self:start !important;
+  height:auto !important;
+  min-height:0 !important;
 }
-.cierre-modulo-u4{
-  margin:.7rem 0 1.1rem!important;
+#e32 .ejemplo-integrador-modelos .tarjeta{
+  padding:1rem 1.1rem !important;
 }
-.autoeval-pendiente{
-  margin:.75rem .45rem 0!important;
-  padding:.65rem .8rem!important;
-  border-radius:14px!important;
-  background:#eef6e8!important;
-  color:#365f35!important;
-  font-weight:700!important;
-  font-size:1.05rem!important;
+#e32 .ejemplo-integrador-modelos .tarjeta h3{
+  margin:.05rem 0 .6rem !important;
+  font-size:1.08rem !important;
+  line-height:1.25 !important;
 }
+#e32 .ejemplo-integrador-modelos .tarjeta p{
+  margin:.45rem 0 !important;
+}
+#e32 .ejemplo-integrador-modelos .formula-integrador{
+  font-size:1rem !important;
+  line-height:1.2 !important;
+  padding:.38rem .5rem !important;
+  margin:.48rem 0 !important;
+  max-width:none !important;
+}
+#e32 .ejemplo-integrador-modelos .nota-ancho{
+  margin:.5rem 0 .9rem !important;
+}
+#e32 .complemento-al-menos-uno{
+  margin-top:.7rem !important;
+  height:auto !important;
+  min-height:0 !important;
+}
+
+/* Evitar separaciones excesivas en herramientas de Normal sin afectar otras estaciones */
+#e32 .herramientas-normal{
+  gap:.85rem !important;
+}
+#e32 .herramientas-normal > .tarjeta{
+  align-self:start !important;
+  height:auto !important;
+}
+
+/* Mantener los bloques previos de U4 intactos: NO se redefinen .dos-columnas, .tarjeta ni .caso globalmente */
+
 
 /* v54 · Maquetación quirúrgica: sólo pares observados en U4 */
 .pair-equal{
@@ -548,73 +686,226 @@ blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:5px solid var(--turque
   #e32 .pair-inversa .grafico-inversa{max-height:none!important;}
 }
 
-/* v55 · Ajustes locales de maquetación y cierre planteado como ejercitación */
-/* Los pares observados se resuelven como filas reales: misma altura y borde inferior alineado. */
-#e31 .pair-discreta-continua,
-#e32 .pair-normal-modelo,
-#e32 .pair-inversa,
-#e32 .pair-aplicacion-normal,
-#e32 .pair-integrador-principal{
+/* v57 · corrección fina de los bloques que seguían desalineados */
+
+/* Estación 8: comparación directa, dos columnas realmente iguales */
+#e31 .pair-discreta-continua{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
   align-items:stretch!important;
-  grid-auto-rows:1fr;
+  gap:1rem!important;
 }
-#e31 .pair-discreta-continua>.tarjeta,
-#e32 .pair-normal-modelo>.tarjeta,
-#e32 .pair-inversa>.tarjeta,
-#e32 .pair-aplicacion-normal>.tarjeta,
-#e32 .pair-integrador-principal>.tarjeta{
-  align-self:stretch!important;
+#e31 .pair-discreta-continua > .tarjeta{
   height:100%!important;
-  margin-top:0!important;
-  margin-bottom:0!important;
+  align-self:stretch!important;
+  box-sizing:border-box!important;
 }
-/* Discreta/continua: fórmula secundaria y texto con la misma escala visual. */
 #e31 .pair-discreta-continua .formula-principal,
 #e31 .pair-discreta-continua .formula-continua{
-  font-size:.96rem!important;
-  padding:.34rem .5rem!important;
+  font-size:.95rem!important;
+  padding:.28rem .42rem!important;
+}
+
+/* Presentación de la Normal: misma altura visual, sin alterar otras tarjetas */
+#e32 .pair-normal-modelo{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:1rem!important;
+}
+#e32 .pair-normal-modelo > .tarjeta{
+  height:100%!important;
+  align-self:stretch!important;
+  box-sizing:border-box!important;
+}
+
+/* Efectos de mu y sigma: conservar el diseño aprobado y cerrar ambas tarjetas en la misma línea */
+#e32 .graficos-normal{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:1rem!important;
+}
+#e32 .graficos-normal > .grafico-parametro{
+  height:100%!important;
+  align-self:stretch!important;
+  display:flex!important;
+  flex-direction:column!important;
+}
+#e32 .graficos-normal > .grafico-parametro svg{
+  flex:0 0 auto!important;
+}
+#e32 .graficos-normal > .grafico-parametro p:last-child{
+  margin-top:.55rem!important;
+}
+
+/* Camino inverso: columnas iguales y contenido alineado desde arriba */
+#e32 .pair-inversa{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+}
+#e32 .pair-inversa > .tarjeta{
+  height:100%!important;
+  align-self:stretch!important;
+  box-sizing:border-box!important;
+}
+
+/* Ejemplo integrador: respuestas secuenciales, no columnas desbalanceadas */
+#e32 .resoluciones-integrador{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:.85rem!important;
+  margin:.85rem 0!important;
+}
+#e32 .resoluciones-integrador > .tarjeta{
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  margin:0!important;
+  box-sizing:border-box!important;
+}
+#e32 .resoluciones-integrador > .tarjeta h3{
+  margin:.05rem 0 .55rem!important;
+}
+#e32 .resoluciones-integrador > .tarjeta p{
+  margin:.42rem 0!important;
+}
+#e32 .resoluciones-integrador > .tarjeta .formula-integrador{
+  max-width:760px!important;
   margin:.48rem 0!important;
 }
-/* Modelo Normal: evita que la caja de fórmula infle artificialmente la tarjeta izquierda. */
-#e32 .pair-normal-modelo .formula-principal{
-  padding:.42rem .55rem!important;
-  margin:.5rem 0!important;
+
+/* Respuestas 3 y 4 mantienen la misma lógica de lectura a ancho completo */
+#e32 .respuesta-complementaria,
+#e32 .complemento-al-menos-uno{
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  box-sizing:border-box!important;
+  margin:.85rem 0!important;
 }
-/* Camino inverso: la gráfica ocupa el espacio disponible sin crear un bloque inferior vacío. */
-#e32 .pair-inversa>.tarjeta:first-child{display:flex!important;flex-direction:column!important;}
-#e32 .pair-inversa .grafico-inversa{margin-top:auto!important;padding-top:.25rem!important;}
-/* Cierre: primero se ve la consigna completa; después, cada bloque responde explícitamente. */
-#e32 .consigna-integrador{
-  background:#fff;
-  border:1px solid #dce7c5;
-  border-left:5px solid var(--lima);
-  border-radius:14px;
-  padding:.9rem 1.1rem;
-  margin:1rem 0;
-  box-shadow:var(--sombra);
-}
-#e32 .consigna-integrador h3{margin:.05rem 0 .45rem!important;}
-#e32 .consigna-integrador p{margin:.25rem 0 .4rem!important;}
-#e32 .consigna-integrador ol{margin:.35rem 0 .1rem;padding-left:1.4rem;}
-#e32 .consigna-integrador li{margin:.32rem 0;}
-#e32 .pair-integrador-principal{margin:1rem 0!important;gap:1rem!important;}
-#e32 .pair-integrador-principal>.tarjeta{padding:1rem 1.1rem!important;}
-#e32 .respuesta-complementaria{margin:.9rem 0!important;padding:1rem 1.1rem!important;}
-#e32 .respuesta-complementaria h3,
-#e32 .complemento-al-menos-uno h3{margin:.05rem 0 .55rem!important;}
-#e32 .respuesta-complementaria p,
-#e32 .complemento-al-menos-uno p{margin:.45rem 0!important;}
+
 @media(max-width:760px){
   #e31 .pair-discreta-continua,
   #e32 .pair-normal-modelo,
-  #e32 .pair-inversa,
-  #e32 .pair-aplicacion-normal,
-  #e32 .pair-integrador-principal{grid-auto-rows:auto;}
-  #e31 .pair-discreta-continua>.tarjeta,
-  #e32 .pair-normal-modelo>.tarjeta,
-  #e32 .pair-inversa>.tarjeta,
-  #e32 .pair-aplicacion-normal>.tarjeta,
-  #e32 .pair-integrador-principal>.tarjeta{height:auto!important;}
+  #e32 .graficos-normal,
+  #e32 .pair-inversa{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* v58 · últimas observaciones de maquetación */
+
+/* Propiedad discreta centrada, sin alterar caja ni tipografía */
+#e31 .pair-discreta-continua > .tarjeta:first-child .formula-principal{
+  text-align:center!important;
+}
+
+/* Gráficos Normal: quitar altura sobrante y acercar explicación al gráfico */
+#e32 .graficos-normal{
+  align-items:start!important;
+}
+#e32 .graficos-normal > .grafico-parametro{
+  height:auto!important;
+  min-height:0!important;
+  align-self:start!important;
+  justify-content:flex-start!important;
+  padding-bottom:1rem!important;
+}
+#e32 .graficos-normal > .grafico-parametro svg{
+  margin-bottom:.15rem!important;
+}
+#e32 .graficos-normal > .grafico-parametro p:last-child{
+  margin-top:.25rem!important;
+  margin-bottom:0!important;
+}
+
+/* Ejemplo integrador: las tarjetas secuenciales no deben heredar alturas mínimas */
+#e32 .resoluciones-integrador > .tarjeta{
+  min-height:0!important;
+  height:auto!important;
+  padding-bottom:1rem!important;
+}
+
+/* Cierre módulo 2: misma lógica de navegación que el módulo 1 */
+#e23 .acciones-cierre-modulo{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:.75rem!important;
+  margin-top:1rem!important;
+}
+#e23 .acciones-cierre-modulo .boton-primario,
+#e23 .acciones-cierre-modulo .boton-secundario{
+  margin:0!important;
+}
+@media(max-width:760px){
+  #e23 .acciones-cierre-modulo{
+    align-items:stretch!important;
+    flex-direction:column!important;
+  }
+}
+
+/* v59 · tres correcciones finales localizadas */
+
+/* 1) Efectos de mu y sigma: dos tarjetas comparativas de igual altura y estructura interna. */
+#e32 .graficos-normal{
+  align-items:stretch!important;
+}
+#e32 .graficos-normal > .grafico-parametro{
+  height:100%!important;
+  min-height:0!important;
+  align-self:stretch!important;
+  display:grid!important;
+  grid-template-rows:auto auto 1fr!important;
+  padding-bottom:1rem!important;
+}
+#e32 .graficos-normal > .grafico-parametro svg{
+  width:100%!important;
+  margin:.15rem 0 .35rem!important;
+}
+#e32 .graficos-normal > .grafico-parametro p:last-child{
+  align-self:end!important;
+  margin:.35rem 0 0!important;
+}
+
+/* 2) Cierre integrador: cada respuesta toma solamente la altura de su contenido. */
+#e32 .resoluciones-integrador{
+  align-items:start!important;
+  grid-auto-rows:max-content!important;
+}
+#e32 .resoluciones-integrador > .tarjeta,
+#e32 .resoluciones-integrador > .tarjeta:first-child{
+  height:max-content!important;
+  min-height:0!important;
+  align-self:start!important;
+  padding-bottom:1rem!important;
+}
+#e32 .resoluciones-integrador > .tarjeta:last-child{
+  margin-bottom:0!important;
+}
+
+/* 3) Conexiones entre modelos: comparación paralela, cajas idénticas y alineadas. */
+#e32 .conexiones-modelos{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:1rem!important;
+}
+#e32 .conexiones-modelos > .tarjeta{
+  height:100%!important;
+  min-height:0!important;
+  align-self:stretch!important;
+  box-sizing:border-box!important;
+  margin:0!important;
+}
+#e32 .conexiones-modelos > .tarjeta h3{
+  margin-top:0!important;
+}
+@media(max-width:760px){
+  #e32 .conexiones-modelos{grid-template-columns:1fr!important;}
+  #e32 .graficos-normal > .grafico-parametro{height:auto!important;}
 }
 
 /* v60 · ajuste puntual final: tarjetas comparativas Normal equilibradas sin hueco interno */
@@ -669,3 +960,173 @@ blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:5px solid var(--turque
   padding:0!important;
   align-self:start!important;
 }
+
+/* v62 · ajuste visual puntual del gráfico de sigma */
+#e32 .graficos-normal{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:1rem!important;
+}
+#e32 .graficos-normal > .grafico-parametro{
+  height:100%!important;
+  min-height:0!important;
+  align-self:stretch!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+}
+
+/* Primera tarjeta: conservar la proporción actual */
+#e32 .graficos-normal > .grafico-parametro:not(.grafico-sigma) svg{
+  width:100%!important;
+  height:190px!important;
+  max-height:190px!important;
+  margin:.2rem 0 .3rem!important;
+}
+
+/* Segunda tarjeta: algo más baja y ensanchada visualmente */
+#e32 .graficos-normal > .grafico-sigma svg{
+  width:106%!important;
+  max-width:none!important;
+  height:165px!important;
+  max-height:165px!important;
+  margin:.85rem -3% .25rem!important;
+  transform:scaleY(.92)!important;
+  transform-origin:center center!important;
+}
+
+#e32 .graficos-normal > .grafico-parametro p:last-child{
+  margin:.35rem 0 0!important;
+}
+
+/* En pantallas angostas, volver a proporciones naturales */
+@media(max-width:760px){
+  #e32 .graficos-normal{
+    grid-template-columns:1fr!important;
+  }
+  #e32 .graficos-normal > .grafico-parametro svg,
+  #e32 .graficos-normal > .grafico-sigma svg{
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    margin:.3rem 0 .4rem!important;
+    transform:none!important;
+  }
+}
+
+/* v63 · corrección REAL del bloque de parámetros Normal */
+
+/* Reducir el "marco verde" superior e inferior de este caso únicamente */
+#e32 .caso-parametros-normal{
+  padding:.72rem .9rem .78rem!important;
+  margin:.65rem 0!important;
+}
+#e32 .caso-parametros-normal > .etiqueta{
+  margin:.05rem 0 .15rem!important;
+}
+#e32 .caso-parametros-normal > h3{
+  margin:.12rem 0 .38rem!important;
+}
+
+/* Las tarjetas ya no agregan 1.1 rem de margen dentro del fondo verde */
+#e32 .caso-parametros-normal .graficos-normal > .grafico-parametro{
+  margin:.35rem 0 .15rem!important;
+}
+
+/* Mantener ambas cajas alineadas */
+#e32 .caso-parametros-normal .graficos-normal{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  gap:1rem!important;
+}
+#e32 .caso-parametros-normal .graficos-normal > .grafico-parametro{
+  align-self:stretch!important;
+  height:100%!important;
+  min-height:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-start!important;
+}
+
+/* Izquierda: conservar su dibujo tal como estaba */
+#e32 .caso-parametros-normal .grafico-parametro:not(.grafico-sigma) > svg{
+  width:100%!important;
+  height:190px!important;
+  max-height:190px!important;
+  margin:.12rem 0 .28rem!important;
+  transform:none!important;
+}
+
+/* Derecha: ahora el propio SVG es más ancho y menos alto; no se escala por CSS */
+#e32 .caso-parametros-normal .grafico-sigma > svg{
+  width:100%!important;
+  height:172px!important;
+  max-height:172px!important;
+  margin:.55rem 0 .25rem!important;
+  transform:none!important;
+}
+
+/* Texto inmediatamente después de cada gráfico */
+#e32 .caso-parametros-normal .grafico-parametro > p:last-child{
+  margin:.28rem 0 0!important;
+  padding:0!important;
+}
+
+@media(max-width:760px){
+  #e32 .caso-parametros-normal .graficos-normal{
+    grid-template-columns:1fr!important;
+  }
+  #e32 .caso-parametros-normal .grafico-parametro > svg,
+  #e32 .caso-parametros-normal .grafico-sigma > svg{
+    width:100%!important;
+    height:auto!important;
+    max-height:none!important;
+    margin:.3rem 0!important;
+  }
+}
+
+/* v64 · compactar SOLO los espacios verdes del bloque de herramientas Normal */
+#e32 .herramienta-digital{
+  padding:.8rem .95rem .9rem!important;
+  margin:.7rem 0!important;
+}
+
+/* La tarjeta GeoGebra no necesita margen vertical global de tarjeta */
+#e32 .herramienta-digital > .geogebra-bloque{
+  margin:.55rem 0 .45rem!important;
+}
+
+/* Acercar las dos tarjetas siguientes al GeoGebra */
+#e32 .herramienta-digital > .herramientas-normal{
+  margin:.35rem 0 .15rem!important;
+  gap:.75rem!important;
+  align-items:start!important;
+}
+#e32 .herramienta-digital > .herramientas-normal > .tarjeta{
+  margin:0!important;
+  padding:1rem 1.05rem!important;
+  min-height:0!important;
+  height:auto!important;
+}
+
+/* Evitar aire extra debajo del texto de tipificación */
+#e32 .herramienta-digital > .herramientas-normal > .tarjeta:first-child p:last-child{
+  margin-bottom:0!important;
+}
+
+/* El siguiente caso comienza más cerca, sin tocar su contenido */
+#e32 .herramienta-digital + .inversa-normal{
+  margin-top:.65rem!important;
+}
+
+/* Autoevaluación U4: devolución formativa por pregunta */
+.feedback-auto-u4{margin:.55rem 0 0;font-weight:700;font-size:.96em}
+.feedback-auto-u4:empty{display:none}
+.feedback-auto-u4.correcto{color:#237a3b}
+.feedback-auto-u4.incorrecto{color:#9b3a2f}
+.autoevaluacion fieldset.respuesta-incorrecta{border-color:#d8aaa4}
+
+/* Devolución formativa homogénea en las tres autoevaluaciones */
+.feedback-autoeval{margin:.65rem 0 0;font-size:.9rem;font-weight:700}.feedback-autoeval.correcto{color:var(--ok)}.feedback-autoeval.incorrecto{color:var(--error)}.autoevaluacion fieldset.respuesta-incorrecta{border-color:#d8aaaa}
