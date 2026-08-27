@@ -253,3 +253,79 @@ m.className='mensaje '+(c>=7?'correcto':'incorrecto');
 const inicial=location.hash.slice(1);if(inicial&&$('#'+inicial))mostrar(inicial);
 
 if($('#comprobar-e28'))$('#comprobar-e28').addEventListener('click',()=>{const elegidos=[...document.querySelectorAll('input[name="e28rec"]:checked')].map(x=>x.value),m=$('#mensaje-e28');if(!elegidos.length){m.textContent='Marcá al menos una situación antes de comprobar.';m.className='mensaje incorrecto';return}const ok=elegidos.length===2&&elegidos.includes('b')&&elegidos.includes('d');m.textContent=ok?'Correcto. Las situaciones 2 y 4 no responden a una Binomial. En la 2, al extraer sin reposición de una población finita, cada extracción modifica la composición del lote y puede cambiar la probabilidad de las siguientes; este tipo de situación abre la puerta al modelo Hipergeométrico. En la 4, el número de ensayos no está fijado de antemano: se continúa hasta alcanzar el tercer defectuoso. En cambio, la situación del dado sí puede modelarse con una Binomial: en cada lanzamiento definimos éxito como obtener 5 o 6, de modo que p=2/6=1/3.':'Revisá una por una las condiciones. Hay dos situaciones que no corresponden a una Binomial. Ojo: que un dado tenga seis resultados posibles no impide usar una Binomial si cada lanzamiento puede clasificarse en éxito o fracaso para el evento que queremos contar.';m.className='mensaje '+(ok?'correcto':'incorrecto')});
+
+
+
+/* Analytics · Aprender con Datos
+   Eventos anónimos para conocer alcance y uso del material.
+   No se envían nombres, respuestas elegidas, claves ni datos personales. */
+(function(){
+  const enviarEvento=(nombre,parametros={})=>{
+    if(typeof window.gtag==='function'){
+      window.gtag('event',nombre,parametros);
+    }
+  };
+
+  const nombreSeccion=(id)=>{
+    const seccion=document.getElementById(id);
+    if(!seccion) return id;
+    const titulo=seccion.querySelector('h2');
+    return titulo ? titulo.textContent.trim() : id;
+  };
+
+  document.addEventListener('click',e=>{
+    const modulo=e.target.closest('[data-modulo-toggle]');
+    if(modulo){
+      enviarEvento('modulo_menu',{
+        modulo:String(modulo.dataset.moduloToggle || ''),
+        estado_previo:modulo.getAttribute('aria-expanded')==='true' ? 'abierto' : 'cerrado'
+      });
+    }
+
+    const navegacion=e.target.closest('[data-seccion],[data-seccion-directa],[data-destino]');
+    if(navegacion){
+      const destino=navegacion.dataset.seccion || navegacion.dataset.seccionDirecta || navegacion.dataset.destino;
+      if(destino){
+        enviarEvento('seccion_visitada',{
+          seccion_id:destino,
+          seccion_nombre:nombreSeccion(destino)
+        });
+        if(['e13','e23','e33'].includes(destino)){
+          enviarEvento('acceso_tp',{seccion_id:destino,seccion_nombre:nombreSeccion(destino)});
+        }
+        if(['autoevaluacion','autoevaluacion-u3','autoevaluacion-u4'].includes(destino)){
+          enviarEvento('autoevaluacion_abierta',{seccion_id:destino,seccion_nombre:nombreSeccion(destino)});
+        }
+      }
+    }
+
+    const enlace=e.target.closest('a.enlace-herramienta,a.enlace-externo');
+    if(enlace){
+      enviarEvento('herramienta_externa',{
+        enlace_texto:(enlace.textContent || '').trim().slice(0,100),
+        enlace_url:enlace.href
+      });
+    }
+  });
+
+  document.addEventListener('submit',e=>{
+    const ids={
+      'form-autoevaluacion':'Modulo 1',
+      'form-autoevaluacion-u3':'Modulo 2',
+      'form-autoevaluacion-u4':'Modulo 3'
+    };
+    const modulo=ids[e.target.id];
+    if(!modulo) return;
+    setTimeout(()=>{
+      const resultado=e.target.querySelector('.mensaje[id^="resultado-"]');
+      const texto=resultado ? resultado.textContent : '';
+      const m=texto.match(/Resultado:\s*(\d+)\/(\d+)/i);
+      const params={modulo};
+      if(m){
+        params.aciertos=Number(m[1]);
+        params.total=Number(m[2]);
+      }
+      enviarEvento('autoevaluacion_corregida',params);
+    },0);
+  });
+})();
