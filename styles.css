@@ -1130,3 +1130,400 @@ blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:5px solid var(--turque
 
 /* Devolución formativa homogénea en las tres autoevaluaciones */
 .feedback-autoeval{margin:.65rem 0 0;font-size:.9rem;font-weight:700}.feedback-autoeval.correcto{color:var(--ok)}.feedback-autoeval.incorrecto{color:var(--error)}.autoevaluacion fieldset.respuesta-incorrecta{border-color:#d8aaaa}
+/* U5 revisión: compactación y legibilidad del tramo introductorio */
+#e38>h2,#e39>h2{margin-bottom:.55rem}#e38>.bajada,#e39>.bajada{margin-top:0;margin-bottom:.65rem;max-width:1050px}#e38>.tarjeta:first-of-type,#e39>.hoja-ruta{margin-top:.7rem}.normal-ic-svg{min-width:320px;align-self:center;text-align:center}.normal-ic-svg svg{width:100%;max-width:520px;height:auto;display:block}.enlace-muestreo{display:flex;gap:.8rem;align-items:center;justify-content:space-between;flex-wrap:wrap}.calculadora-n-u5{display:grid;grid-template-columns:repeat(3,minmax(130px,1fr)) auto;gap:.7rem;align-items:end;margin:1rem 0}.calculadora-n-u5 label{font-weight:700}.calculadora-n-u5 input,.calculadora-n-u5 select{margin:.25rem 0 0}.calculadora-n-u5 output{grid-column:1/-1;margin:0}@media(max-width:800px){.calculadora-n-u5{grid-template-columns:1fr 1fr}.calculadora-n-u5 button{grid-column:1/-1}}
+/* Ajustes U5 - revisión inferencia e IC */
+#e35 .mini-comprobacion{padding:1rem 1.25rem;margin-top:1rem}
+#e35 .mini-comprobacion h3{margin:.1rem 0 .45rem}
+#e35 .mini-comprobacion p{margin:.35rem 0}
+#e35 .mini-comprobacion label{margin:.25rem 0}
+#e35 .mini-comprobacion .fila-comprobar{margin-top:.55rem}
+.bajada-compacta{margin-bottom:.8rem!important}
+.profundizar{margin-top:.7rem;padding:.65rem .8rem;border:1px solid #c8dcd8;border-radius:10px;background:#f8fbfa}
+.profundizar summary{cursor:pointer;font-weight:700}
+.varianza-aparte h3{margin-top:0}
+.paso-ic{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:1.5rem;align-items:center}
+.normal-ic-esquema{position:relative;height:220px;min-width:300px;overflow:hidden}
+.campana-css{position:absolute;left:8%;right:8%;bottom:38px;height:150px;border-top:3px solid #1d5b5d;border-radius:50% 50% 0 0/100% 100% 0 0;transform:scaleX(.78)}
+.normal-ic-esquema:after{content:"";position:absolute;left:8%;right:8%;bottom:38px;border-bottom:2px solid #718b86}
+.zona-central{position:absolute;left:29%;right:29%;bottom:40px;height:115px;background:rgba(132,177,76,.18);display:flex;align-items:center;justify-content:center;font-weight:700}
+.cola{position:absolute;bottom:72px;font-size:.9rem}.cola.izq{left:13%}.cola.der{right:13%}
+.marca{position:absolute;bottom:10px;font-size:.8rem}.m1{left:27%}.m0{left:49%}.m2{right:25%}
+.algebra-ic p{margin:.45rem 0}
+.presentacion-dist canvas{display:block;max-width:760px;width:100%;margin:1rem auto .5rem}
+.formula-flecha{font-size:1.08rem;text-align:center}
+.tabs-plan-n{margin-top:1rem}
+#e41 .panel-tab-u5{padding-top:.6rem}
+@media(max-width:800px){.paso-ic{grid-template-columns:1fr}.normal-ic-esquema{height:200px}}
+/* U5 v81: revisión integral previa a Pruebas de Hipótesis */
+#e34 .recurso-video-enlace{padding:1.1rem 1.25rem;text-align:left}
+#e34 .recurso-video-enlace h3,#e34 .recurso-video-enlace p{margin:.25rem 0 .65rem}
+#e35 .retorno-textual{text-align:center;margin:.25rem 0 1rem;color:#527b75;font-size:.94rem}
+#e35 .enlace-muestreo{padding:1rem 1.25rem;line-height:1.45}
+#e35 .antes-despues-compacto{display:grid;grid-template-columns:1fr auto 1fr;gap:.8rem;align-items:stretch;margin:1rem 0}
+#e35 .antes-despues-compacto article{border:1px solid #d5e3e0;border-radius:16px;padding:1rem 1.15rem;background:#fff}
+#e35 .antes-despues-compacto article h3{margin:.05rem 0 .45rem}
+#e35 .antes-despues-compacto article p{margin:0;line-height:1.5}
+#e35 .antes-despues-compacto>i{align-self:center;font-style:normal;font-size:1.5rem}
+#e35 .roles-tabla{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.4rem 0 1rem}
+#e35 .roles-tabla span{padding:.55rem .75rem;text-align:center;background:#eef6f4;border-radius:8px;font-size:.9rem}
+#e36 .controles-pegados{gap:.65rem;align-items:end}
+#e36 .check-u5{max-width:210px;line-height:1.25}
+#e36 .variabilidades-compacta{padding:1rem 1.25rem}
+#e36 .variabilidades-compacta h3{margin:.1rem 0 .45rem}
+#e36 .variabilidades-compacta p{margin:.35rem 0}
+#e37 .pregunta-puente{text-align:center;margin:1rem 0 .7rem}
+#e37 .regla-practica{margin-top:.75rem}
+#e39 .valores-criticos{margin-top:.7rem}
+.pivotal-recordatorio{margin:.75rem 0 1rem;padding:.8rem 1rem}
+#e40 .hoja-ruta-ic ol{display:grid;grid-template-columns:1fr 1fr;column-gap:2rem;row-gap:.55rem}
+#e40 .hoja-ruta-ic li{padding-right:.5rem}
+#e41>.bajada{max-width:1120px;margin-bottom:.45rem}
+#e41 .guia-simulacion{margin:.2rem 0 .8rem}
+#e41 .plan-n{padding:1.1rem 1.25rem}
+#e41 .plan-n>h3,#e41 .plan-n>p{margin-top:.25rem;margin-bottom:.55rem}
+#e41 .tabs-plan-n{margin:.55rem 0 .25rem}
+#e41 .panel-tab-u5{padding-top:.25rem}
+#e41 .panel-tab-u5>p{margin:.45rem 0}
+#e41 .calculadora-n-u5{margin:.65rem 0 .45rem;gap:.6rem}
+#e41 .regla-redondeo{margin:.65rem 0 .5rem}
+#e41 .doble-direccion{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin:.6rem 0 0}
+#e41 .doble-direccion span{background:#eef6f4;border-radius:8px;padding:.5rem .8rem;font-weight:700}
+@media(max-width:800px){#e35 .antes-despues-compacto{grid-template-columns:1fr}#e35 .antes-despues-compacto>i{transform:rotate(90deg);justify-self:center}#e35 .roles-tabla,#e40 .hoja-ruta-ic ol{grid-template-columns:1fr}}
+
+/* Ajustes finales pre-PH v82 */
+#e35 .retorno-inferencia{margin:.5rem 7% .9rem;text-align:center;color:#527b75}
+#e35 .retorno-inferencia p{margin:0}
+#e35 .enlace-muestreo{display:block;padding:.7rem 1rem;line-height:1.35}
+#e35 .enlace-muestreo strong{display:inline}
+#e35 .enlace-muestreo .boton-secundario{display:block;margin-top:.55rem;padding:.55rem .9rem}
+#e37 .titulo-caso-distrib{text-align:center;margin:.55rem 0 .8rem;font-size:1.25rem;line-height:1.3}
+#e37 .caso-distrib{margin-top:0}
+#e37 .tcl-lgn .nota{margin:.45rem 0 .65rem}
+.normal-ic-svg2{min-width:300px;align-self:center}
+.normal-ic-svg2 svg{width:100%;max-width:500px;height:auto;display:block;margin:auto;font-family:Georgia,serif;fill:#17333b}
+.normal-ic-svg2 .curva-normal{fill:none;stroke:#1d5b5d;stroke-width:3}
+.normal-ic-svg2 .eje-normal{stroke:#718b86;stroke-width:2}
+.normal-ic-svg2 .area-central{fill:#e5efd7;stroke:none}
+.normal-ic-svg2 .limite-normal{stroke:#8a9d5c;stroke-width:1.5;stroke-dasharray:4 4}
+.normal-ic-svg2 .txt-cola{fill:#6f861d;font-size:20px}.normal-ic-svg2 .txt-centro{font-size:22px}
+#e40 .hoja-ruta-ic ol{display:grid;grid-template-columns:1fr;grid-auto-flow:row;grid-template-rows:none;row-gap:.32rem;align-items:start;margin:.45rem 0 .2rem;padding-left:1.65rem}
+#e40 .hoja-ruta-ic li{padding-right:0}
+#e40 .hoja-ruta-ic{padding:.85rem 1.15rem}
+#e40 .hoja-ruta-ic h3{margin:.05rem 0 .45rem}
+#e40 .estructura-ic-simetrico{padding:.8rem 1.15rem}
+#e40 .estructura-ic-simetrico h3{margin:.05rem 0 .35rem}
+#e40 .estructura-ic-simetrico p{margin:.25rem 0}
+#e40 .estructura-ic-simetrico .formula-grande{margin:.35rem 0}
+#e36 .controles-pegados{display:block;margin:.45rem 0 .55rem}
+#e36 .controles-principales-u5{display:flex;align-items:flex-end;gap:.65rem;flex-wrap:wrap}
+#e36 .controles-principales-u5 label{display:flex;flex-direction:column;gap:.3rem;font-weight:700;margin:0}
+#e36 .controles-principales-u5 select,#e36 .controles-principales-u5 button{margin:0}
+#e36 .check-u5{display:flex;flex-direction:row;align-items:center;gap:.5rem;max-width:none;width:max-content;margin:.65rem 0 .15rem;padding:.55rem .75rem;line-height:1.25}
+#e36 .check-u5 input{margin:0;flex:0 0 auto}
+#e36 .nota-poblacion-simulada{margin:.65rem 0 .85rem;max-width:1050px}
+#e37 .formula-estandarizacion{overflow-x:auto;padding-bottom:.2rem}
+#e41 .controles-u5{display:flex;align-items:flex-end;gap:.9rem;flex-wrap:wrap;margin:.55rem 0 .65rem}
+#e41 .controles-u5 label{display:flex;flex-direction:column;gap:.3rem;font-weight:700;margin:0}
+#e41 .controles-u5 select{margin:0;min-width:110px}
+#e41 .controles-u5 button{margin:0}
+#e41 .laboratorio-u5{padding-top:.8rem}
+#e41 .confianza-eleccion,#e41 .guia-simulacion{margin:.55rem 0}
+#e41 .sintesis-precision .formula-grande{margin:.65rem 0}
+@media(max-width:800px){#e40 .hoja-ruta-ic ol{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}#e35 .retorno-inferencia{margin-left:1rem;margin-right:1rem}.normal-ic-svg2{min-width:0}#e36 .controles-principales-u5{align-items:stretch}#e36 .controles-principales-u5 label,#e36 .controles-principales-u5 button{width:100%}#e36 .check-u5{width:100%;box-sizing:border-box}}
+#e39 .limites-aleatorios{display:flex;align-items:center;justify-content:center;gap:1.1rem;flex-wrap:wrap;margin:.8rem 0 1rem;font-size:1.08rem}
+#e39 .limites-aleatorios b{font-weight:600}
+
+/* U5 v85: correcciones finales de IC y revisión visual de PH */
+#e35 .u5-flujo-circular{padding-bottom:0!important}
+#e35 .retorno-inferencia{position:static!important;inset:auto!important;left:auto!important;right:auto!important;bottom:auto!important;width:auto!important;min-width:0!important;height:auto!important;margin:.5rem 7% .9rem!important;padding:0!important;border:0!important;border-left:0!important;border-bottom:0!important;border-radius:0!important;background:transparent!important;text-align:center!important;color:#527b75!important}
+#e35 .retorno-inferencia::before,#e35 .retorno-inferencia::after,#e35 .retorno-inferencia .punta-retorno,#e35 .flecha-retorno{display:none!important;content:none!important}
+#e35 .retorno-inferencia-grafico{height:48px;margin:-.25rem 0 0;overflow:visible}
+#e35 .retorno-inferencia-grafico svg{display:block;width:100%;height:100%;overflow:visible}
+#e35 .retorno-inferencia-grafico path[marker-end]{fill:none;stroke:#6f9b91;stroke-width:2;stroke-dasharray:7 6;vector-effect:non-scaling-stroke}
+#e35 .retorno-inferencia-grafico marker path{fill:#6f9b91;stroke:none}
+#e35 .retorno-inferencia{margin:.15rem 7% .9rem!important}
+
+#e36 .check-u5{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:.5rem!important;max-width:none!important;width:auto!important;margin:.65rem 0 .15rem!important;padding:.5rem .7rem!important;line-height:1.25!important}
+#e36 .check-u5 input{display:inline-block!important;flex:0 0 1.1rem!important;width:1.1rem!important;max-width:1.1rem!important;height:1.1rem!important;margin:0!important;padding:0!important}
+#e36 .check-u5 span{display:inline!important;width:auto!important;white-space:normal}
+
+#e40 .casos-media-ic{align-items:start}
+#e40 .casos-media-ic .tarjeta{height:auto;min-height:0;padding:1rem 1.2rem}
+#e40 .casos-media-ic h3{margin:.05rem 0 .55rem}
+#e40 .casos-media-ic p{margin:.45rem 0}
+
+#e43 .tabla-decision{border:1px solid #bfd3d5;border-collapse:separate;border-spacing:0;overflow:hidden}
+#e43 .tabla-decision th,#e43 .tabla-decision td{border-color:#cbdadc}
+#e43 .tabla-decision thead th,#e43 .tabla-decision tbody th{background:#dcebed;color:#17333b}
+#e43 .tabla-decision .ok-cell{background:#e2f1d8;box-shadow:inset 4px 0 #739443}
+#e43 .tabla-decision .error-cell{background:#fde8dc;box-shadow:inset 4px 0 #c56f4c}
+#e43 .conceptos-error{align-items:stretch;margin-bottom:.55rem}
+#e43 .conceptos-error .tarjeta{height:100%;min-height:0;padding:1rem 1.15rem;display:grid;grid-template-rows:auto minmax(3.4rem,auto) 1fr;align-content:start;box-sizing:border-box}
+#e43 .conceptos-error h3,#e43 .conceptos-error p{margin:.35rem 0}
+#e43 .potencia-nota{margin:.45rem 0 1rem;padding:.7rem .9rem}
+
+#e43 .lab-compacto canvas,#e44 .lab-compacto canvas{display:block;width:100%;max-width:760px;height:auto;margin:.45rem auto .25rem}
+#e43 .lab-compacto,#e44 .lab-compacto{padding:1rem 1.1rem}
+.grafico-leyenda{display:flex;justify-content:center;gap:1.1rem;flex-wrap:wrap;margin:.35rem auto .15rem;font-size:.82rem;color:#385b54}
+.grafico-leyenda span{display:inline-flex;align-items:center;gap:.35rem}
+.grafico-leyenda i{display:inline-block;width:1rem;height:.65rem;border-radius:2px}
+.grafico-leyenda .zona-alpha{background:rgba(209,165,36,.42)}
+.grafico-leyenda .zona-p{background:rgba(122,47,85,.38)}
+
+#e45 table th:nth-child(3){min-width:290px}
+#e45 .tarjeta .formula-grande{margin:.55rem 0}
+
+/* U5 v86: muestreo, estimación puntual y mapa de intervalos */
+#e4 .por-que-muestreamos{margin:.85rem 0 1.1rem;padding:1rem 1.2rem}
+#e4 .por-que-muestreamos h3,#e4 .por-que-muestreamos p{margin:.35rem 0 .65rem}
+.dos-decisiones-muestreo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:.75rem 0}
+.dos-decisiones-muestreo>div{padding:.8rem 1rem;border:1px solid #c8ded5;border-radius:12px;background:#f7fbf8}
+.dos-decisiones-muestreo strong,.dos-decisiones-muestreo span{display:block}
+.dos-decisiones-muestreo span{margin-top:.3rem;line-height:1.45}
+
+#e36 .ejemplo-exacto-muestreo{margin:.8rem 0;padding:.75rem 1rem}
+#e36 .ejemplo-exacto-muestreo p{margin:.45rem 0}
+#e36 .tabla-pares-muestreo{min-width:620px;margin:.65rem 0;text-align:center}
+#e36 .tabla-pares-muestreo th,#e36 .tabla-pares-muestreo td{vertical-align:middle}
+#e36 .tabla-pares-muestreo thead th,#e36 .tabla-pares-muestreo tbody th{background:#eaf4f1}
+#e36 .tabla-pares-muestreo td{white-space:nowrap;line-height:1.45}
+
+#e38 .ejemplo-estimacion-puntual{padding:1rem 1.2rem}
+#e38 .ejemplo-estimacion-puntual h3{margin:.05rem 0 .55rem}
+#e38 .ejemplo-estimacion-puntual>p{margin:.45rem 0}
+#e38 .datos-ejemplo{padding:.65rem .8rem;border-radius:10px;background:#eef6f4;text-align:center;font-variant-numeric:tabular-nums;line-height:1.65}
+#e38 .ejemplo-estimacion-puntual table{min-width:760px}
+#e38 .limite-estimacion-puntual{padding:1rem 1.2rem}
+#e38 .limite-estimacion-puntual h3{margin:.05rem 0 .5rem}
+#e38 .limite-estimacion-puntual p{margin:.5rem 0}
+.comparacion-estimaciones{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:.7rem 0}
+.comparacion-estimaciones>div{padding:.7rem .9rem;border:1px solid #c8ded5;border-radius:10px;background:#f7fbf8;text-align:center}
+.comparacion-estimaciones strong,.comparacion-estimaciones span{display:block}
+.comparacion-estimaciones span{margin-top:.25rem}
+#e38 .puente-propiedades-estimador{margin:.9rem 0 .75rem;padding:.9rem 1.15rem;background:#f2f7ed;border-left:4px solid #7a9639}
+#e38 .puente-propiedades-estimador h3{margin:.05rem 0 .4rem}
+
+/* U5 v88: secuencia conceptual, tablas compactas y alineación de IC/PH */
+#e36 .paso-ejemplo-exacto{padding:.25rem 0 .45rem}
+#e36 .paso-ejemplo-exacto+ .paso-ejemplo-exacto{border-top:1px solid #d9e6e2;padding-top:.7rem}
+#e36 .paso-ejemplo-exacto h3{margin:.1rem 0 .35rem;font-size:1rem}
+#e36 .paso-ejemplo-exacto .formula-grande{margin:.35rem 0}
+#e36 .tabla-cuantia-medias{min-width:520px;margin:.45rem 0;text-align:center}
+#e36 .tabla-cuantia-medias th,#e36 .tabla-cuantia-medias td{padding:.55rem .7rem}
+#e36 .tabla-cuantia-medias thead th,#e36 .tabla-cuantia-medias tbody th{background:#eaf4f1}
+#e37 .propiedades-media-muestral{margin:.7rem 0;padding:.85rem 1.1rem;text-align:center}
+#e37 .propiedades-media-muestral h3,#e37 .propiedades-media-muestral p{margin:.35rem 0}
+#e37 .tcl-lgn{align-items:stretch}
+#e37 .tcl-lgn .tarjeta{height:100%;box-sizing:border-box}
+#e37 .complemento-tcl-lgn{margin:.55rem 0 .75rem}
+#e38 .error-muestreo{margin-bottom:.9rem}
+#e40 .casos-media-ic{align-items:stretch}
+#e40 .casos-media-ic .tarjeta{height:100%;box-sizing:border-box}
+#e40 .nota-comun-media{margin:.65rem 0}
+.normal-ic-svg2 text{font-size:17px}
+.normal-ic-svg2 text tspan{font-size:13px}
+#e44 .tres-columnas.compactas{align-items:stretch;gap:.8rem;margin:.65rem 0 .45rem}
+#e44 .tres-columnas.compactas>div{display:grid;grid-template-rows:auto minmax(3.4rem,auto) auto;align-content:start;padding:.75rem .85rem;box-sizing:border-box}
+#e44 .tres-columnas.compactas b{display:block;margin:0 0 .15rem}
+#e44 .tres-columnas.compactas p{margin:.15rem 0;text-align:center}
+#e44 .tres-columnas.compactas small{display:block;margin:.15rem 0 0;color:#52716b}
+#e44 .tres-columnas.compactas+ .nota{margin-top:.45rem}
+
+/* U5 v89: compactación final y cierre de intervalos */
+#e37 .tcl-lgn{align-items:stretch;gap:1rem;margin:.65rem 0 .35rem}
+#e37 .tcl-lgn .tarjeta{height:auto;min-height:0;margin:0;padding:.85rem 1rem}
+#e37 .tcl-lgn h3{margin:.05rem 0 .45rem}
+#e37 .tcl-lgn p{margin:.4rem 0}
+#e37 .condiciones-tcl-lgn{margin:.65rem 0 .4rem;padding:.7rem .9rem;background:#eef6f4;border-left:4px solid #5f8f88}
+#e37 .complemento-tcl-lgn{margin:.45rem 0 .75rem;padding:.15rem 0}
+#e40 .casos-media-ic{gap:1rem;margin:.65rem 0 .35rem}
+#e40 .casos-media-ic .tarjeta{height:auto;min-height:0;margin:0;padding:.85rem 1rem}
+#e40 .casos-media-ic h3{margin:.05rem 0 .4rem}
+#e40 .casos-media-ic p{margin:.35rem 0}
+#e40 .nota-comun-media{margin:.65rem 0 .5rem}
+#e41 .formula-recordatorio-ic{margin:.55rem 0;padding:.65rem .9rem;border-radius:12px;background:#eef6f4;border-left:4px solid #5f8f88}
+#e41 .formula-recordatorio-ic span{font-size:.92rem;font-weight:700;color:#465f62}
+#e41 .formula-recordatorio-ic .formula-grande{margin:.25rem 0 0;overflow-x:auto}
+#e41 .cierre-tres-ic{margin-top:1rem;padding:1rem 1.15rem}
+#e41 .cierre-tres-ic>h3{margin:.05rem 0 .4rem}
+#e41 .cierre-tres-ic>p{margin:.4rem 0}
+#e41 .tabs-cierre-ic{margin:.7rem 0 .25rem}
+#e41 .cierre-tres-ic .panel-tab-u5{padding:.35rem .15rem 0}
+#e41 .cierre-tres-ic .panel-tab-u5 p{margin:.4rem 0}
+#e41 .cierre-tres-ic .formula-grande{overflow-x:auto}
+#e41 .sintesis-tres-ic{margin:.65rem 0 0;padding:.65rem .8rem;background:#f2f7ed;border-left:4px solid #7a9639}
+#e42 .definicion-ph{margin:.65rem 0;padding:.7rem .9rem;background:#eef6f4;border-left:4px solid #5f8f88}
+#e43 .conceptos-error{align-items:stretch;gap:1rem;margin:.7rem 0 .55rem}
+#e43 .conceptos-error .tarjeta{height:auto;min-height:0;margin:0;padding:.8rem 1rem;display:block}
+#e43 .conceptos-error h3{margin:.05rem 0 .25rem}
+#e43 .conceptos-error p{margin:.3rem 0}
+#e43 .potencia-nota{margin:.55rem 0 1rem;padding:.55rem .8rem}
+#e38 .puente-propiedades-estimador p{margin:.3rem 0}
+#e38 .subtitulo-dianas{text-align:center;margin:1rem 0 .55rem;font-size:1.08rem}
+#e38 .nota-dianas{margin:.55rem 0 .7rem}
+#e38 .consistencia-evolucion{display:grid;grid-template-columns:minmax(180px,1fr) auto minmax(180px,1fr);align-items:center;gap:.9rem;margin:.65rem 0;padding:.8rem 1rem;border:1px solid #c9ddd8;border-radius:12px;background:#f8fbfa;text-align:center}
+#e38 .consistencia-evolucion>div{display:flex;flex-direction:column;gap:.28rem}
+#e38 .consistencia-evolucion small{color:#526c67}
+#e38 .dispersion{display:block;min-height:2rem;padding:.2rem .5rem;font-size:1.35rem;color:#1d5b5d;letter-spacing:.08em}
+#e38 .dispersion.amplia{word-spacing:1.2rem}
+#e38 .dispersion.concentrada{letter-spacing:-.04em}
+#e38 .flecha-consistencia{font-weight:700;color:#527b75;white-space:nowrap}
+#e38 .nota-consistencia{margin:.45rem 0 .85rem}
+
+#e40 .mapa-ic{padding:1rem 1.15rem}
+#e40 .mapa-ic h3{margin:.05rem 0 .6rem}
+#e40 .mapa-ic table{min-width:780px}
+#e40 .mapa-ic .nota{margin:.65rem 0 0}
+#e40 .condicion-no-normal{margin:.75rem 0 1rem;padding:.75rem 1rem;border-left:4px solid #5f8f88;background:#eef6f4}
+
+#e42>h2{margin-bottom:.75rem}
+#e42>.bajada{margin-top:0;margin-bottom:1rem;line-height:1.65}
+#e42 .transicion-ic-ph{margin:0 0 1rem;padding:.8rem 1rem;border-left:4px solid #6f8f36;border-radius:0 10px 10px 0;background:#f3f7e9;line-height:1.55}
+#e42 .caso-u5{margin-top:0}
+
+@media(max-width:800px){
+  #e35 .retorno-inferencia-grafico{display:none}
+  #e35 .retorno-inferencia p::before{content:"Inferencia → Población · ";font-weight:700;color:#456f68}
+  .dos-decisiones-muestreo,.comparacion-estimaciones{grid-template-columns:1fr}
+  #e36 .check-u5{width:auto!important;max-width:100%!important}
+  #e43 .conceptos-error{grid-template-columns:1fr}
+  #e43 .lab-compacto canvas,#e44 .lab-compacto canvas{max-width:100%}
+  #e38 .consistencia-evolucion{grid-template-columns:1fr}
+  #e38 .flecha-consistencia{white-space:normal}
+}
+
+/* U5 v90: coherencia didáctica, controles compactos y escalas alineadas */
+#e38 .recordatorio-varianza-muestral{margin:.55rem 0 .75rem;padding:.65rem .85rem;background:#eef6f4;border-left:4px solid #5f8f88}
+#e44 .controles-grafico{width:max-content;max-width:100%;padding:.45rem .6rem;gap:.65rem;margin:.4rem 0 .55rem!important}
+#e44 .controles-grafico label:first-child{width:220px}
+#e44 .controles-grafico label:first-child input{width:220px;max-width:100%;margin:.15rem 0 .1rem}
+#e44 .controles-grafico output{line-height:1.1}
+#e44 .cierre-ph{margin-top:1rem}
+#e44 .cierre-ph h3{margin:.05rem 0 .45rem}
+#e44 .pasos-cierre-ph{margin:.55rem 0;padding-left:1.4rem}
+#e44 .pasos-cierre-ph li{margin:.35rem 0}
+#e45 .comparacion-ic-ph-proporcion{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+#e45 .encabezado-comparacion-u5{grid-column:1/-1;padding:.7rem .9rem;background:#eef6f4;border-left:4px solid #5f8f88}
+#e45 .encabezado-comparacion-u5 h3,#e45 .encabezado-comparacion-u5 p{margin:.2rem 0}
+#e45 .comparacion-ic-ph-proporcion article{margin:0}
+#e45 .slider-icph{display:block;margin:.65rem 0 0}
+#e45 .slider-icph-valor{margin:0 0 .15rem;font-weight:700}
+#e45 .slider-icph-valor output{font:inherit}
+#e45 .barra-icph{margin:.15rem 0 1.55rem}
+#e45 .slider-icph input[type="range"]{display:block;width:100%;max-width:none;margin:0;padding:0}
+#glosario .bajada-glosario{margin:.2rem 0 .75rem}
+@media(max-width:800px){
+  #e44 .controles-grafico{width:100%}
+  #e44 .controles-grafico label:first-child{width:100%}
+  #e44 .controles-grafico label:first-child input{width:100%}
+  #e45 .comparacion-ic-ph-proporcion{grid-template-columns:1fr}
+}
+
+/* U5 v91: barra compacta del laboratorio de muestreo */
+#e36 .controles-pegados{
+  margin:.35rem 0 .55rem;
+}
+#e36 .controles-principales-u5{
+  display:flex;
+  align-items:flex-end;
+  gap:.65rem;
+  flex-wrap:wrap;
+}
+#e36 .controles-principales-u5 > label:first-child{
+  flex:0 1 225px;
+  min-width:190px;
+}
+#e36 .controles-principales-u5 > label:first-child > span{
+  white-space:nowrap;
+}
+#e36 .controles-principales-u5 > label:first-child select{
+  width:100%;
+}
+#e36 .controles-principales-u5 > button{
+  flex:0 0 auto;
+  min-height:2.85rem;
+  white-space:nowrap;
+}
+#e36 .controles-principales-u5 > .check-u5{
+  align-self:flex-end!important;
+  min-height:2.85rem;
+  box-sizing:border-box;
+  margin:0!important;
+}
+@media(max-width:800px){
+  #e36 .controles-principales-u5 > label:first-child,
+  #e36 .controles-principales-u5 > button,
+  #e36 .controles-principales-u5 > .check-u5{
+    flex:1 1 100%;
+    width:100%!important;
+  }
+  #e36 .controles-principales-u5 > label:first-child > span{
+    white-space:normal;
+  }
+  #e36 .controles-principales-u5 > .check-u5{
+    justify-content:flex-start;
+  }
+}
+
+/* U5 v94: panorama final sin tarjetas sobredimensionadas */
+#e47 .tarjetas-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.8rem;
+  margin:.75rem 0;
+}
+#e47 .tarjetas-grid .tarjeta{
+  min-height:0;
+  margin:0;
+  padding:.85rem 1rem;
+}
+#e47 .tarjetas-grid .tarjeta h3{
+  margin:.05rem 0 .3rem;
+}
+#e47 .tarjetas-grid .tarjeta p{
+  margin:.2rem 0;
+}
+.formula-glosario{
+  display:block;
+  margin:.28rem 0;
+  text-align:center;
+}
+.guia-bognar-comun,.guia-bognar-parametro{
+  margin:.7rem 0;
+  padding:.7rem .85rem;
+  border-left:4px solid #5f8f88;
+  background:#eef6f4;
+}
+.guia-bognar-comun h4,.guia-bognar-parametro h4{
+  margin:.05rem 0 .4rem;
+}
+.guia-bognar-comun>div{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.8rem;
+}
+.guia-bognar-comun p,.guia-bognar-parametro p{
+  margin:.3rem 0;
+}
+.guia-bognar-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.8rem;
+}
+.guia-bognar-grid>div{
+  display:flex;
+  flex-direction:column;
+  gap:.22rem;
+  padding:.55rem .7rem;
+  border-radius:10px;
+  background:#fff;
+}
+@media(max-width:700px){
+  #e47 .tarjetas-grid{
+    grid-template-columns:1fr;
+  }
+  .guia-bognar-comun>div,.guia-bognar-grid{
+    grid-template-columns:1fr;
+  }
+}
