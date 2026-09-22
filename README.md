@@ -1,99 +1,53 @@
-# Aprender con Datos — Edición 2026.3
+# Aprender con Datos — Edición 2026.4
 
 Teórico digital interactivo de Estadística para explorar datos, analizarlos con herramientas estadísticas e interpretar los resultados con sentido crítico.
 
-Esta entrega desarrolla las Unidades 1, 2 y 3 y está preparada para funcionar como sitio estático en GitHub Pages.
+Esta edición desarrolla las Unidades 1 a 5 y está preparada para funcionar como sitio estático en GitHub Pages.
+
+## Organización del contenido
+
+- **Módulo 1 — Datos:** Unidades 1 y 2.
+- **Módulo 2 — Probabilidad:** Unidad 3.
+- **Módulo 3 — Distribuciones de probabilidad:** Unidad 4.
+- **Módulo 4 — Inferencia estadística:** Unidad 5.
+- **Glosario:** conceptos correspondientes a todos los módulos.
 
 ## Estructura
 
 - `index.html`: contenido completo y navegación.
-- `css/estilos.css`: identidad visual, diseño responsive e impresión.
-- `js/app.js`: actividades, gráficos SVG, navegación y guardado local del progreso.
+- `styles.css` y `css/estilos.css`: identidad visual, diseño responsive e impresión.
+- `js/app.js`: actividades, simulaciones, gráficos, navegación y guardado local del progreso.
 - `assets/img/`: imágenes institucionales y de la SRT.
 - `assets/documentos/`: informes de la SRT utilizados como fuentes.
+- `assets/`: recursos interactivos complementarios.
 
 ## Abrir localmente
 
-1. Descomprimir toda la carpeta.
+1. Descomprimir completamente el archivo ZIP.
 2. Abrir `index.html` con Chrome, Edge o Firefox.
-3. No abrir el archivo directamente dentro del ZIP.
+3. No abrir `index.html` directamente desde el interior del ZIP.
+4. Algunas herramientas externas insertadas requieren conexión a internet.
 
 ## Publicar en GitHub Pages
 
-1. Crear un repositorio público.
-2. Subir **el contenido interno** de esta carpeta, de modo que `index.html` quede en la raíz.
-3. Ir a `Settings > Pages`.
-4. Elegir `Deploy from a branch`, rama `main`, carpeta `/ (root)`.
-5. Guardar y esperar a que GitHub muestre la dirección del sitio.
+1. Subir el contenido interno de la carpeta al repositorio, de modo que `index.html` quede en la raíz.
+2. Ir a `Settings > Pages`.
+3. En **Source**, elegir `Deploy from a branch`.
+4. Seleccionar la rama `main` y la carpeta `/ (root)`.
+5. Guardar y esperar a que GitHub actualice la dirección del sitio.
 
 ## Personalización
 
 - El enlace al aula PEDCO se edita en `index.html`, buscando `id="enlace-pedco"`.
-- Los colores principales están al comienzo de `css/estilos.css`, dentro de `:root`.
-- Los ejemplos interactivos y respuestas se encuentran en `js/app.js`.
+- Los colores principales se encuentran en las hojas de estilo.
+- Los ejemplos interactivos, simulaciones y respuestas están en `js/app.js`.
 - Los textos teóricos están en `index.html`.
+- Las claves de acceso a los módulos se encuentran al comienzo de `js/app.js`.
 
 ## Principios didácticos
 
 - La explicación construye el concepto y la interacción lo potencia.
-- El desarrollo general es independiente del TP vigente.
-- PEDCO concentra materiales oficiales, actividades acreditables y entregas.
-- La aplicación de las Unidades 1 y 2 vincula explícitamente con el TP1 y Excel; la Unidad 3 mantiene un recorrido teórico autónomo compatible con el TP de Probabilidad.
-- Los contextos profesionales se utilizan para dar sentido a la Estadística sin convertir el sitio en un manual de Higiene y Seguridad.
-
-## Tecnologías
-
-HTML5, CSS3, JavaScript, SVG, MathJax y `localStorage`. No requiere servidor ni base de datos.
-
-## Versión 5
-
-Esta edición incorpora la revisión docente de las Unidades 1 y 2: fuentes SRT ampliadas, frecuencias acumuladas en variables discretas y continuas, gráficos completos, ejemplos profesionales, simetría y asimetría, comparación entre media/mediana/moda, tipificación contextualizada, terminología de relación lineal y una autoevaluación ampliada.
-
-
-## Versión final
-Incluye la comparación entre parámetros poblacionales y estadísticos muestrales, el coeficiente de variación y los últimos ajustes editoriales.
-
-
-## Edición 2026
-Incluye la revisión editorial final de las Unidades 1 y 2, con ejemplos de Higiene y Seguridad, normativa argentina, gráficos corregidos y actividades de uso crítico de IA.
-
-
-## Ajustes finales
-- Interpretación formal de la media.
-- Diagrama de dispersión basado en observaciones.
-- Corrección del margen inferior del gráfico de barras.
-
-## Edición 2026.2 · Unidad 3
-- Incorpora un recorrido de ocho estaciones sobre Probabilidad.
-- Distingue los enfoques clásico y frecuencial y explicita sus condiciones de uso.
-- Integra complemento, unión e intersección con diagramas de Venn y una secuencia formal progresiva.
-- Define la probabilidad condicionada antes de utilizarla en tablas y explicita el cambio del espacio de referencia.
-- Contrasta eventos independientes y mutuamente excluyentes e incluye un desafío conceptual de justificación.
-- Incorpora árboles con notación de ramas diferenciada del producto y desarrolla la probabilidad total como suma de caminos.
-- Presenta el teorema de Bayes como un resultado general de actualización ante nueva información y utiliza en la materia su forma operativa.
-- Prioriza ejemplos contextualizados en Higiene y Seguridad y explicita la interpretación de los resultados.
-- Añade simulación frecuencial, árboles visuales, actividades breves, glosario ampliado y autoevaluación específica.
-
-## Edición en progreso · Unidad 4
-Se incorporó el Módulo 3 (Unidad 4 · Distribuciones de probabilidad) con las tres primeras estaciones:
-1. puente desde experimento aleatorio y espacio muestral;
-2. variable aleatoria discreta/continua;
-3. distribución de probabilidad discreta genérica.
-
-Clave provisoria del Módulo 3: `DISTRIB2026`.
-Las estaciones de esperanza/variancia y los modelos Binomial, Poisson y Normal se incorporarán en la siguiente iteración.
-
-
-## Ajustes v41
-- Se compactó el bloque de parámetros de la Normal y se corrigió la sigma residual.
-- Se normalizó la tipografía de los eventos y de la regla empírica.
-- Se ajustó el contenedor de GeoGebra para que escale dentro de la tarjeta.
-- El applet Normal de Matt Bognar ahora ocupa el ancho completo del bloque, sin ventana angosta, y conserva el botón externo como alternativa.
-
-
-## Ajustes v42
-- Se centró el encabezado `x` en la tabla de la distribución discreta.
-- Se nombró explícitamente la función de cuantía (o función de probabilidad).
-- Se igualó la altura de las tarjetas que comparan los efectos de μ y σ.
-- Se redujo el tamaño visual del gráfico interactivo de la regla empírica.
-- Se compactó el encuadre del applet Normal de Matt Bognar.
+- El desarrollo conceptual general es independiente del TP vigente.
+- PEDCO concentra los materiales oficiales, las actividades acreditables y las entregas.
+- Cada módulo recupera conocimientos anteriores y los vincula con situaciones aplicadas.
+- Las herramientas digitales apoyan los cálculos, pero la elección del procedimiento y la interpretación forman parte del análisis.
