@@ -4385,6 +4385,16 @@
 </div>
 <div class="alerta">
 <strong>La confianza pertenece al procedimiento.</strong> Un procedimiento de nivel \(1-\alpha\) está construido para que, en muestreos repetidos bajo las mismas condiciones, una proporción \(1-\alpha\) de los intervalos obtenidos contenga al verdadero valor del parámetro. Una vez observado un intervalo concreto, lo interpretamos usando <strong>confianza</strong>, no asignándole una nueva probabilidad al parámetro fijo.</div>
+<div class="tarjeta interpretaciones-ic">
+<h3>Cómo comunicar correctamente un intervalo observado</h3>
+<p>Si el intervalo calculado fue \([l_i,l_s]\) con un nivel de confianza del \(100(1-\alpha)\%\), podemos expresarlo de maneras equivalentes:</p>
+<ul>
+<li><strong>En el contexto:</strong> “El intervalo \([l_i,l_s]\) contiene al verdadero valor de <em>[parámetro poblacional]</em> con un \(100(1-\alpha)\%\) de confianza”.</li>
+<li><strong>En forma breve:</strong> “El intervalo de confianza del \(100(1-\alpha)\%\) obtenido para <em>[parámetro]</em> es \([l_i,l_s]\)”.</li>
+<li><strong>Destacando el método:</strong> “El intervalo \([l_i,l_s]\) fue obtenido mediante un procedimiento que, en muestreos repetidos comparables, contiene al parámetro en el \(100(1-\alpha)\%\) de los casos”.</li>
+</ul>
+<div class="alerta alerta-compacta"><strong>Evitar:</strong> “el parámetro está entre \(l_i\) y \(l_s\) con un \(100(1-\alpha)\%\) de confianza”, porque puede sugerir que el parámetro varía; “hay una probabilidad del \(100(1-\alpha)\%\) de que el parámetro esté en este intervalo”; y “el \(100(1-\alpha)\%\) de los valores de la población está entre los límites”. El parámetro es <strong>fijo</strong>: lo que varía de una muestra a otra es el intervalo. El nivel de confianza describe la <strong>cobertura del procedimiento</strong>.</div>
+</div>
 <div class="grupo-botones">
 <button class="boton-primario avanzar" data-destino="e40">Continuar: distintos parámetros →</button>
 </div>
@@ -4550,12 +4560,25 @@
 <p class="formula-grande">\[\text{confianza}\uparrow\;\text{ con }n\text{ fijo}\quad\Longrightarrow\quad\text{IC más ancho}\quad\Longrightarrow\quad\text{menor precisión}\]</p>
 <p class="nota">Estas relaciones se extienden a los demás IC, aunque la expresión concreta del margen de error depende del parámetro y del procedimiento utilizado.</p>
 </div>
+<div class="tarjeta precision-error-ic">
+<h3>Precisión, margen de error y error de muestreo</h3>
+<p>En un intervalo simétrico, la <strong>semiamplitud</strong> coincide con el margen de error:</p>
+<p class="formula-grande">\[E=\frac{l_s-l_i}{2},\qquad IC=[\widehat\theta-E,\widehat\theta+E].\]</p>
+<div class="comparacion-u5 compactas">
+<div><strong>Precisión</strong><span>Cuanto menor es \(E\), más estrecho es el intervalo y mayor es la precisión.</span></div>
+<div><strong>Error de muestreo realizado</strong><span>Es \(|\widehat\theta-\theta|\). En general no podemos calcularlo porque \(\theta\) es desconocido.</span></div>
+</div>
+<p>El diseño del intervalo no afirma que el error realizado sea exactamente \(E\). Afirma que, bajo las condiciones del procedimiento,</p>
+<p class="formula-grande">\[P\!\left(|\widehat\theta-\theta|\le E\right)=1-\alpha\]</p>
+<p class="nota">Esta igualdad se interpreta antes de observar la muestra y corresponde directamente a los intervalos simétricos estudiados. Después de observarla, \(E\) es el margen informado y el error verdadero continúa siendo desconocido.</p>
+</div>
 <div class="tarjeta plan-n">
 <h3>La pregunta inversa: ¿qué tamaño de muestra necesitamos?</h3>
 <p>Hasta ahora elegimos \(n\) y observamos qué precisión obtenemos. Al planificar un estudio podemos invertir la pregunta: <strong>¿qué tamaño muestral necesitamos para alcanzar un margen de error máximo deseado?</strong>
 </p>
 <div class="tabs-u5 tabs-plan-n">
-<button class="tab-u5 activo" data-tab="plan-media">Para una media</button>
+<button class="tab-u5 activo" data-tab="plan-media">Media: \(\sigma\) conocida</button>
+<button class="tab-u5" data-tab="plan-media-piloto">Media: \(\sigma\) desconocida</button>
 <button class="tab-u5" data-tab="plan-prop">Para una proporción</button>
 </div>
 <div class="panel-tab-u5 visible" id="plan-media">
@@ -4575,6 +4598,23 @@
 <button class="boton-primario" id="n-calcular" type="button">Calcular n</button>
 <output class="resultado-destacado" id="n-resultado">
 </output>
+</div>
+</div>
+<div class="panel-tab-u5" id="plan-media-piloto">
+<p>Si \(\sigma\) es desconocida, una <strong>muestra piloto</strong> de tamaño \(n_0\) permite obtener una estimación previa \(s_0\). Para planificar de forma aproximada y conservadora podemos usar</p>
+<p class="formula-grande">\[E\approx t_{\alpha/2,n_0-1}\frac{s_0}{\sqrt n},\qquad n\approx\left(\frac{t_{\alpha/2,n_0-1}s_0}{E}\right)^2.\]</p>
+<p class="nota"><strong>Qué aporta la prueba piloto:</strong> \(s_0\) estima la variabilidad poblacional y \(n_0-1\) fija los grados de libertad usados para obtener este valor crítico inicial de \(t\). Como \(t\) depende de los grados de libertad, el resultado es una regla de planificación, no una identidad exacta. Puede refinarse recalculando \(t_{\alpha/2,n-1}\) con el tamaño obtenido hasta que el entero mínimo se estabilice.</p>
+<div class="calculadora-n-u5">
+<label>Confianza<select id="nt-conf">
+<option value="1.644854">0,90</option>
+<option selected="" value="1.959964">0,95</option>
+<option value="2.575829">0,99</option>
+</select></label>
+<label>Tamaño piloto \(n_0\)<input id="nt-n0" min="3" step="1" type="number" value="20"/></label>
+<label>Desvío piloto \(s_0\)<input id="nt-s0" min="0.01" step="0.1" type="number" value="10"/></label>
+<label>Margen máximo \(E\)<input id="nt-error" min="0.01" step="0.1" type="number" value="2"/></label>
+<button class="boton-primario" id="nt-calcular" type="button">Calcular n</button>
+<output class="resultado-destacado" id="nt-resultado"></output>
 </div>
 </div>
 <div class="panel-tab-u5" id="plan-prop">
@@ -5432,13 +5472,6 @@ window.addEventListener('load', function(){
 </script>
 <script>
 (function(){
-  const b=document.getElementById('np-calcular');
-  if(b){b.addEventListener('click',function(){
-    const z=parseFloat(document.getElementById('np-conf').value), p0=parseFloat(document.getElementById('np-p').value), E=parseFloat(document.getElementById('np-error').value), out=document.getElementById('np-resultado');
-    if(!(p0>0&&p0<1&&E>0)){out.textContent='Revisá p y E.';return;}
-    const raw=z*z*p0*(1-p0)/(E*E), n=Math.ceil(raw);
-    out.textContent='n calculado = '+raw.toFixed(2)+' → tamaño mínimo: n = '+n;
-  });}
   document.querySelectorAll('[data-retorno]').forEach(btn=>btn.addEventListener('click',()=>sessionStorage.setItem('u5Retorno',btn.dataset.retorno)));
   const e4=document.getElementById('e4');
   if(e4 && !e4.querySelector('.retorno-u5')){

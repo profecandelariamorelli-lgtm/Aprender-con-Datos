@@ -683,6 +683,7 @@ blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:5px solid var(--turque
 .tab-u5:not(.activo):not(.visitado){background:#fff4c7;border-color:#c99b18;box-shadow:0 0 0 2px rgba(201,155,24,.12)}
 .tab-u5.visitado:not(.activo){background:#edf7f3;border-color:#83aa9b;color:#294c47}
 .tab-u5.visitado:not(.activo)::after{content:' ✓';font-weight:900;color:#4f7b27}
+.interpretaciones-ic ul{margin-bottom:.6rem}.alerta-compacta{margin:.7rem 0 0}.precision-error-ic .comparacion-u5 span{display:block;margin-top:.35rem}.tabs-plan-n .tab-u5{flex:1 1 210px}
 .enlace-herramienta{gap:.28rem;white-space:nowrap}
 .enlace-herramienta .simbolo-boton{display:inline-flex;align-items:center}
 #e47 .tarjetas-grid{gap:.7rem}
